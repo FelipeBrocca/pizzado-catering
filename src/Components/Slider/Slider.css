@@ -1,0 +1,161 @@
+.slider{
+    width: 100%;
+    height: 90vh;
+    max-height: 500px;
+    position: relative;
+    overflow: hidden;
+}
+.slide{
+    position: absolute;
+    top: 0;
+    left: 0;
+    width: 100%;
+    height: 100%;
+    opacity: 0;
+    transform: translateX(0);
+    transition: all .5s ease-out;
+    display: flex;
+    flex-direction: column;
+}
+.current-slide{
+    opacity: 1;
+    transform: translateX(0);
+    width: 100%;
+    z-index: 1;
+}
+.current-slide .slider-content{
+    opacity: 1;
+}
+.slider-img{
+    display: block;
+    width: 100%;
+    height: 100%;
+    object-fit: cover;
+    filter: brightness(50%);
+}
+.slider-content{
+    position: absolute;
+    z-index: 2;
+    top: 40%;
+    align-self: center;
+    color: white;
+    transform: translate (-50%, -50%);
+    width: 60%;
+    max-width: 400px;
+    text-align: center;
+    display: flex;
+    flex-direction: column;
+    gap: 10px;
+    opacity: 0;
+    animation: slide-up 1s ease 0.5s;
+    animation-fill-mode: forwards;
+    visibility: hidden;
+}
+.slider-title{
+    font-size: 20px;
+    margin: 0;
+}
+.slider-btn{
+    position: absolute;
+    width: 40px;
+    height: 40px;
+    background: rgba(255, 255, 255, 0.273);
+    top: 50%;
+    transform: translateY(-50%);
+    font-size: 30px;
+    font-weight: bold;
+    font-family: monospace;
+    text-align: center;
+    border-radius: 50%;
+    cursor: pointer;
+    z-index: 3;
+}
+.slider-btn:hover{
+    background-color: #fff;
+    color: black;
+}
+.slider-btn-left{
+    left: 10px;
+}
+
+.slider-btn-right{
+    right: 10px;
+}
+
+
+.draw-border {
+    box-shadow: inset 0 0 0 4px #be1615;
+    color: #be1615;
+    transition: color 0.25s 0.0833333333s;
+    position: relative;
+}
+.draw-border::before, .draw-border::after {
+    border: 0 solid transparent;
+    box-sizing: border-box;
+    content: "";
+    pointer-events: none;
+    position: absolute;
+    width: 0;
+    height: 0;
+    bottom: 0;
+    right: 0;
+}
+
+.draw-border::before {
+    border-bottom-width: 4px;
+    border-left-width: 4px;
+}
+
+.draw-border::after {
+    border-top-width: 4px;
+    border-right-width: 4px;
+}
+
+.draw-border:hover {
+    color: #ffe593;
+}
+
+.draw-border:hover::before, .draw-border:hover::after {
+    border-color: #f5b721;
+    transition: border-color 0s, width 0.25s, height 0.25s;
+    width: 100%;
+    height: 100%;
+}
+
+.draw-border:hover::before {
+    transition-delay: 0s, 0s, 0.25s;
+}
+
+.draw-border:hover::after {
+    transition-delay: 0s, 0.25s, 0s;
+}
+
+.btn {
+    background: none;
+    border: none;
+    cursor: pointer;
+    line-height: 1.5;
+    font: 700 17px "Roboto Slab", sans-serif;
+    padding: 1em 2em;
+    letter-spacing: 0.05rem;
+    width: 100%;
+}
+
+.btn a{
+    text-decoration: none;
+    color: white;
+    height: 100%;
+    width: 100%;
+}
+
+
+@keyframes slide-up{
+    0%{
+        visibility: visible;
+        top: 40%;
+    }
+    100%{
+        visibility: visible;
+        top: 30%;
+    }
+}
