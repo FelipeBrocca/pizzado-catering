@@ -32,6 +32,6 @@ a{
    justify-content: center;
    align-items: center;
    animation: fade-in 300ms forwards;
-   background-color: rgba(21, 21, 21, 0.295);
+   background-color: rgba(21, 21, 21, 0.491);
    z-index: 90;
 }

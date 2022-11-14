@@ -38,7 +38,7 @@
     height: 100vh;
     translate: 0 0;
     transition: 500ms;
-    background-color: #0C0C0C;
+    background-color: #292929;
 }
 .main-nav.closed{
     visibility: hidden;
