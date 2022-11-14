@@ -5,11 +5,11 @@ export const FoodOptData = [
     {
       image: napolitanaOpt,
       title: 'Pizzas Congeladas',
-      link: '#events'
+      link: '#morfi'
     },
     {
       image: entradasOpt,
       title: 'Eventos',
-      link: '#morfi'
+      link: '#events'
     }
 ]

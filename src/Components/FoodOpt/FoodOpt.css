@@ -1,8 +1,11 @@
 .container-options{
     margin-top: 50px;
     display: flex;
-    justify-content: space-around;
+    animation: lazy-in 1s ease-in 0.5s;
+    animation-fill-mode: forwards;
     flex-wrap: wrap;
+    gap: 20px;
+    justify-content: space-around;
 }
 .options-item{
     width: 200px;
@@ -25,32 +28,35 @@
     justify-content: center;
     align-items: center;
     position: absolute;
-    bottom: -250px;
-    right: -150px;
     color: white;
     padding: 20px;
     padding-bottom: 70px;
     padding-right: 50px;
     font-size: 1.1em;
     font-weight: bold;
-    transition: all 0.5s;
+    animation: lazy-op 1.5s ease;
+    animation-fill-mode: forwards;
 }
-.options-item:hover .options-circle{
-    transform: scale(1.2);
-    bottom: -90px;
-    right: -50px;
+
+
+@keyframes lazy-in {
+    0%{
+        opacity: 0;
+    }
+    100%{
+        opacity: 1;
+    }
 }
-.options-item:before{
-    content: "";
-    position: absolute;
-    width: 100%;
-    height: 100%;
-    top: 0;
-    left: 0;
-    background: rgba(255, 255, 255, 0.2);
-    opacity: 0;
-    transition: all 0.5s;
-}
-.options-item:hover:before{
-    opacity: 1;
+@keyframes lazy-op {
+    0%{
+        opacity: 0;
+        bottom: -250px;
+        right: -150px;
+    }
+    100%{
+        transform: scale(1.2);
+        bottom: -80px;
+        right: -40px;
+        opacity: 1;
+    }
 }

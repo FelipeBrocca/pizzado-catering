@@ -6,20 +6,20 @@ import { FoodOptData } from './FoodOptData'
 
 const FoodOpt = () => {
   return (
-    <section class="container-options">
+    <>
         {
             FoodOptData.map(product => {
                 return (
-               <div class="options-item">
+               <div className="options-item" key={product.link}>
                    <Link to={product.link}>
-                       <img src={product.image} alt="" class="options-img" />
-                       <p class="options-circle">{product.title}</p>
+                       <img src={product.image} alt="" className="options-img" />
+                       <p className="options-circle">{product.title}</p>
                    </Link>
                </div>
                )
             })
         }
-    </section>
+    </>
   )
 }
 

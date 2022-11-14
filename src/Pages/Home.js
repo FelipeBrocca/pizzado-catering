@@ -1,19 +1,20 @@
 import React from 'react'
-import EventsAsk from '../Components/EventsAsk/EventsAsk'
-import FoodOpt from '../Components/FoodOpt/FoodOpt'
-import Footer from '../Components/Footer/Footer'
+import LazyEventsAsk from '../Components/EventsAsk/LazyEventsAsk'
+import FoodOptLazy from '../Components/FoodOpt/LazyFoodOpt'
+import FooterLazy from '../Components/Footer/LazyFooter'
 import Header from '../Components/Header/Header'
 import Slider from '../Components/Slider/Slider'
-const Home = () => {
 
+
+const Home = () => {
 
   return (
     <>
       <Header />
          <Slider />
-         <FoodOpt />
-         <EventsAsk />
-      <Footer />
+         <FoodOptLazy />
+         <LazyEventsAsk />
+      <FooterLazy />
     </>
   )
 
