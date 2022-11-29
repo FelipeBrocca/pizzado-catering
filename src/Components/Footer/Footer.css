@@ -11,6 +11,7 @@ footer{
 }
 .footer-section > p{
     text-align: center;
+    padding: 5px 15px;
 }
 .footer-title{
     color: #E6AF20;

@@ -16,6 +16,7 @@ const Slider = () => {
            showThumbs={false}
            stopOnHover={true}
            dynamicHeight={true}
+            showStatus={false}
            >
                 {
                     sliderData?.map((slide) => {

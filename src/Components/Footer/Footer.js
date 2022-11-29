@@ -6,7 +6,7 @@ import IGblanco from '../../public/images/instagramblco.png'
 import Wappblanco from '../../public/images/wappblco.png'
 
 const Footer = () => {
-  return (
+    return (
     <footer className="main-footer">
         <div className="footer-section">
             <h2 className="footer-title">Sobre Nosotros</h2>
