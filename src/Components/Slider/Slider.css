@@ -14,7 +14,7 @@
     width: 100%;
     max-width: 900px;
     height: 100%;
-    min-height: 300px;
+    /* min-height: 300px; */
     max-height: 400px;
 }
 .image-slider{
@@ -24,7 +24,7 @@
 .slide{
     width: 100%;
 }
-.slide > div{
+.slide-foodopt-container{
     position: relative;
     display: flex;
     width: 100%;

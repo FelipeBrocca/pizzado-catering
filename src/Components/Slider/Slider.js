@@ -21,7 +21,7 @@ const Slider = () => {
                 {
                     sliderData?.map((slide) => {
                         return(
-                        <div key={slide.title}>
+                        <div key={slide.title} className="slide-foodopt-container">
                         <img src={slide.image} alt="imgSlide" className='image-slider' />
                             <div className="slider-content">
                                 <h2 className="slider-title">

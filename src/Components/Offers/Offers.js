@@ -13,7 +13,7 @@ const Offers = () => {
                 <h2>PROMOS MUNDIALISTAS</h2>
                 <h3 className='offer-choose'>ELEGÍ TU FORMACIÓN PARA VER A LA SELECCIÓN</h3>
                 <h3 className='offer-discount'>10% OFF SÓLO EFECTIVO Y TAKEAWAY</h3>
-            <div className='carousel-offer'>
+            {/* <div className='carousel-offer'> */}
                 <Carousel
                 autoPlay={true}
                 interval={5000}
@@ -25,6 +25,7 @@ const Offers = () => {
                     {
                         offersData?.map((offer) => {
                             return(
+                                <div className='text-offer-container'>
                                     <span className='offer' key={offer.title}>
                                     <h3 className="offer-title">
                                         {offer.title}
@@ -33,11 +34,12 @@ const Offers = () => {
                                         {offer.subtitle}
                                     </p>                    
                                     <p className='offer-price'>${offer.price}</p>
-                                    </span>        
+                                    </span>
+                                </div>            
                         )})
                     }
                     </Carousel>
-                </div>
+                {/* </div> */}
             </div>
         </div>
     </>
