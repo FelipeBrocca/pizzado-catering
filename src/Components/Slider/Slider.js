@@ -15,6 +15,7 @@ const Slider = () => {
            infiniteLoop={true}
            showThumbs={false}
            stopOnHover={true}
+           showArrows={false}
            dynamicHeight={true}
             showStatus={false}
            >

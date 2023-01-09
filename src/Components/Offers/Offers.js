@@ -34,6 +34,7 @@ const Offers = () => {
                                         {offer.subtitle}
                                     </p>                    
                                     <p className='offer-price'>${offer.price}</p>
+                                    <button>Agregar al carrito</button>
                                     </span>
                                 </div>            
                         )})
