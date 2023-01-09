@@ -20,6 +20,9 @@ const Header = () => {
     <header className="main-header">
         <div className="container-flex-header">
             <div className="main-header-container">
+                <Link to="/" className='link-logo'>
+                    <img src={Logo} className="img-logo" alt="img-logo" />
+                </Link>
                 <span 
                 className="icon-menu" 
                 onClick={handlePopUp}
@@ -28,9 +31,6 @@ const Header = () => {
                 <div></div>
                 <div></div>
                 </span>
-                <Link to="/" className='link-logo'>
-                    <img src={Logo} className="img-logo" alt="img-logo" />
-                </Link>
                 <nav className={`main-nav ${isClosed ? "closed" : ""}`} id="main-nav">
                     <div><p onClick={handlePopUp}>X</p></div>
                     <ul className="menu">
