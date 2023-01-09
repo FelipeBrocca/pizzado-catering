@@ -1,17 +1,12 @@
-import React, {useState
-  // , useContext
-} from 'react'
-import { Link } from 'react-router-dom'
+import React, {useState} from 'react'
 import './Card.css'
-// import { CartContext } from '../../Context/CartContext';
+import CartService from './CartService'
 
 
 
-const Card = ({image, title, ingredients, price}) => {
+const Card = ({id, image, title, ingredients, price}) => {
 
-  // const {addItemToCart} = useContext(CartContext)
   const [valor, setValor] = useState(1)
-
 
   return (
     <>
@@ -29,14 +24,12 @@ const Card = ({image, title, ingredients, price}) => {
               </div>
           </div>
       </div>
-          <button 
-          className="button-card"
-          >
-              <Link to="#" className="add-carrito" data-id="1">
-                  <span className="button-card-txt">Agregar +</span>
-                  <span>¡Dale!</span>
-              </Link>
-          </button>
+      <CartService 
+      id = {id}
+      title = {title}
+      price = {price}
+      valor = {valor}
+      />
     </div>
     </>
     

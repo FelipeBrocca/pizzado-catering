@@ -7,24 +7,24 @@ const EventsForm = () => {
         <section className="section-register">
             <h2 className="titulo-register">Cotizá tu evento!</h2>
             <form action="resultado.html" method="POST" className="form-register">
-                <p className="form-register-input">
-                    <label for="name" className="titulo-input"> Nombre Completo </label>
+                <div className="form-register-input">
+                    <label htmlFor="name" className="titulo-input"> Nombre Completo </label>
                     <div>
                         <input type="text" name="name" id="name" required/>
                     </div>
-                </p>
-                <p className="form-register-input">
-                    <label for="email" className="titulo-input"> E-mail </label>
+                </div>
+                <div className="form-register-input">
+                    <label htmlFor="email" className="titulo-input"> E-mail </label>
                     <div>
                         <input type="email" name="email" id="email" required/>
                     </div>
-                </p>
-                <p className="form-register-input">
-                    <label for="start" className="titulo-input"> Dia del evento: </label>
+                </div>
+                <div className="form-register-input">
+                    <label htmlFor="start" className="titulo-input"> Dia del evento: </label>
                     <div>
                         <input type="date" id="start" name="trip-start" min="2023-01-01" max="2030-12-31"/>
                     </div>
-                </p>
+                </div>
 
                 {/* AGREGAR DIRECCION DEL EVENTO CON UN MAPA */}
                 {/* AGREGAR OPCIONES DE MENU A ELEGIR */}

@@ -25,7 +25,7 @@ const Offers = () => {
                     {
                         offersData?.map((offer) => {
                             return(
-                                <div className='text-offer-container'>
+                                <div className='text-offer-container' key={offer.title}>
                                     <span className='offer' key={offer.title}>
                                     <h3 className="offer-title">
                                         {offer.title}

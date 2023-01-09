@@ -11,10 +11,12 @@ const Container = () => {
                 ProducData.map((product)=>{
                     return (
                         <Card 
+                            id={product.id}
                             image = {product.image}
                             title = {product.title}
                             ingredients = {product.ingredients}
                             price = {product.price}
+                            key = {product.title}
                         />
                     )
                 })
