@@ -1,0 +1,30 @@
+input:focus,
+textarea:focus {
+    outline: 1px solid #f5b721;
+}
+
+.section-register{
+    background-color: #212121;
+    height: 40vh;
+    width: 100%;
+    margin: auto;
+    text-align: center;
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+    position: relative;
+    align-items: center;
+}
+
+.titulo-register{
+    margin: 30px;
+    font-size: 32px;
+}
+
+.form-register-input{
+    margin: 20px;
+}
+
+.titulo-input{
+    margin: 100px;
+}

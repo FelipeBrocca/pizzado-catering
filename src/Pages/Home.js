@@ -6,10 +6,10 @@ import FooterLazy from '../Components/Footer/LazyFooter'
 import Header from '../Components/Header/Header'
 import Offers from '../Components/Offers/Offers'
 import Slider from '../Components/Slider/Slider'
-
+import EventsForm from '../Components/EventsForm/EventsForm'
+import EventsType from '../Components/EventsType/EventsType'
 
 const Home = () => {
-
   return (
     <>
       <Header />
@@ -18,6 +18,8 @@ const Home = () => {
           <Offers />
           <LazyEventsAsk />
           <Container />
+          <EventsForm />
+          <EventsType />
       <FooterLazy />
     </>
   )
