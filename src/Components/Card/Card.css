@@ -18,10 +18,12 @@
         border: #212121 0.2rem solid;
         transition: all 0.4s ease-in;
         box-shadow: 0.4rem 0.4rem 0.6rem #00000040; 
+        display: flex;
+        flex-direction: column;
+        gap: 10px;
 }
 .container-products .card .product-title {
         margin: 5px;
-        text-align: center; 
 }
 .container-products .card .product-img {
         width: 100%;
@@ -29,17 +31,27 @@
         object-fit: cover;
         border-radius: 1rem; 
 }
+.product-description{
+    display: flex;
+    flex-direction: column;
+    gap: 10px;
+    height: 50%;
+}
 .container-products .card .product-ingredients {
-        font-size: 8px; 
+    font-size: 10px; 
+}
+.product-price{
+    font-size: 20px;
+    color: #f5b721;
 }
 .container-products .card:hover {
         transform: translateY(-0.5rem);
-        border: #ec1b1b 0.2em solid;
+        border: #ec1b1b62 0.2em solid;
         border-radius: 2.5rem 0 2.5rem 0; 
 }
 .container-products .product {
         text-align: center;
-        justify-content: center;
+        justify-content: start;
         padding: 10px; 
 }
 .button-card {
@@ -56,10 +68,13 @@
     user-select: none;
     -webkit-user-select: none;
     touch-action: manipulation; 
+    border-radius: 10px;
 }
 .button-card > a{
-    color: black;
+    color: rgb(62, 62, 62);
     text-decoration: none;
+    font-size: 16px;
+    font-weight: 700;
 }
 .button-card span:first-child {
     position: relative;
