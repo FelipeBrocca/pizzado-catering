@@ -28,6 +28,7 @@ const Card = ({id, image, title, ingredients, price}) => {
       id = {id}
       title = {title}
       price = {price}
+      image = {image}
       valor = {valor}
       />
     </div>

@@ -116,12 +116,12 @@
     text-transform: uppercase;
     transition: all .3s ease;
 }
-.hover-btn {
+/* .hover-btn {
     position: absolute;
     inset: 0;
     background-color: #f5b721;
     transform: translate(0%,100%);
-}
+} */
 .default-btn span {
     color: hsl(0, 0%, 100%);
 }
@@ -130,10 +130,22 @@
     color: black;
 }
 
-.button-carrito:hover .default-btn {
+/* .button-carrito:hover .default-btn {
     transform: translate(0%,-100%);
-}
+} */
 
-.button-carrito:hover .hover-btn {
+/* .button-carrito:hover .hover-btn {
     transform: translate(0%,0%);
+} */
+.button-carrito:hover .default-btn {
+    background-color: #8e1212;
+}
+.cart-length{
+    border: 2px solid white;
+    border-radius: 50%;
+    width: 25px;
+    height: 25px;
+    display: flex;
+    justify-content: center;
+    align-items: center;
 }

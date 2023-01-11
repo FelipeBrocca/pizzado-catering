@@ -1,21 +1,37 @@
-import React from 'react'
+import React, {useState, useContext, useEffect} from 'react'
 import { Link } from 'react-router-dom'
 import Logo from '../../public/images/logo-pizzado-white.jpeg'
 import './Header.css'
 import usePopUp from '../../Hooks/usePopUp';
+import { CartContext } from '../../Context/CartContext';
+import Cart from '../Cart/Cart';
+import useCartPopUp from '../../Hooks/useCartPopUp';
 
 
 const Header = () => {
 
     const { popUpState, backdropPopUp, handlePopUp, isClosed } = usePopUp()
+    const { cartPopUpState, backdropCartPopUp, handleCartPopUp, isCartClosed } = useCartPopUp()
 
     const body = document.getElementById('body')
-    popUpState ? body.classList.add('body-fixed') : body.classList.remove('body-fixed')
+    cartPopUpState || popUpState ? body.classList.add('body-fixed') : body.classList.remove('body-fixed')
+
+    const [productsInCartLength, setProductsInCartLength] = useState(0)
+    const {cartItems} = useContext(CartContext)
+      
+    useEffect(() => {
+       setProductsInCartLength(
+        cartItems.reduce((previous, current) => previous + current.quantity, 0)
+       )
+    }, [cartItems])
 
   return (
     <>
     {
         popUpState ? backdropPopUp : ''
+    }
+    {
+        cartPopUpState ? backdropCartPopUp : ''
     }
     <header className="main-header">
         <div className="container-flex-header">
@@ -50,19 +66,29 @@ const Header = () => {
                 </nav>
             </div>
             <div className="main-header-container" id="carrito">
-                <button className="button-carrito">
+                <button 
+                className="button-carrito"
+                onClick={handleCartPopUp}
+                >
                     <div className="default-btn">
-                        <svg className="css-i6dzq1" strokeLinejoin="round" strokeLinecap="round" fill="none" strokeWidth="2" stroke="#FFF" height="20" width="20" viewBox="0 0 24 24"><path d="M1 12s4-8 11-8 11 8 11 8-4 8-11 8-11-8-11-8z"></path><circle r="3" cy="12" cx="12"></circle></svg>
-                        <span>Mi Carrito</span>
+                        <span className='cart-length'><span>{productsInCartLength}</span></span>
+                        <span>Ver Carrito</span>
                     </div>
-                    <div className="hover-btn">
+                    {/* <div className="hover-btn">
                         <svg className="css-i6dzq1" strokeLinejoin="round" strokeLinecap="round" fill="none" strokeWidth="2" stroke="#000" height="20" width="20" viewBox="0 0 24 24"><circle r="1" cy="21" cx="9"></circle><circle r="1" cy="21" cx="20"></circle><path d="M1 1h4l2.68 13.39a2 2 0 0 0 2 1.61h9.72a2 2 0 0 0 2-1.61L23 6H6"></path></svg>
                         <span>Shop Now</span>
-                    </div>
+                    </div> */}
                 </button> 
             </div>
         </div>
     </header>
+       <div className={`cart-display-container ${isCartClosed ? "closed" : ""}`}>
+       <Cart
+          cartPopUpState={cartPopUpState}
+          handleCartPopUp={handleCartPopUp}
+          cartItems={cartItems}
+          />
+        </div>
     </>
   )
 }

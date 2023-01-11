@@ -5,7 +5,7 @@ import { CartContext } from '../../Context/CartContext';
 
 
 
-const CartService = ({id, valor, title, price}) => {
+const CartService = ({id, valor, title, price, image}) => {
 
   const {addItemToCart} = useContext(CartContext)
 
@@ -13,6 +13,7 @@ const CartService = ({id, valor, title, price}) => {
     id: 0,
     title: '',
     price: 0,
+    image: image,
     quantity: 0
   }
 

@@ -1,0 +1,144 @@
+.button-toCart{
+    border: none;
+    background-color: transparent;
+}
+ .cart-display-container{
+    position: fixed;
+    z-index: 100;
+    top: 0;
+    right: 0;
+    width: 95%;
+    margin: 0px 2.5%;
+    background-color: #292929;
+    min-height: 150px;
+    translate: 0 0;
+    transition: 500ms;
+    display: flex;
+    flex-direction: column;
+    justify-content: flex-start;
+    gap: 10px;
+    border-radius: 00px 0px 10px 10px;
+    padding-top: 15px;
+}
+.cart-display-container.closed{
+    opacity: 0;
+    visibility: hidden;
+    translate: 0 -100%;
+}
+.cart-top{
+    display: flex;
+    position: relative;
+    padding: 5px 15px;
+}
+.close-cart{
+    position: absolute;
+    top: 10px;
+    right: 15px;
+    display: flex;
+    align-items: center;
+    cursor: pointer;
+    color: #F5B721;
+    font-size: 20px;
+}
+.cart-bottom{
+    width: 100%;
+    bottom: 0px;
+    display: flex;
+    justify-content: space-around;
+    align-items: center;
+    padding: 10px;
+    border-top: 1px dotted #F5B721;
+    border-radius: 0px 0px 10px 10px;
+}
+.cart-bottom > button{
+    border: none;
+    background-color: #BE1615;
+    border-radius: 5px;
+    color: white;
+    padding: 10px;
+}
+.cart-contain{
+    display: flex;
+    flex-direction: column;
+    gap: 20px;
+}
+.item-in-cart{
+    display: flex;
+    padding: 0px 15px;
+    justify-content: flex-start;
+    gap: 10px;
+    position: relative;
+    min-height: 50px;
+}
+.image-item-in-cart{
+    width: 60px;
+}
+.image-item-in-cart > img{
+    width: 100%;
+    border-radius: 10px;
+}
+.div2-cart{
+    display: flex;
+    flex-direction: column;
+    justify-content: space-around;
+}
+.div2-cart > p{
+   font-size: 16px;
+   font-weight: 600;
+   min-width: 100px;
+}
+.quantity-cart{
+    display: flex;
+    font-size: 24px;
+    gap: 10px;
+}
+.button-quantity-cart{
+    border: none;
+    background-color: transparent;
+    font-size: 24px;
+    cursor: pointer;
+    color: white;
+}
+.size-in-cart{
+    font-size: 10px;
+}
+.div3-cart{
+    position: absolute;
+    right: 15px;
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    justify-content: space-between;
+    gap: 5px;
+    height: 100%;
+}
+.delete-in-cart{
+    border: none;
+    background-color: transparent;
+    position: relative;
+    width: 15px;
+    height: 13px;
+    color: #BE1615;
+    font-size: 15px;
+    font-weight: 900;
+    margin-right: 35px;
+    cursor: pointer;
+}
+.trash-icon-cart{
+    color: #BE1615;
+    cursor: pointer;
+}
+.button-whatsapp{
+    cursor: pointer;
+}
+.cart-contain > p{
+    padding-left: 15px;
+    font-size: 16px;
+    margin: 15px 0px;
+}
+.cart-top > h2{
+    font-size: 24px;
+}
+.price-item-cart{
+    font-size: 18px;
+}
