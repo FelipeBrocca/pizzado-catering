@@ -13,10 +13,10 @@ const Container = () => {
                         <Card 
                             id={product.id}
                             image = {product.image}
-                            title = {product.title}
+                            name = {product.name}
                             ingredients = {product.ingredients}
                             price = {product.price}
-                            key = {product.title}
+                            key = {product.name}
                         />
                     )
                 })
