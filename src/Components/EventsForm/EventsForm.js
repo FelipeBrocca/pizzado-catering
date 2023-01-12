@@ -1,6 +1,7 @@
 import React from 'react'
 import { Link } from 'react-router-dom'
 import './EventsForm.css'
+import Menu from '../Dropdown/Dropdown'
 
 const EventsForm = () => {
     return (
@@ -27,8 +28,6 @@ const EventsForm = () => {
                 </div>
 
                 {/* AGREGAR DIRECCION DEL EVENTO CON UN MAPA */}
-                {/* AGREGAR OPCIONES DE MENU A ELEGIR */}
-                
                 <p>
                     <button className="button-card">
                         <Link to="#" data-id="1">
@@ -38,6 +37,7 @@ const EventsForm = () => {
                     </button>
                 </p>
             </form>
+            <Menu/>
         </section>
     )
 }

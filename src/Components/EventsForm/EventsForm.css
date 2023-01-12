@@ -5,7 +5,7 @@ textarea:focus {
 
 .section-register{
     background-color: #212121;
-    height: 40vh;
+    min-height: 40vh;
     width: 100%;
     margin: auto;
     text-align: center;
