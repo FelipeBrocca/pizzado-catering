@@ -4,7 +4,7 @@ import CartService from './CartService'
 
 
 
-const Card = ({id, image, title, ingredients, price}) => {
+const Card = ({id, image, name, ingredients, price}) => {
 
   const [valor, setValor] = useState(1)
 
@@ -14,7 +14,7 @@ const Card = ({id, image, title, ingredients, price}) => {
       <div className="product card">
           <img src={image} alt="" className="product-img" />
           <div className="product-description">
-              <h3 className="product-title">{title}</h3>
+              <h3 className="product-title">{name}</h3>
               <p className="product-ingredients">Ingredientes: {ingredients}</p>
               <span className="product-price">${price}</span>
               <div className='quantity-container'>
@@ -26,7 +26,7 @@ const Card = ({id, image, title, ingredients, price}) => {
       </div>
       <CartService 
       id = {id}
-      title = {title}
+      name = {name}
       price = {price}
       image = {image}
       valor = {valor}
