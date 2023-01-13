@@ -13,7 +13,7 @@ const CartService = ({id, valor, name, price, image}) => {
     id: 0,
     title: '',
     price: 0,
-    image: image,
+    image: '',
     quantity: 0
   }
 
@@ -22,6 +22,7 @@ const CartService = ({id, valor, name, price, image}) => {
     productToCart.title = name
     productToCart.price = price
     productToCart.quantity = valor
+    productToCart.image = image
 
     addItemToCart(productToCart, productToCart.quantity)
   })

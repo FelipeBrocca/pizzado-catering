@@ -36,11 +36,21 @@ const Cart = ({cartPopUpState, handleCartPopUp, cartItems}) => {
         cartItems.map((item) => {
             return(
                 <div className='item-in-cart' key={item.title + item.size}>
-                    <div className='image-item-in-cart'>
+                    <div className={item.image ? 'image-item-in-cart' : 'no-image-in-item'}>
                         <img src={item.image} alt={`${item.image}`} />
                     </div>
                     <div className='div2-cart'>
-                    <p>{item.title}</p>
+                    {
+                    item.offer ? <p>PROMO {item.title}<br></br><small>(
+                      {
+                      item.offer.map((offer) => {
+                        return(
+                          <small>{offer.quantity + ' ' + offer.name}, </small>
+                        )
+                      })
+                      }
+                    )</small></p> : <p>{item.title}</p>
+                    }
                     <div className='quantity-cart'>
                     <button
                      className='button-quantity-cart'

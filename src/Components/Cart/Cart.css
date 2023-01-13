@@ -142,3 +142,6 @@
 .price-item-cart{
     font-size: 18px;
 }
+.no-image-in-item{
+    display: none;
+}

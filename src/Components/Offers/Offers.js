@@ -3,9 +3,33 @@ import { Carousel } from 'react-responsive-carousel';
 import "react-responsive-carousel/lib/styles/carousel.min.css";
 import { offersData } from './OffersData'
 import './Offers.css'
+import OffersCartService from './OffersCartService';
+// import { CartContext } from '../../Context/CartContext';
+
 
 
 const Offers = () => {
+
+    //  const {addItemToCart} = useContext(CartContext)
+
+    //  const offerToCart = {
+    //     id: 0,
+    //     title: '',
+    //     price: 0,
+    //     image: '',
+    //     quantity: 0
+    //   }
+    
+    //   const setProductToCart = (() => {
+    //     productToCart.id = id
+    //     productToCart.title = name
+    //     productToCart.price = price
+    //     productToCart.quantity = valor
+    //     productToCart.image = image
+    
+    //     addItemToCart(productToCart, productToCart.quantity)
+    //   })
+
     return (
         <>
         <div className='offers-container'>
@@ -13,7 +37,6 @@ const Offers = () => {
                 <h2>PROMOS MUNDIALISTAS</h2>
                 <h3 className='offer-choose'>ELEGÍ TU FORMACIÓN PARA VER A LA SELECCIÓN</h3>
                 <h3 className='offer-discount'>10% OFF SÓLO EFECTIVO Y TAKEAWAY</h3>
-            {/* <div className='carousel-offer'> */}
                 <Carousel
                 autoPlay={true}
                 interval={5000}
@@ -25,8 +48,8 @@ const Offers = () => {
                     {
                         offersData?.map((offer) => {
                             return(
-                                <div className='text-offer-container' key={offer.title}>
-                                    <span className='offer' key={offer.title}>
+                                <div className='text-offer-container' key={offer.id + offer.title}>
+                                    <span className='offer'>
                                     <h3 className="offer-title">
                                         {offer.title}
                                     </h3>
@@ -34,13 +57,18 @@ const Offers = () => {
                                         {offer.subtitle}
                                     </p>                    
                                     <p className='offer-price'>${offer.price}</p>
-                                    <button>Agregar al carrito</button>
+                                    <OffersCartService
+                                    id={offer.id}
+                                    name={offer.title}
+                                    price={offer.price}
+                                    value={1}
+                                    offer={offer.offer}
+                                    />
                                     </span>
                                 </div>            
                         )})
                     }
                     </Carousel>
-                {/* </div> */}
             </div>
         </div>
     </>
