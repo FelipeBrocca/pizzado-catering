@@ -53,7 +53,7 @@ const Menu =
                 <div className="menu-sub" id="submenu">
                     <>
                     <MenuButton isCloseButton menuItem={{
-                    ...menuItem
+                    ...menuItem,
                     }}
                     onClick={() => toggleMenuOpen(menuItem)}
                 />

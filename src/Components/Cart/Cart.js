@@ -58,7 +58,7 @@ const Cart = ({cartPopUpState, handleCartPopUp, cartItems}) => {
                     >-</button>
                     <p>{item.quantity}</p>
                     <button
-                     className='button-quantity-cart'
+                    className='button-quantity-cart'
                     onClick={() => addItemToCart(item, 1)}
                     >+</button>
                     </div>
@@ -67,7 +67,7 @@ const Cart = ({cartPopUpState, handleCartPopUp, cartItems}) => {
                     <button
                     className='delete-in-cart'
                     onClick={() => deleteItemInCart(item)}
-                    > Quitar
+                    > Vaciar
                     </button>
                     <p className='price-item-cart'>${item.price * item.quantity}</p>
                     </div>
@@ -81,8 +81,8 @@ const Cart = ({cartPopUpState, handleCartPopUp, cartItems}) => {
         <ReactWhatsapp 
         className='button-whatsapp'
         number='++54 9 11 4078-1149'
-        message={`Hola! Quiero iniciar la compra de: \n\n${messageFriendlyString} \n\n Total: $${total}`}
-        ><p>Iniciar compra</p>
+        message={`Hola! Quiero pedirles: \n\n${messageFriendlyString} \n\n Total: $${total}`}
+        ><p>Comprar</p>
           </ReactWhatsapp>
     </div>
     </>

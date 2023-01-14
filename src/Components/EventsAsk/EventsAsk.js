@@ -9,7 +9,7 @@ const EventsAsk = () => {
                 Cotizá tu Evento
             </h2>
             <p className="section-events-txt">
-                Querés conocer mas acerca de nuestros eventos? <br/> Completá tus datos en Whatsapp y enterate
+                Querés conocer mas acerca de nuestros eventos? <br/> Completá tus datos y enterate
             </p>
             <a href="https://wa.me/5491135781101?text=Hola!%20Soy%20%20%20%20%20%20y%20me%20interesaría%20cotizar%20un%20evento%20para%20%20%20%20personas%20el%20dia%20%20%20%20.Muchas%20Gracias!%20Espero%20tu%20respuesta%20" 
             target="_blank" rel="noreferrer">
@@ -26,7 +26,7 @@ const EventsAsk = () => {
             </a>    
         </div>
     </section>
-  )
+    )
 }
 
 export default EventsAsk
