@@ -11,7 +11,8 @@
   flex-direction: column;
   justify-content: space-between;
   color: #fff;
-  background: url("https://res.cloudinary.com/du2iouufy/image/upload/v1673907157/Pizzado/img-principales/old-black-background-grunge-texture-dark-wallpaper-blackboard-chalkboard-room-wall_emqq4u.jpg") no-repeat center center fixed;
+  background: url("https://res.cloudinary.com/du2iouufy/image/upload/v1673911770/Pizzado/img-principales/Imagen_de_WhatsApp_2023-01-16_a_las_20.12.01_aba9y0.jpg") center center no-repeat fixed;
+  background-size: cover;
 }
 body{
   overflow-x: hidden;

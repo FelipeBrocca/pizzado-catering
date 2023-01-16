@@ -18,7 +18,7 @@ const FoodOpt = () => {
             <div className="options-item">
                 <Link
                     onClick={handleClickScrollMenu}>
-                    <img src='https://res.cloudinary.com/du2iouufy/image/upload/v1673907263/Pizzado/img-principales/Napolitana_rxlcdx.jpg' alt="" className="options-img" />
+                    <img src='https://res.cloudinary.com/du2iouufy/image/upload/v1673912076/Pizzado/img-principales/Imagen_de_WhatsApp_2023-01-16_a_las_20.33.54_fiazhh.jpg' alt="" className="options-img" />
                     <p className="options-circle">Pizzas Congeladas</p>
                 </Link>
             </div>
@@ -26,7 +26,7 @@ const FoodOpt = () => {
                 <Link
                     to={'/eventos'}
                     onClick={scrollToTop}>
-                    <img src='https://res.cloudinary.com/du2iouufy/image/upload/v1673907272/Pizzado/img-principales/entradas_yuso01.jpg' alt="" className="options-img" />
+                    <img src='https://res.cloudinary.com/du2iouufy/image/upload/v1673912056/Pizzado/img-principales/Imagen_de_WhatsApp_2023-01-16_a_las_20.33.50_cf90h4.jpg' alt="" className="options-img" />
                     <p className="options-circle">Eventos</p>
                 </Link>
             </div>
