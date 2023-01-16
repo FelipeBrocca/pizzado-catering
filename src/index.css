@@ -11,7 +11,7 @@
   flex-direction: column;
   justify-content: space-between;
   color: #fff;
-  background: url("./public/images/old-black-background-grunge-texture-dark-wallpaper-blackboard-chalkboard-room-wall.jpg") no-repeat center center fixed;
+  background: url("https://res.cloudinary.com/du2iouufy/image/upload/v1673907157/Pizzado/img-principales/old-black-background-grunge-texture-dark-wallpaper-blackboard-chalkboard-room-wall_emqq4u.jpg") no-repeat center center fixed;
 }
 body{
   overflow-x: hidden;

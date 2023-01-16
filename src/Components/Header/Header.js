@@ -1,6 +1,5 @@
 import React, {useState, useContext, useEffect} from 'react'
 import { Link } from 'react-router-dom'
-import Logo from '../../public/images/logo-pizzado-white.jpeg'
 import './Header.css'
 import usePopUp from '../../Hooks/usePopUp';
 import { CartContext } from '../../Context/CartContext';
@@ -45,7 +44,7 @@ const Header = () => {
         <div className="container-flex-header">
             <div className="main-header-container">
                 <Link to="/" className='link-logo'>
-                    <img src={Logo} className="img-logo" alt="img-logo" />
+                    <img src='https://res.cloudinary.com/du2iouufy/image/upload/v1673908043/Pizzado/img-principales/logo-pizzado-white_fcqf9t.png' className="img-logo" alt="img-logo" />
                 </Link>
                 <span 
                 className="icon-menu" 

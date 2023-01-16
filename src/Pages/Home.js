@@ -1,7 +1,7 @@
 import React from 'react'
 import Container from '../Components/Card/Container'
-import LazyEventsAsk from '../Components/EventsAsk/LazyEventsAsk'
-import FoodOptLazy from '../Components/FoodOpt/LazyFoodOpt'
+import EventsAsk from '../Components/EventsAsk/EventsAsk'
+import FoodOpt from '../Components/FoodOpt/FoodOpt'
 import FooterLazy from '../Components/Footer/LazyFooter'
 import Header from '../Components/Header/Header'
 import Offers from '../Components/Offers/Offers'
@@ -13,9 +13,9 @@ const Home = () => {
     <>
       <Header />
           <Slider />
-          <FoodOptLazy />
+          <FoodOpt />
           <Offers />
-          <LazyEventsAsk />
+          <EventsAsk />
           <Container />
       <FooterLazy />
     </>

@@ -37,7 +37,7 @@
 }
 
 .button-events:hover svg {
-    transform: translateX(3em) scale(1.1);
+    transform: translateX(3.5em) scale(1.1);
 }
 
 .button-events:hover span {

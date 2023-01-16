@@ -1,9 +1,6 @@
 import React from 'react'
-
+import { Link } from 'react-router-dom'
 import './Footer.css'
-
-import IGblanco from '../../public/images/instagramblco.png'
-import Wappblanco from '../../public/images/wappblco.png'
 
 const Footer = () => {
     return (
@@ -18,16 +15,16 @@ const Footer = () => {
         <div className="footer-section" id="redes">
             <h2 className="footer-title">Redes Sociales</h2>
             <div className='social-media-footer'>
-            <a 
-            href="https://wa.me/5491135781101" 
+            <Link 
+            to="https://wa.me/5491135781101" 
             target="_blank" 
             rel="noreferrer"
-            className="footer-link"><img src={Wappblanco} alt="wapp"/></a>
-            <a 
-            href="https://instagram.com/pizzadocatering" 
+            className="footer-link"><img src='https://res.cloudinary.com/du2iouufy/image/upload/v1673908049/Pizzado/img-principales/wappblco_bc9zdu.png' alt="wapp"/></Link>
+            <Link 
+            to="https://instagram.com/pizzadocatering" 
             target="_blank" 
             rel="noreferrer"
-            className="footer-link"><img src={IGblanco} alt="ig"/></a>
+            className="footer-link"><img src='https://res.cloudinary.com/du2iouufy/image/upload/v1673908039/Pizzado/img-principales/instagramblco_hfgf8n.png' alt="ig"/></Link>
             </div>
         </div>
         <p className="copy-footer">- 2022 Pizzado Catering - Todos los derechos reservados</p>

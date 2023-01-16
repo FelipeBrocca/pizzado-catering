@@ -1,8 +1,6 @@
 import React from 'react'
 import { Link } from 'react-router-dom'
 
-import napolitanaOpt from '../../public/images/Napolitana.jpg'
-import entradasOpt from '../../public/images/entradas.jpg'
 import './FoodOpt.css'
 
 const FoodOpt = () => {
@@ -16,11 +14,11 @@ const FoodOpt = () => {
     }
 
     return (
-        <>
+        <section className='container-options'>
             <div className="options-item">
                 <Link
                     onClick={handleClickScrollMenu}>
-                    <img src={napolitanaOpt} alt="" className="options-img" />
+                    <img src='https://res.cloudinary.com/du2iouufy/image/upload/v1673907263/Pizzado/img-principales/Napolitana_rxlcdx.jpg' alt="" className="options-img" />
                     <p className="options-circle">Pizzas Congeladas</p>
                 </Link>
             </div>
@@ -28,11 +26,11 @@ const FoodOpt = () => {
                 <Link
                     to={'/eventos'}
                     onClick={scrollToTop}>
-                    <img src={entradasOpt} alt="" className="options-img" />
+                    <img src='https://res.cloudinary.com/du2iouufy/image/upload/v1673907272/Pizzado/img-principales/entradas_yuso01.jpg' alt="" className="options-img" />
                     <p className="options-circle">Eventos</p>
                 </Link>
             </div>
-        </>
+        </section>
     )
 }
 
