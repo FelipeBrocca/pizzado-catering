@@ -1,25 +1,38 @@
 import React from 'react'
 import { Link } from 'react-router-dom'
 
+import napolitanaOpt from '../../public/images/Napolitana.jpg'
+import entradasOpt from '../../public/images/entradas.jpg'
 import './FoodOpt.css'
-import { FoodOptData } from './FoodOptData'
 
 const FoodOpt = () => {
-    return (
-    <>
-        {
-            FoodOptData.map(product => {
-                return (
-                <div className="options-item" key={product.link}>
-                    <Link to={product.link}>
-                        <img src={product.image} alt="" className="options-img" />
-                        <p className="options-circle">{product.title}</p>
-                    </Link>
-                </div>
-                )
-            })
+
+    const scrollToTop = () => window.scrollTo({ top: 0, behavior: 'smooth' })
+    const handleClickScrollMenu = () => {
+        const menu = document.getElementById('menu-section')
+        if(menu){
+            menu.scrollIntoView({behavior: 'smooth'})
         }
-    </>
+    }
+
+    return (
+        <>
+            <div className="options-item">
+                <Link
+                    onClick={handleClickScrollMenu}>
+                    <img src={napolitanaOpt} alt="" className="options-img" />
+                    <p className="options-circle">Pizzas Congeladas</p>
+                </Link>
+            </div>
+            <div className="options-item">
+                <Link
+                    to={'/eventos'}
+                    onClick={scrollToTop}>
+                    <img src={entradasOpt} alt="" className="options-img" />
+                    <p className="options-circle">Eventos</p>
+                </Link>
+            </div>
+        </>
     )
 }
 

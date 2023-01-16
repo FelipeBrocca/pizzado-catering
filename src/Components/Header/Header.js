@@ -13,12 +13,17 @@ const Header = () => {
     const { popUpState, backdropPopUp, handlePopUp, isClosed } = usePopUp()
     const { cartPopUpState, backdropCartPopUp, handleCartPopUp, isCartClosed } = useCartPopUp()
 
+
     const body = document.getElementById('body')
-    cartPopUpState || popUpState ? body.classList.add('body-fixed') : body.classList.remove('body-fixed')
+
+    useEffect(() => {
+        popUpState || cartPopUpState ? body.classList.add('body-fixed') : body.classList.remove('body-fixed')
+    }, [popUpState, cartPopUpState])
+
 
     const [productsInCartLength, setProductsInCartLength] = useState(0)
     const {cartItems} = useContext(CartContext)
-      
+
     useEffect(() => {
        setProductsInCartLength(
         cartItems.reduce((previous, current) => previous + current.quantity, 0)

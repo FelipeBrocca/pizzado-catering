@@ -7,8 +7,7 @@ export const sliderData = [
       image: ruculaYcherry,
       title: 'Las mejores pizzas en un solo lugar',
       subtitle: 'Metelas en el frizzer y olvidate',
-      button: 'Ver Menú',
-      link: 'nada'
+      button: 'Ver Menú'
     },
     {
       image: asadoParri,
