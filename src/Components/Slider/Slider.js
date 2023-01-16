@@ -7,6 +7,9 @@ import './Slider.css'
 
 
 const Slider = () => {
+
+   const scrollToTop = () => window.scrollTo({ top:0 , behavior:'smooth'})
+
     return (
         <div className='carousel-container'>
             <Carousel
@@ -31,9 +34,12 @@ const Slider = () => {
                                 <p className="slider-text">
                                     {slide.subtitle}
                                 </p>                    
-                                <button className="btn draw-border">
-                                    <Link to="#morfi">{slide.button}</Link>
-                                </button>
+                                <div className="btn draw-border">
+                                    <Link to={`/${slide.link}`}
+                                    className='link-slider'
+                                    onClick={scrollToTop}
+                                    >{slide.button}</Link>
+                                </div>
                             </div>
                         </div>
                     )})

@@ -123,16 +123,17 @@
     cursor: pointer;
     line-height: 1.5;
     font: 700 17px "Roboto Slab", sans-serif;
-    padding: 1em 2em;
     letter-spacing: 0.05rem;
     width: 100%;
 }
 
-.btn a{
+.link-slider{
+    display: block;
     text-decoration: none;
     color: white;
     height: 100%;
     width: 100%;
+    padding: 1em 2em;
 }
 .carousel.control-arrow{
     position: absolute;

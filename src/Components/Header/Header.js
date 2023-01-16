@@ -25,6 +25,9 @@ const Header = () => {
        )
     }, [cartItems])
 
+   const scrollToTop = () => window.scrollTo({ top:0 , behavior:'smooth'})
+
+
   return (
     <>
     {
@@ -51,16 +54,24 @@ const Header = () => {
                     <div><p onClick={handlePopUp}>X</p></div>
                     <ul className="menu">
                         <li className="menu-item">
-                            <Link to="/" className="menu-link">Inicio</Link>
+                            <Link to="/" className="menu-link"
+                            onClick={scrollToTop}
+                            >Inicio</Link>
                         </li>
                         <li className="menu-item">
-                            <Link to="#morfi" className="menu-link">Menú</Link>
+                            <Link to="#morfi" className="menu-link"
+                            onClick={scrollToTop}
+                            >Menú</Link>
                         </li>
                         <li className="menu-item">
-                            <Link to="#events" className="menu-link">Tu Evento</Link>
+                            <Link to="/eventos" className="menu-link"
+                            onClick={scrollToTop}
+                            >Cotizar evento</Link>
                         </li>
                         <li className="menu-item">
-                            <Link to="#redes" className="menu-link">Contacto</Link>
+                            <Link to="#redes" className="menu-link"
+                            onClick={scrollToTop}
+                            >Contacto</Link>
                         </li>
                     </ul>
                 </nav>
@@ -74,10 +85,6 @@ const Header = () => {
                         <span className='cart-length'><span>{productsInCartLength}</span></span>
                         <span>Ver Carrito</span>
                     </div>
-                    {/* <div className="hover-btn">
-                        <svg className="css-i6dzq1" strokeLinejoin="round" strokeLinecap="round" fill="none" strokeWidth="2" stroke="#000" height="20" width="20" viewBox="0 0 24 24"><circle r="1" cy="21" cx="9"></circle><circle r="1" cy="21" cx="20"></circle><path d="M1 1h4l2.68 13.39a2 2 0 0 0 2 1.61h9.72a2 2 0 0 0 2-1.61L23 6H6"></path></svg>
-                        <span>Shop Now</span>
-                    </div> */}
                 </button> 
             </div>
         </div>
