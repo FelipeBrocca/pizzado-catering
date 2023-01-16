@@ -4,29 +4,12 @@ import { Link } from 'react-router-dom'
 import './FoodOpt.css'
 
 const FoodOpt = () => {
-<<<<<<< HEAD
-const scrollToTop = () => window.scrollTo({ top:0 , behavior:'smooth'})
-    return (
-    <>
-        {
-            FoodOptData.map(product => {
-                return (
-                <div className="options-item" key={product.link}>
-                    <Link to={product.link} onClick={scrollToTop}>
-                        <img src={product.image} alt="" className="options-img" />
-                        <p className="options-circle">{product.title}</p>
-                    </Link>
-                </div>
-                )
-            })
-=======
 
     const scrollToTop = () => window.scrollTo({ top: 0, behavior: 'smooth' })
     const handleClickScrollMenu = () => {
         const menu = document.getElementById('menu-section')
         if(menu){
             menu.scrollIntoView({behavior: 'smooth'})
->>>>>>> ec19e089e699825e9fbe30ce11927f09a1e21050
         }
     }
 
