@@ -9,6 +9,12 @@ import './Slider.css'
 const Slider = () => {
 
    const scrollToTop = () => window.scrollTo({ top:0 , behavior:'smooth'})
+   const handleClickScrollMenu = () => {
+    const menu = document.getElementById('menu-section')
+    if(menu){
+        menu.scrollIntoView({behavior: 'smooth'})
+    }
+}
 
     return (
         <div className='carousel-container'>
@@ -35,9 +41,10 @@ const Slider = () => {
                                     {slide.subtitle}
                                 </p>                    
                                 <div className="btn draw-border">
-                                    <Link to={`/${slide.link}`}
+                                    <Link 
+                                    to={slide.button !== 'Ver Menú' ? `/${slide.link}` : ''}
                                     className='link-slider'
-                                    onClick={scrollToTop}
+                                    onClick={slide.button === 'Ver Menú' ? handleClickScrollMenu : scrollToTop}
                                     >{slide.button}</Link>
                                 </div>
                             </div>

@@ -6,8 +6,12 @@ const Container = () => {
 
     return (
         <>
+<<<<<<< HEAD
         <div className='container'>
             <h2 className="titulo-pizzas"> Pizzas Congeladas </h2>
+=======
+        <div className='container' id='menu-section'>
+>>>>>>> ec19e089e699825e9fbe30ce11927f09a1e21050
             {
                 ProducData.map((product)=>{
                     return (
