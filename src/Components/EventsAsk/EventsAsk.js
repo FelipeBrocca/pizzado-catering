@@ -4,7 +4,7 @@ import './EventsAsk.css'
 
 const EventsAsk = () => {
 
-   const scrollToTop = () => window.scrollTo({ top:0 , behavior:'smooth'})
+const scrollToTop = () => window.scrollTo({ top:0 , behavior:'smooth'})
 
     return (
         <section className="section-events" id="events">
@@ -25,7 +25,7 @@ const EventsAsk = () => {
                                 </svg>
                             </div>
                         </div>
-                        <span>¡Consultános!</span>
+                        <span>¡Consultanos!</span>
                     </button>
                 </Link>
             </div>

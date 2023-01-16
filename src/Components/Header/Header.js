@@ -18,17 +18,17 @@ const Header = () => {
 
     const [productsInCartLength, setProductsInCartLength] = useState(0)
     const {cartItems} = useContext(CartContext)
-      
+    
     useEffect(() => {
-       setProductsInCartLength(
+        setProductsInCartLength(
         cartItems.reduce((previous, current) => previous + current.quantity, 0)
-       )
+        )
     }, [cartItems])
 
-   const scrollToTop = () => window.scrollTo({ top:0 , behavior:'smooth'})
+const scrollToTop = () => window.scrollTo({ top:0 , behavior:'smooth'})
 
 
-  return (
+    return (
     <>
     {
         popUpState ? backdropPopUp : ''

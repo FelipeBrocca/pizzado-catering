@@ -7,6 +7,7 @@ const Container = () => {
     return (
         <>
         <div className='container'>
+            <h2 className="titulo-pizzas"> Pizzas Congeladas </h2>
             {
                 ProducData.map((product)=>{
                     return (
