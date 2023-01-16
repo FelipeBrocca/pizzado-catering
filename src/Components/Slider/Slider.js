@@ -7,18 +7,18 @@ import './Slider.css'
 
 
 const Slider = () => {
-  return (
-    <div className='carousel-container'>
-           <Carousel
-           autoPlay={true}
-           interval={5000}
-           infiniteLoop={true}
-           showThumbs={false}
-           stopOnHover={true}
-           showArrows={false}
-           dynamicHeight={true}
-            showStatus={false}
-           >
+    return (
+        <div className='carousel-container'>
+            <Carousel
+            autoPlay={true}
+            interval={5000}
+            infiniteLoop={true}
+            showThumbs={false}
+            stopOnHover={true}
+            showArrows={false}
+            dynamicHeight={true}
+                showStatus={false}
+            >
                 {
                     sliderData?.map((slide) => {
                         return(
@@ -38,9 +38,9 @@ const Slider = () => {
                         </div>
                     )})
                 }
-            </Carousel>
-</div>
-  )
+                </Carousel>
+        </div>
+    )
 }
 
 export default Slider
