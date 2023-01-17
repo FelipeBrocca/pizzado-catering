@@ -1,7 +1,6 @@
 import React from 'react'
 import { Link } from 'react-router-dom'
 import './EventsForm.css'
-import Menu from '../Dropdown/Dropdown'
 
 const EventsForm = () => {
     return (
@@ -32,7 +31,6 @@ const EventsForm = () => {
                     </Link>
                 </button>
             </form>
-            <Menu/>
         </section>
     )
 }

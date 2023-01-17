@@ -52,13 +52,13 @@
     width: 100%;
 }
 .main-nav > div{
-   font-size: 20px;
-   color: white;
-   top: 5px;
-   right: 5px;
-   height: 40px;
-   display: flex;
-   justify-content: flex-end;
+    font-size: 20px;
+    color: white;
+    top: 5px;
+    right: 5px;
+    height: 40px;
+    display: flex;
+    justify-content: flex-end;
 }
 .main-nav > div > p{ 
     cursor: pointer;
@@ -70,9 +70,9 @@
     color: #F5B721;
 }
 .menu > li{
-   height: 50px;
-   display: flex;
-   align-items: center;
+    height: 50px;
+    display: flex;
+    align-items: center;
 }
 .menu > li > a{
     color: black;
