@@ -1,18 +1,22 @@
-import {Route, Routes} from 'react-router-dom'
+import { Route, Routes } from 'react-router-dom'
 import Home from './Pages/Home'
 import Events from './Pages/Events';
 
-import {CartProvider} from './Context/CartContext'
+import { CartProvider } from './Context/CartContext'
+import Header from './Components/Header/Header';
+import FooterLazy from './Components/Footer/LazyFooter';
 
 
 
 function App() {
   return (
     <CartProvider>
-    <Routes>
-      <Route exact path='/' element={<Home />} />
-      <Route exact path='/eventos' element={<Events />} />
-    </Routes>
+      <Header />
+      <Routes>
+        <Route exact path='/' element={<Home />} />
+        <Route exact path='/eventos' element={<Events />} />
+      </Routes>
+      <FooterLazy />
     </CartProvider>
   );
 }
