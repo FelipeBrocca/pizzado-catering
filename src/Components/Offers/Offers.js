@@ -34,9 +34,9 @@ const Offers = () => {
         <>
         <div className='offers-container'>
             <div className="offers-content">
-                <h2>PROMOS MUNDIALISTAS</h2>
-                <h3 className='offer-choose'>ELEGÍ TU FORMACIÓN PARA VER A LA SELECCIÓN</h3>
-                <h3 className='offer-discount'>10% OFF SÓLO EFECTIVO Y TAKEAWAY</h3>
+                <h2>NUESTRAS PROMOS</h2>
+                <h3 className='offer-choose'>ELEGÍ LA QUE MAS TE GUSTE!</h3>
+                <h3 className='offer-discount'>10% OFF EN EFECTIVO Y TAKEAWAY</h3>
                 <Carousel
                 autoPlay={true}
                 interval={5000}

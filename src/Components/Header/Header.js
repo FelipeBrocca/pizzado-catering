@@ -92,15 +92,15 @@ const scrollToTop = () => window.scrollTo({ top:0 , behavior:'smooth'})
             </div>
         </div>
     </header>
-       <div className={`cart-display-container ${isCartClosed ? "closed" : ""}`}>
-       <Cart
-          cartPopUpState={cartPopUpState}
-          handleCartPopUp={handleCartPopUp}
-          cartItems={cartItems}
-          />
-        </div>
+    <div className={`cart-display-container ${isCartClosed ? "closed" : ""}`}>
+    <Cart
+        cartPopUpState={cartPopUpState}
+        handleCartPopUp={handleCartPopUp}
+        cartItems={cartItems}
+        />
+    </div>
     </>
-  )
+    )
 }
 
 export default Header
