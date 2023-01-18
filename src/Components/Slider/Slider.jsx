@@ -30,6 +30,10 @@ const Slider = () => {
             >
                 {
                     sliderData?.map((slide) => {
+                        if(!slide.image){
+                            return(<div>hola</div>)
+                        }
+                        else{ 
                         return(
                         <div key={slide.title} className="slide-foodopt-container">
                         <img src={slide.image} alt="imgSlide" className='image-slider' />
@@ -49,7 +53,7 @@ const Slider = () => {
                                 </div>
                             </div>
                         </div>
-                    )})
+                    )}})
                 }
                 </Carousel>
         </div>
