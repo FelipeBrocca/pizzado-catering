@@ -8,8 +8,8 @@
     justify-content: space-around;
 }
 .options-item{
-    width: 170px;
-    height: 170px;
+    width: 150px;
+    height: 150px;
     border-radius: 50%;
     position: relative;
     overflow: hidden;
@@ -31,7 +31,7 @@
     position: absolute;
     color: white;
     padding: 20px 50px 70px 20px;
-    font-size: 1.1em;
+    font-size: 16px;
     font-weight: bold;
     animation: lazy-op 1.5s ease;
     animation-fill-mode: forwards;
@@ -53,7 +53,7 @@
         right: -150px;
     }
     100%{
-        transform: scale(1.2);
+        transform: scale(0.9);
         bottom: -80px;
         right: -40px;
         opacity: 1;

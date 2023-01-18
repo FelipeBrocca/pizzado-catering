@@ -1,7 +1,11 @@
-import React from 'react'
-import './Card.css'
+import React, { Suspense } from 'react'
+import useNearScreen from '../../Hooks/useNearScreen'
+
 import Card from './Card'
+import './Card.css'
+
 import { ProducData } from './ProductData'
+
 const Container = () => {
 
     return (
@@ -28,4 +32,17 @@ const Container = () => {
     )
 }
 
-export default Container
+
+export default function ContainerLazy (){
+    const {isNearScreen, fromRef} = useNearScreen()
+
+    return <section className="container-options" ref={fromRef}>
+               <Suspense fallback={<div>Cargando...</div>}>
+                  {
+                      isNearScreen 
+                      ? <Container /> 
+                      : <div>Cargando...</div>
+                  }
+               </Suspense>
+           </section>
+}

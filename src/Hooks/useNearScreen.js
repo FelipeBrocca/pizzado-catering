@@ -23,7 +23,7 @@ export default function useNearScreen(){
         ).then(() => {
             
             observer = new IntersectionObserver(onChange, {
-                rootMargin: '20px'
+                rootMargin: '50px'
             })
     
             observer.observe(fromRef.current)

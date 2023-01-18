@@ -1,21 +1,19 @@
-import React, { lazy, Suspense } from 'react'
-
-const Container = lazy(() => import('../Components/Card/Container'))
-const EventsAsk = lazy(() => import('../Components/EventsAsk/EventsAsk'))
-const FoodOpt = lazy(() => import('../Components/FoodOpt/FoodOpt'))
-const Offers = lazy(() => import('../Components/Offers/Offers'))
-const Slider = lazy(() => import('../Components/Slider/Slider'))
-
+import React from 'react'
+import Slider from '../Components/Slider/Slider'
+import FoodOpt from '../Components/FoodOpt/FoodOpt'
+import Offers from '../Components/Offers/Offers'
+import EventsAsk from '../Components/EventsAsk/EventsAsk'
+import Container from '../Components/Card/Container'
 
 const Home = () => {
   return (
-    <Suspense fallback= {<div />}>
+    <>
       <Slider />
       <FoodOpt />
       <Offers />
       <EventsAsk />
       <Container />
-    </Suspense>
+    </>
   )
 
 }

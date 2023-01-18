@@ -15,7 +15,7 @@ const Card = ({id, image, name, ingredients, price}) => {
           <img src={image} alt="" className="product-img" />
           <div className="product-description">
               <h3 className="product-title">{name}</h3>
-              <p className="product-ingredients">Ingredientes: {ingredients}</p>
+              <p className="product-ingredients">({ingredients})</p>
               <span className="product-price">${price}</span>
               <div className='quantity-container'>
                   <button className="button-quantity" onClick={()=> valor > 1 ? setValor(valor - 1) : valor}>-</button>

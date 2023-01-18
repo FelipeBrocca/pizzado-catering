@@ -1,5 +1,5 @@
 import React from "react";
-import Loader from '../../public/images/Various-pizza-slices-transparent-PNG.webp';
+import Loader from '../../public/images/descarga.webp';
 import './PreLoader.css'
 
 const PreLoader = () => {
