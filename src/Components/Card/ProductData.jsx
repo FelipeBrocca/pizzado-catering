@@ -36,14 +36,14 @@ export const ProducData = [
     },
     {
         id: 6,
-        image: 'https://res.cloudinary.com/du2iouufy/image/upload/v1673912264/Pizzado/img-productos/Imagen_de_WhatsApp_2023-01-16_a_las_20.37.09_a4wrk2.jpg',
+        image: 'https://res.cloudinary.com/du2iouufy/image/upload/v1673996355/Pizzado/img-productos/ao7if-u6019_oi6vt5.avif',
         name: 'Chicken BBQ',
         ingredients: 'Muzzarella, Pollo desmenuzado y salsa barbacoa',
         price: 600
     }, 
     {
         id: 7,
-        image: 'https://res.cloudinary.com/du2iouufy/image/upload/v1673912264/Pizzado/img-productos/Imagen_de_WhatsApp_2023-01-16_a_las_20.37.09_a4wrk2.jpg',
+        image: 'https://res.cloudinary.com/du2iouufy/image/upload/v1673996355/Pizzado/img-productos/ao7if-u6019_oi6vt5.avif',
         name: 'Roquefort',
         ingredients: 'Muzzarella con un salpicon de roque, y salsa de tomate',
         price: 600
