@@ -43,7 +43,7 @@ const scrollToTop = () => window.scrollTo({ top:0 , behavior:'smooth'})
         <div className="container-flex-header">
             <div className="main-header-container">
                 <Link to="/" className='link-logo'>
-                    <img src='https://res.cloudinary.com/du2iouufy/image/upload/v1673993281/Pizzado/img-principales/as_is_idin2y.webp' className="img-logo" alt="img-logo" />
+                    <img src='https://res.cloudinary.com/dvvqhykic/image/upload/v1674074581/img-principales/logo_xrdjdl.webp' className="img-logo" alt="logo" />
                 </Link>
                 <span 
                 className="icon-menu" 
