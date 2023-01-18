@@ -1,5 +1,5 @@
 import React from "react";
-import Loader from '../../public/images/ezgif.com-gif-maker.avif';
+import Loader from '../../public/images/Various-pizza-slices-transparent-PNG.webp';
 import './PreLoader.css'
 
 const PreLoader = () => {
