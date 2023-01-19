@@ -5,6 +5,7 @@ import usePopUp from '../../Hooks/usePopUp';
 import { CartContext } from '../../Context/CartContext';
 import Cart from '../Cart/Cart';
 import useCartPopUp from '../../Hooks/useCartPopUp';
+import logo from '../../public/images/logo.webp'
 
 
 const Header = () => {
@@ -16,8 +17,11 @@ const Header = () => {
     const body = document.getElementById('body')
 
     useEffect(() => {
-        popUpState || cartPopUpState ? body.classList.add('body-fixed') : body.classList.remove('body-fixed')
-    }, [popUpState, cartPopUpState])
+        popUpState ? body.classList.add('body-fixed') : body.classList.remove('body-fixed')
+    }, [popUpState, body.classList])
+    useEffect(() => {
+        cartPopUpState ? body.classList.add('body-cart-fixed') : body.classList.remove('body-cart-fixed')
+    }, [cartPopUpState, body.classList])
 
 
     const [productsInCartLength, setProductsInCartLength] = useState(0)
@@ -43,7 +47,8 @@ const scrollToTop = () => window.scrollTo({ top:0 , behavior:'smooth'})
         <div className="container-flex-header">
             <div className="main-header-container">
                 <Link to="/" className='link-logo'>
-                    <img src='https://res.cloudinary.com/dvvqhykic/image/upload/v1674074581/img-principales/logo_xrdjdl.webp' className="img-logo" alt="logo" />
+                    {/* <img src='https://res.cloudinary.com/dvvqhykic/image/upload/v1674074581/img-principales/logo_xrdjdl.webp' className="img-logo" alt="logo" /> */}
+                    <img src={logo} className="img-logo" alt="logo" />
                 </Link>
                 <span 
                 className="icon-menu" 

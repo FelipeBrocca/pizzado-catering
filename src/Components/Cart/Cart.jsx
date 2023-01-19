@@ -9,8 +9,9 @@ const Cart = ({ cartPopUpState, handleCartPopUp, cartItems }) => {
 
   const total = cartItems.reduce((previous, current) => previous + current.quantity * current.price, 0)
   const [itemsForMessage, setItemsForMessage] = useState([])
+
   const body = document.getElementById('body')
-  cartPopUpState ? body.classList.add('body-fixed') : body.classList.remove('body-fixed')
+  cartPopUpState ? body.classList.add('body-cart-fixed') : body.classList.remove('body-cart-fixed')
 
   const { addItemToCart, subtractItemInCart, deleteItemInCart } = useContext(CartContext)
 
@@ -30,12 +31,12 @@ const Cart = ({ cartPopUpState, handleCartPopUp, cartItems }) => {
           onClick={handleCartPopUp}
         >X</div>
       </div>
-      <div className='cart-contain'>
+      <ul className='cart-contain'>
         {
           !cartItems[0] ? <p>No hay productos en el carrito</p> :
             cartItems.map((item) => {
               return (
-                <div className='item-in-cart' key={item.title + item.size}>
+                <li className='item-in-cart' key={item.title + item.size}>
                   <div className={item.image ? 'image-item-in-cart' : 'no-image-in-item'}>
                     <img src={item.image} alt={`${item.image}`} />
                   </div>
@@ -64,11 +65,6 @@ const Cart = ({ cartPopUpState, handleCartPopUp, cartItems }) => {
                     </div>
                   </div>
                   <div className='div3-cart'>
-                    {/* <button
-                    className='delete-in-cart'
-                    onClick={() => deleteItemInCart(item)}
-                    > Vaciar
-                    </button> */}
                     <svg xmlns="http://www.w3.org/2000/svg" fill="none" viewBox="0 0 24 24" strokeWidth="1.5" stroke="currentColor" className='delete-in-cart'
                     onClick={() => deleteItemInCart(item)}
                     >
@@ -76,11 +72,11 @@ const Cart = ({ cartPopUpState, handleCartPopUp, cartItems }) => {
                     </svg>
                     <p className='price-item-cart'>${item.price * item.quantity}</p>
                   </div>
-                </div>
+                </li>
               )
             })
         }
-      </div>
+      </ul>
       <div className='cart-bottom'>
         <h3>Total: ${total}</h3>
         <ReactWhatsapp

@@ -1,49 +1,57 @@
+import cebollaCaram from '../../public/images/cebollacaram.webp'
+import muzza from '../../public/images/muzza.webp'
+import provo from '../../public/images/provo.webp'
+import cuatroQuesos from '../../public/images/4quesos.webp'
+import morron from '../../public/images/morroncaram.webp'
+import chickenBBQ from '../../public/images/polloybarb.webp'
+import roque from '../../public/images/roque.webp'
+
 export const ProducData = [
     {
         id: 1,
-        image: 'https://res.cloudinary.com/dvvqhykic/image/upload/v1674073719/Cebolla%20Caramelizada/cebollacaram_eab33u.webp' ,
+        image: cebollaCaram ,
         name: 'Cebolla Caramelizada',
         ingredients: 'Muzzarella, finas rodajas de cebolla caramelizada y salsa de tomate',
         price: 600
     },
     {
         id: 2,
-        image: 'https://res.cloudinary.com/dvvqhykic/image/upload/v1674074086/Provolone%20%28usar%20tambi%C3%A9n%20para%20muzza%29/muzza_rotlzx.webp',
+        image: muzza,
         name: 'Muzzarella',
         ingredients: 'Muzzarella, salpicón de orégano y salsa de tomate',
         price: 600
     },
     {
         id: 3,
-        image: 'https://res.cloudinary.com/dvvqhykic/image/upload/v1674074090/Provolone%20%28usar%20tambi%C3%A9n%20para%20muzza%29/provo_lmwsnh.webp' ,
+        image: provo,
         name: 'Provolone',
         ingredients: 'Muzzarella, Provolone en trozos y salsa de tomate',
         price: 600
     },
     {
         id: 4,
-        image: 'https://res.cloudinary.com/dvvqhykic/image/upload/v1674073137/4%20quesos/4%20quesos%20en%20la%20web.webp' ,
+        image: cuatroQuesos,
         name: '4 Quesos',
         ingredients: 'Muzzarella, cubitos de provolone, Roquefort, Parmesano rallado y salsa de tomate ',
         price: 600
     },
     {
         id: 5,
-        image: 'https://res.cloudinary.com/dvvqhykic/image/upload/v1674074107/Morr%C3%B3n%20caramelizado/morroncaram_ia8ksb.webp',
+        image: morron,
         name: 'Morron',
         ingredients: 'Muzzarella, cubos de morron caramelizado y salsa de tomate',
         price: 600
     },
     {
         id: 6,
-        image: 'https://res.cloudinary.com/dvvqhykic/image/upload/v1674074118/Pollo%20y%20barbacoa/polloybarb_qitgl1.webp',
+        image: chickenBBQ,
         name: 'Chicken BBQ',
         ingredients: 'Muzzarella, Pollo desmenuzado y salsa barbacoa',
         price: 600
     }, 
     {
         id: 7,
-        image: 'https://res.cloudinary.com/dvvqhykic/image/upload/v1674074077/Roque/roque_myu86z.webp',
+        image: roque,
         name: 'Roquefort',
         ingredients: 'Muzzarella con un salpicon de roque, y salsa de tomate',
         price: 600

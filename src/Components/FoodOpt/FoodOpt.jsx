@@ -2,6 +2,8 @@ import React from 'react'
 import { Link } from 'react-router-dom'
 
 import './FoodOpt.css'
+import pizzasOpt from '../../public/images/pizzas.webp'
+import eventsOpt from '../../public/images/eventos.webp'
 
 const FoodOpt = () => {
 
@@ -18,7 +20,7 @@ const FoodOpt = () => {
             <div className="options-item">
                 <Link
                     onClick={handleClickScrollMenu}>
-                    <img src='https://res.cloudinary.com/dvvqhykic/image/upload/v1674074598/img-principales/pizzas_tap8tg.webp' alt="" className="options-img" />
+                    <img src={pizzasOpt} alt="pizzas-opt" className="options-img" />
                     <p className="options-circle">Pizzas Congeladas</p>
                 </Link>
             </div>
@@ -26,7 +28,7 @@ const FoodOpt = () => {
                 <Link
                     to={'/eventos'}
                     onClick={scrollToTop}>
-                    <img src='https://res.cloudinary.com/dvvqhykic/image/upload/v1674074596/img-principales/eventos_bt8mip.webp' alt="" className="options-img" />
+                    <img src={eventsOpt} alt="eventos-opt" className="options-img" />
                     <p className="options-circle">Eventos</p>
                 </Link>
             </div>
