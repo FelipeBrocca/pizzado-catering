@@ -1,7 +1,7 @@
 import React from "react";
 import { useContext } from "react";
 import { LoadingContext } from "../../Context/LoadingContext";
-import Loader from '../../public/images/pizza.svg';
+import Loader from '../../public/images/preloader.svg';
 import './PreLoader.css'
 
 const PreLoader = () => {
