@@ -1,21 +1,12 @@
-import React, {useContext} from 'react'
+import React from 'react'
 import { Carousel } from 'react-responsive-carousel';
 import "react-responsive-carousel/lib/styles/carousel.min.css";
 import { sliderData } from './SliderData'
 import { Link } from 'react-router-dom'
 import './Slider.css'
-import { LoadingContext } from '../../Context/LoadingContext';
 
 
 const Slider = () => {
-
-    
-    const {setLoading} = useContext(LoadingContext)
-    const handleLoading = () => {
-        setTimeout(() => {
-            setLoading(false)
-        }, 1000)
-    }
 
     const scrollToTop = () => window.scrollTo({ top: 0, behavior: 'smooth' })
     const handleClickScrollMenu = () => {
@@ -47,8 +38,7 @@ const Slider = () => {
                             else {
                                 return (
                                     <div key={slide.title} className="slide-foodopt-container">
-                                        <img src={slide.image} alt="imgSlide" className='image-slider'
-                                        onLoad={handleLoading} />
+                                        <img src={slide.image} alt="imgSlide" className='image-slider' />
                                         <div className="slider-content">
                                             <h2 className="slider-title">
                                                 {slide.title}

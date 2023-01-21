@@ -4,13 +4,11 @@ import Home from './Pages/Home'
 import Events from './Pages/Events';
 
 import { CartProvider } from './Context/CartContext'
-import Header from './Components/Header/Header'
 import FooterLazy from './Components/Footer/LazyFooter';
 import NotFound from './Pages/NotFound';
 import { LoadingProvider } from './Context/LoadingContext';
 import PreLoader from './Components/PreLoader/PreLoader';
-
-
+const Header = React.lazy(() => import('./Components/Header/Header'))
 
 
 function App() {

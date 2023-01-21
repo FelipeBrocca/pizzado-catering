@@ -6,9 +6,19 @@ import { CartContext } from '../../Context/CartContext';
 import Cart from '../Cart/Cart';
 import useCartPopUp from '../../Hooks/useCartPopUp';
 import logo from '../../public/images/logo.webp'
+import { LoadingContext } from '../../Context/LoadingContext';
+
 
 
 const Header = () => {
+
+    const {setLoading} = useContext(LoadingContext)
+    const handleLoading = () => {
+        setTimeout(() => {
+            setLoading(false)
+        }, 1000)
+    }
+
 
     const { popUpState, backdropPopUp, handlePopUp, isClosed } = usePopUp()
     const { cartPopUpState, backdropCartPopUp, handleCartPopUp, isCartClosed } = useCartPopUp()
@@ -47,8 +57,7 @@ const scrollToTop = () => window.scrollTo({ top:0 , behavior:'smooth'})
         <div className="container-flex-header">
             <div className="main-header-container">
                 <Link to="/" className='link-logo'>
-                    {/* <img src='https://res.cloudinary.com/dvvqhykic/image/upload/v1674074581/img-principales/logo_xrdjdl.webp' className="img-logo" alt="logo" /> */}
-                    <img src={logo} className="img-logo" alt="logo" />
+                <img src={logo} className="img-logo" alt="logo"onLoad={handleLoading}  />
                 </Link>
                 <span 
                 className="icon-menu" 
