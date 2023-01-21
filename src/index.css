@@ -11,7 +11,7 @@
   flex-direction: column;
   justify-content: space-between;
   color: #fff;
-  background: url("./public/images/spectrum-gradient.svg") center center no-repeat fixed;
+  background: url("./public/images/spectrum-gradient.svg") center center no-repeat;
   background-size: cover;
 }
 body{
