@@ -46,9 +46,7 @@
     flex-direction: column;
     gap: 10px;
     opacity: 100;
-    animation: slide-up 1s ease 0.5s;
-    animation-fill-mode: forwards;
-    visibility: hidden;
+    visibility: visible;
     border-radius: 5px;
     padding: 10px 5px 2px 5px;
 }
@@ -145,15 +143,3 @@
     opacity: 100;
 }
 
-
-
-@keyframes slide-up{
-    0%{
-        visibility: visible;
-        top: 40%;
-    }
-    100%{
-        visibility: visible;
-        top: 30%;
-    }
-}

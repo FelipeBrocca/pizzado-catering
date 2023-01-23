@@ -1,8 +1,6 @@
 .container-options{
     margin-top: 50px;
     display: flex;
-    animation: lazy-in 1s ease-in 0.5s;
-    animation-fill-mode: forwards;
     flex-wrap: nowrap;
     gap: 20px;
     justify-content: space-around;
@@ -33,29 +31,9 @@
     padding: 20px 50px 70px 20px;
     font-size: 16px;
     font-weight: bold;
-    animation: lazy-op 1.5s ease;
-    animation-fill-mode: forwards;
+    bottom: -80px;
+    right: -40px;
+    opacity: 1;
 }
 
 
-@keyframes lazy-in {
-    0%{
-        opacity: 0;
-    }
-    100%{
-        opacity: 1;
-    }
-}
-@keyframes lazy-op {
-    0%{
-        opacity: 0;
-        bottom: -250px;
-        right: -150px;
-    }
-    100%{
-        transform: scale(0.9);
-        bottom: -80px;
-        right: -40px;
-        opacity: 1;
-    }
-}
