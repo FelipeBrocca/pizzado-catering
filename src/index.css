@@ -11,8 +11,9 @@
   flex-direction: column;
   justify-content: space-between;
   color: #fff;
-  background: url("./public/images/spectrum-gradient.svg") center center no-repeat;
-  background-size: cover;
+  /* background: url("./public/images/spectrum-gradient.svg") center center no-repeat;
+  background-size: cover; */
+  background-color: #1E1E1D;
 }
 body{
   overflow-x: hidden;
