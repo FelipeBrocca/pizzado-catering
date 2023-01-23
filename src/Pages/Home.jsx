@@ -2,8 +2,8 @@ import React from 'react'
 import FoodOpt from '../Components/FoodOpt/FoodOpt'
 import Offers from '../Components/Offers/Offers'
 import EventsAsk from '../Components/EventsAsk/EventsAsk'
-import Container from '../Components/Card/Container'
 import Slider from '../Components/Slider/Slider'
+import ContainerLazy from '../Components/Card/Container'
 
 
 const Home = () => {
@@ -13,7 +13,7 @@ const Home = () => {
       <FoodOpt />
       <Offers />
       <EventsAsk />
-      <Container />
+      <ContainerLazy />
     </>
   )
 
