@@ -7,10 +7,11 @@ import './PreLoader.css'
 const PreLoader = () => {
 
     const {loading} = useContext(LoadingContext)
+    
 
     return (
     <div id="body-loading" className={loading ? 'body-loading' : 'body-loaded'}>
-       <img src={Loader} className='loader-img' alt="loader" />
+       <img src={Loader} className={loading ? 'loader-img' : 'img-loaded'} alt="loader" />
     </div>
 )
 }

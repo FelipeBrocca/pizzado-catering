@@ -14,9 +14,7 @@ const Header = () => {
 
     const {setLoading} = useContext(LoadingContext)
     const handleLoading = () => {
-        setTimeout(() => {
-            setLoading(false)
-        }, 1000)
+        setLoading(false)
     }
 
 
