@@ -14,13 +14,11 @@
     animation: spin 2000ms infinite;
 }
 .body-loaded{
-   transition: all 2s;
-   display: flex;
-    justify-content: center;
-    align-items: center;
+   display: none;
    opacity: 0;
 }
 .img-loaded{
+    visibility: hidden;
     height: 0px;
 }
 

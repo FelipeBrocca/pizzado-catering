@@ -22,7 +22,7 @@ const Slider = () => {
             <div className='carousel-container'>
                 <Carousel
                     autoPlay={true}
-                    interval={5000}
+                    interval={10000}
                     infiniteLoop={true}
                     showThumbs={false}
                     stopOnHover={true}

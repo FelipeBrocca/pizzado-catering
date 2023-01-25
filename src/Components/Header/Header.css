@@ -3,13 +3,15 @@
     width: 100%;
 }
 .main-header-container{
+    position: relative;
     display: flex;
     justify-content: space-between;
     align-items: center;
     width: 100%;
+    padding-right: 15px;
 }
 .link-logo{
-    width: 70px;
+    width: 90px;
     margin: 5px;
 }
 .link-logo > img{
@@ -83,69 +85,98 @@
     align-items: center;
     color: white;
     padding-left: 35px;
+    gap: 45%;
 }
 .menu > li > a:hover{
     color: #F5B721;
 }
 
 .button-carrito {
-    position: relative;
+    position: absolute;
     margin: 0 auto;
     margin-top: 5px;
     overflow: hidden;
     outline: none;
     cursor: pointer;
     border-radius: 10px;
-    background-color: #be1615;
+    background-color: transparent;
     border: none;
     font-family: inherit;
-}
-.default-btn,.hover-btn {
-    background-color: #be1615;
-    display: -webkit-box;
-    display: -moz-box;
-    display: -ms-flexbox;
-    display: -webkit-flex;
     display: flex;
+    gap: 3px;
     align-items: center;
-    gap: 15px;
-    padding: 15px 20px;
-    border-radius: 10px;
-    font-size: 17px;
-    font-weight: 500;
-    text-transform: uppercase;
-    transition: all .3s ease;
+    width: 70px;
+    height: 70px;
+    justify-content: center;
+    right: 60px;
 }
-/* .hover-btn {
-    position: absolute;
-    inset: 0;
-    background-color: #f5b721;
-    transform: translate(0%,100%);
-} */
-.default-btn span {
+
+.button-carrito > span {
     color: hsl(0, 0%, 100%);
+    position: relative;
+    bottom: 20px;
 }
 
 .hover-btn span {
     color: black;
 }
 
-/* .button-carrito:hover .default-btn {
-    transform: translate(0%,-100%);
-} */
-
-/* .button-carrito:hover .hover-btn {
-    transform: translate(0%,0%);
-} */
 .button-carrito:hover .default-btn {
     background-color: #8e1212;
 }
 .cart-length{
     border: 2px solid white;
     border-radius: 50%;
-    width: 25px;
-    height: 25px;
+    width: 20px;
+    height: 20px;
     display: flex;
     justify-content: center;
     align-items: center;
+}
+.menu-item.contact{
+    position: relative;
+}
+.contact > ul{
+    visibility: hidden;
+    opacity: 0;
+    transition: all 300ms;
+    position: absolute;
+    left: 40px;
+    top: 60px;
+    list-style: none;
+    display: flex;
+    flex-direction: column;
+    gap: 15px;
+    height: 50px;
+    width: 100%;
+}
+.contact > .open{
+    position: absolute;
+    left: 40px;
+    top: 60px;
+    list-style: none;
+    display: flex;
+    flex-direction: column;
+    gap: 15px;
+    height: 50px;
+    visibility: visible;
+    opacity: 1;
+    transition: all 300ms;
+}
+.contact > ul > li > a{
+    display: flex;
+    align-items: flex-end;
+    gap: 20px;
+    color: white;
+}
+.contact > ul > li > a > img{
+    width: 20px;
+}
+.contact > ul > li > a:hover{
+    color: #F5B721;
+    cursor: pointer;
+}
+.cart-icon{
+    color: #F5B721;
+    font-size: 2em;
 }

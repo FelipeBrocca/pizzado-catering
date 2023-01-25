@@ -8,13 +8,13 @@ import ContainerLazy from '../Components/Card/Container'
 
 const Home = () => {
   return (
-    <>
+    <main>
       <Slider />
       <FoodOpt />
       <Offers />
       <ContainerLazy />
       <EventsAsk />
-    </>
+    </main>
   )
 
 }

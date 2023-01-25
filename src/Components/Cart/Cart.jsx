@@ -11,7 +11,7 @@ const Cart = ({ cartPopUpState, handleCartPopUp, cartItems }) => {
   const [itemsForMessage, setItemsForMessage] = useState([])
 
   const body = document.getElementById('body')
-  cartPopUpState ? body.classList.add('body-cart-fixed') : body.classList.remove('body-cart-fixed')
+  cartPopUpState ? body.classList.add('body-fixed') : body.classList.remove('body-fixed')
 
   const { addItemToCart, subtractItemInCart, deleteItemInCart } = useContext(CartContext)
 

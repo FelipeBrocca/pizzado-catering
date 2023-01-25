@@ -5,11 +5,11 @@ import EventsType from '../Components/EventsType/EventsType'
 
 const Events = () => {
   return (
-    <>
+    <main>
       <EventsForm />
       <EventsType />
       <Offers />
-    </>
+    </main>
   )
 
 }
