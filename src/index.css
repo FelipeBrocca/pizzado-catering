@@ -12,7 +12,7 @@
   justify-content: space-between;
   color: #fff;
   background-color: #1E1E1D;
-  gap: 70px;
+  gap: 50px;
 }
 body{
   overflow-x: hidden;
@@ -20,7 +20,7 @@ body{
 main{
   display: flex;
   flex-direction: column;
-  gap: 70px;
+  gap: 50px;
 }
 a{
   text-decoration: none;
