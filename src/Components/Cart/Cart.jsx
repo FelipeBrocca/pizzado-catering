@@ -7,14 +7,16 @@ import './Cart.css'
 
 const Cart = ({ cartPopUpState, handleCartPopUp, cartItems }) => {
 
-  const total = cartItems.reduce((previous, current) => previous + current.quantity * current.price, 0)
-  const [itemsForMessage, setItemsForMessage] = useState([])
-
+  
   const body = document.getElementById('body')
   cartPopUpState ? body.classList.add('body-fixed') : body.classList.remove('body-fixed')
-
+  
   const { addItemToCart, subtractItemInCart, deleteItemInCart } = useContext(CartContext)
 
+  
+  const total = cartItems.reduce((previous, current) => previous + current.quantity * current.price, 0)
+  const [itemsForMessage, setItemsForMessage] = useState([])
+  
   useEffect(() => {
     setItemsForMessage([...cartItems])
   }, [cartItems])
@@ -83,7 +85,7 @@ const Cart = ({ cartPopUpState, handleCartPopUp, cartItems }) => {
         <h3>Total: ${total}</h3>
         <ReactWhatsapp
           className='button-whatsapp'
-          number='++54 9 11 4078-1149'
+          number='+54 9 11 4078-1149'
           message={`Hola! Quiero pedirles: \n\n${messageFriendlyString} \n\n Total: $${total}`}
         ><p>Comprar</p>
         </ReactWhatsapp>
