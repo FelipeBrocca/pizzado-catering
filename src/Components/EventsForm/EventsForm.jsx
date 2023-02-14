@@ -1,7 +1,8 @@
 import React, { useRef } from 'react'
 import { useState } from 'react';
-import ReactWhatsapp from 'react-whatsapp';
-import { Bebidas, Entradas, Menu, Postres } from './EventsCateringData';
+import ConfirmEvent from './ConfirmEvent';
+import EventOption from './EventOption';
+import { Bebidas, Entradas, PizzaClassic, PizzaPremium, AsadoClassic, AsadoPremium, Hamburguesas, EmpanadasClassic, Postres } from './EventsCateringData';
 import './EventsForm.css'
 
 const EventsForm = () => {
@@ -12,6 +13,7 @@ const EventsForm = () => {
     const [bebida, setBebida] = useState([])
     const [message, setMessage] = useState({})
 
+
     const nameRef = useRef()
     const emailRef = useRef()
     const addressRef = useRef()
@@ -19,46 +21,47 @@ const EventsForm = () => {
     const timeRef = useRef()
     const quantRef = useRef()
 
+
     const handleChangeEntrada = async (food) => {
-        const found = await entrada.find(element => element.name === food) 
-        if(found){
-           let newEntrada = entrada.filter(element => element !== found)
-           setEntrada(newEntrada)
+        const found = await entrada.find(element => element.name === food)
+        if (found) {
+            let newEntrada = entrada.filter(element => element !== found)
+            setEntrada(newEntrada)
         } else {
             entrada.push({ name: food })
             setEntrada(entrada)
         }
         setMessage({ ...message, entrada: entrada })
     }
-    const handleChangeMenu = async (food) => {
-        const found = await menu.find(element => element.name === food) 
-        if(found){
-            let newMenu = menu.filter(element => element !== found)
-            setMenu(newMenu)
-        } else {
-            menu.push({name: food})
-            setMenu(menu)
-        }
-        setMessage({ ...message, menu: menu })
-    }
-    const handleChangePostre = async(food) => {
-        const found = await postre.find(element => element.name === food) 
-        if(found){
+    // const handleChangeMenu = async (food) => {
+    //     const found = await menu.find(element => element.name === food) 
+    //     if(found){
+    //         let newMenu = menu.filter(element => element !== found)
+    //         setMenu(newMenu)
+    //     } else {
+    //         menu.push({name: food})
+    //         setMenu(menu)
+    //     }
+    //     setMessage({ ...message, menu: menu })
+    // }
+    const handleChangePostre = async (food) => {
+        const found = await postre.find(element => element.name === food)
+        if (found) {
             let newPostre = postre.filter(element => element !== found)
             setPostre(newPostre)
         } else {
-            postre.push({name: food})
+            postre.push({ name: food })
             setPostre(postre)
         }
         setMessage({ ...message, postre: postre })
     }
-    const handleChangeBebida = async(food) => {
-        const found = await bebida.find(element => element.name === food) 
-        if(found){
+    const handleChangeBebida = async (food) => {
+        const found = await bebida.find(element => element.name === food)
+        if (found) {
             let newBebida = bebida.filter(element => element !== found)
             setBebida(newBebida)
         } else {
-            bebida.push({name: food})
+            bebida.push({ name: food })
             setBebida(bebida)
         }
         setMessage({ ...message, bebida: bebida })
@@ -100,116 +103,65 @@ const EventsForm = () => {
     return (
         <section className="section-register">
             <h2 className="titulo-register">Cotizá tu evento!</h2>
+            <div className='top-form'>
+                <p>El servicio incluye a los cocineros y mozos. <br></br>Trabajamos en la parrilla u horno que haya en el lugar, aunque también tenemos nuestras parrillas movibles en caso de ser necesarias.<br></br> Se cobra un costo de envío desde San Isidro. Los menores de 10 años pagan la mitad. Se debe abonar la logística del traslado.</p>
+                <div>
+                    IMAGENES
+                </div>
+            </div>
             <form className="form-register">
-                <div className="form-register-input">
-                    <label>Nombre completo</label>
-                    <input type="text" ref={nameRef} onChange={getInfo} name="name" id="name" placeholder="Ej.: Juan Perez" required />
-                </div>
-                <div className="form-register-input">
-                    <label>Email</label>
-                    <input type="email" ref={emailRef} onChange={getInfo} name="email" id="email" placeholder="email@tuemail.tu" required />
-                </div>
-                <div className="form-register-input">
-                    <label>Dirección</label>
-                    <input type="street-address" ref={addressRef} onChange={getInfo} placeholder="Av. Falsa 123, Palermo" />
-                </div>
                 <fieldset className='form-register-input'>
-                    <legend>Elegí tus combos.</legend>
+                    <legend>Elegí tus combos.<br></br><small>(Todos los precios son por persona)</small></legend>
                     <div className='combo-section'>
-                        <h3>Entradas</h3>
-                        {
-                            Entradas.map((entrada) => {
-                                return (
-                                    <div key={entrada.name}>
-                                        <input type="checkbox"
-                                            id="scales"
-                                            name='entrada'
-                                            onChange={() => handleChangeEntrada(entrada.name)}
-                                        />
-                                        <label>{entrada.name}</label>
-                                    </div>
-                                )
-                            })
-                        }
+                        <h3>Pizzas</h3>
+                        <EventOption
+                            OptionName={PizzaClassic}
+                        />
+                        <EventOption
+                            OptionName={PizzaPremium}
+                        />
                     </div>
                     <div className='combo-section'>
-                        <h3>Menú principal</h3>
-                        {
-                            Menu.map((menu) => {
-                                return (
-                                    <div key={menu.name}>
-                                        <input
-                                            type="checkbox"
-                                            id="scales"
-                                            name="menu"
-                                            onChange={() => handleChangeMenu(menu.name)} />
-                                        <label>{menu.name}</label>
-                                    </div>
-                                )
-                            })
-                        }
+                        <h3>Asado</h3>
+                        <EventOption
+                            OptionName={AsadoClassic}
+                        />
+                        <EventOption
+                            OptionName={AsadoPremium}
+                        />
+                    </div>
+                    <div className='combo-section'>
+                        <h3>Hamburguesas</h3>
+                        <EventOption
+                            OptionName={Hamburguesas}
+                        />
+                    </div>
+                    <div className='combo-section'>
+                        <h3>Empanadas</h3>
+                        <EventOption
+                            OptionName={EmpanadasClassic}
+                        />
+                    </div>
+                    <div className='combo-section'>
+                        <h3>Entradas</h3>
+                        <EventOption
+                            OptionName={Entradas}
+                        />
                     </div>
                     <div className='combo-section'>
                         <h3>Postres</h3>
-                        {
-                            Postres.map((postre) => {
-                                return (
-                                    <div key={postre.name}>
-                                        <input
-                                            type="checkbox"
-                                            id="scales"
-                                            name="postre"
-                                            onChange={() => handleChangePostre(postre.name)} />
-                                        <label>{postre.name}</label>
-                                    </div>
-                                )
-                            })
-                        }
+                        <EventOption
+                            OptionName={Postres}
+                        />
                     </div>
                     <div className='combo-section'>
                         <h3>Bebidas</h3>
-                        {
-                            Bebidas.map((bebida) => {
-                                return (
-                                    <div key={bebida.name}>
-                                        <input
-                                            type="checkbox"
-                                            id="scales"
-                                            name="bebida"
-                                            onChange={() => handleChangeBebida(bebida.name)}
-                                        />
-                                        <label>{bebida.name}</label>
-                                    </div>
-                                )
-                            })
-                        }
+                        <EventOption
+                            OptionName={Bebidas}
+                        />
                     </div>
                 </fieldset>
-                <div className='event-and-quantity'>
-                    <div className="form-register-input datetime">
-                        <label>Fecha del evento</label>
-                        <input type="date" ref={dateRef} onChange={getInfo} id="start" name="trip-start"
-                            className='date-event'
-                            min="2023-01-01" max="2200-12-31" />
-                    </div>
-                    <div className="form-register-input datetime">
-                        <label>Hora del evento</label>
-                        <input type="time" ref={timeRef} onChange={getInfo} id="start" name="trip-start"
-                            className='date-event' />
-                    </div>
-                </div>
-                <div className="form-register-input quantity">
-                    <label>Cantidad de invitados</label>
-                    <input type="number" ref={quantRef} onChange={getInfo} min={0} className='quantity-event' />
-                </div>
-                <ReactWhatsapp
-                    className="button-card"
-                    number='+54 9 11 4078-1149'
-                    message={messageForm}
-                >
-                    <span className="button-card-txt"> Enviar </span>
-                    <span>¡Dale!</span>
-                </ReactWhatsapp>
+                <ConfirmEvent />
             </form>
         </section>
     )

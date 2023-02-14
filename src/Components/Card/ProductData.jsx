@@ -9,7 +9,7 @@ import roque from '../../public/images/roque.webp'
 export const ProducData = [
     {
         id: 1,
-        image: cebollaCaram ,
+        image: cebollaCaram,
         name: 'Cebolla Caramelizada',
         ingredients: 'Muzzarella, finas rodajas de cebolla caramelizada y salsa de tomate',
         price: 600
@@ -32,7 +32,7 @@ export const ProducData = [
         id: 4,
         image: cuatroQuesos,
         name: '4 Quesos',
-        ingredients: 'Muzzarella, cubitos de provolone, Roquefort, Parmesano rallado y salsa de tomate ',
+        ingredients: 'Muzzarella, cubitos de provolone, Roquefort, Parmesano rallado y salsa de tomate',
         price: 600
     },
     {
