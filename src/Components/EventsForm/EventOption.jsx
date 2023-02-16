@@ -9,15 +9,15 @@ const EventOption = ({OptionName}) => {
                         <>
                             <div key={option.title}>
                                 <label className='checkbox-style'>
-                                <input type="checkbox"
-                                    id="scales"
-                                    name='option'
-                                />
-                                <span></span>
+                                    <input type="checkbox"
+                                        id="scales"
+                                        name='option'
+                                    />
+                                    <span></span>
                                 </label>
                                 <div className='option-container'>
                                     <label>{option.title}</label>
-                                    <p>$ {option.price}</p>
+                                    <p>${option.price}</p>
                                 </div>
                             </div>
                             {

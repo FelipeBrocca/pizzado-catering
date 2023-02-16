@@ -11,7 +11,7 @@ const PreLoader = () => {
 
     return (
     <div id="body-loading" className={loading ? 'body-loading' : 'body-loaded'}>
-       <img src={Loader} className={loading ? 'loader-img' : 'img-loaded'} alt="loader" />
+        <img src={Loader} className={loading ? 'loader-img' : 'img-loaded'} alt="loader" />
     </div>
 )
 }

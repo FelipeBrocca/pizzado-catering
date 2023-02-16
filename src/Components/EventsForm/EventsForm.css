@@ -3,15 +3,47 @@ textarea:focus {
     outline: none;
 }
 
+.section-register{
+    min-height: 40vh;
+    width: 100%;
+    margin: auto;
+    padding: 10px;
+    text-align: center;
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+    position: relative;
+    align-items: center;
+    gap: 50px;
+}
+
+.titulo-register{
+    font-size: 32px;
+}
+
+.top-form{
+    display: flex;
+    flex-direction: column;
+    gap: 20px;
+}
+
 .form-register{
     width: 95%;
-    max-width: 400px;
+    min-width: 350px;
+    max-width: 600px;
     margin: 0 auto;
     display: flex;
     flex-direction: column;
     justify-content: center;
     align-items: center;
-    gap: 15px;
+}
+
+.form-register-input{
+    display: flex;
+    flex-direction: column;
+    align-items: flex-start;
+    width: 90%;
+    margin: 0;
 }
 
 .form-register-input > input{
@@ -23,77 +55,12 @@ textarea:focus {
     border: 1px solid #f5b721;
 }
 
-.section-register{
-    min-height: 40vh;
-    width: 100%;
-    margin: auto;
-    text-align: center;
-    display: flex;
-    flex-direction: column;
-    justify-content: center;
-    position: relative;
-    align-items: center;
-    gap: 50px;
-}
-
-.top-form{
-    display: flex;
-    flex-direction: column;
-    gap: 20px;
-}
-.titulo-register{
-    font-size: 32px;
-}
-.titulo-input{
-    margin: 100px;
-}
-.form-register-input{
-    display: flex;
-    flex-direction: column;
-    align-items: flex-start;
-    gap: 10px;
-    width: 90%;
-    margin: 0;
-}
-.form-register-input > label{
-    font-size: 14px;
-}
-.date-event{
-    width: 100%;
-    max-width: 110px;
-    height: 40px;
-    display: flex;
-    align-items: center;
-    align-self: center;
-}
-.event-and-quantity{
-    display: flex;
-    gap: 20px;
-}
-.quantity-event{
-    width: 40%;
-    max-width: 110px;
-    align-self: center;
-}
-.form-register-input.datetime{
-    margin: 0;
-    max-width: 110px;
-    display: flex;
-    flex-direction: column;
-}
-.form-register-input.quantity{
-    margin: 0;
-}
-.form-register-input.quantity > label{
-    width: 100%;
-   text-align: center;
-}
-
 .button-card{
     width: 100px;
     font-size: 16px;
     font-weight: 550;
 }
+
 fieldset.form-register-input{
     border-color: #f5b721;
     display: flex;
@@ -107,6 +74,9 @@ fieldset.form-register-input > legend{
 fieldset.form-register-input > legend > small{
     font-size: 11px;
 }
+
+/* MENUS PIZZA ASADO ETC */
+
 .combo-section{
     width: 100%;
     display: flex;
@@ -124,6 +94,9 @@ fieldset.form-register-input > legend > small{
     width: 100%;
     position: relative;
 }
+
+/* TITULO Y PRECIO */ 
+
 .option-container{
     display: flex;
     justify-content: space-between;
@@ -131,14 +104,24 @@ fieldset.form-register-input > legend > small{
 }
 .option-container > label{
     width: 80%;
-    font-size: 14px;
 }
 .option-container > p{
     width: 17%;
-    font-size: 12px;
 }
+
+/* ITEMS */ 
+
+ul{
+    text-align: left;
+    margin-left: 45px;
+    font-size: 14px;
+}
+
+/* CHECKBOX */ 
+
 .checkbox-style > input{
     display: none;
+
 }
 .checkbox-style > span{
     display: inline-block;
@@ -146,7 +129,7 @@ fieldset.form-register-input > legend > small{
     height: 20px;
     width: 20px;
     background-color: transparent;
-    border-radius: 100%;
+    border-radius: 20%;
     transition: all 0.5s;
     border: 1px solid #f5b721;
 }
@@ -174,13 +157,16 @@ fieldset.form-register-input > legend > small{
     opacity: 1;
 }
 
+/* SOLAPA AMARILLA */ 
+
 .yellow-form{
+    width: calc(100vw - (100vw - 100%));
+    height: 70px;
     display: block;
     position: fixed;
     bottom: 0px;
+    color: black;
     background-color: #f5b721;
-    width: calc(100vw - (100vw - 100%));
-    height: 70px;
     border-radius: 20px 20px 0px 0px;
     transition: all 1s;
 }
@@ -188,7 +174,66 @@ fieldset.form-register-input > legend > small{
     height: 90vh;
     transition: all 1s;
 }
+
+.yellow-form > h2{
+    width: 75%;
+    font-size: 32px;
+    text-align: left;
+    margin: 0 20px 20px 20px;
+}
+
+.yellow-form > p{
+    font-size: 14px;
+    text-align: justify;
+    margin: 0 20px 20px 20px;
+}
+
+.form-register-input.datetime{
+    margin-right: 20px;
+    max-width: 110px;
+    display: flex;
+    flex-direction: column;
+}
+.form-register-input.quantity{
+    margin-bottom: 20px;
+}
+.form-register-input.quantity > label{
+    width: 100%;
+    text-align: center;
+}
+
+.date-event{
+    width: 100%;
+    max-width: 110px;
+    height: 40px;
+    display: flex;
+    align-items: center;
+    align-self: center;
+    margin: 10px;
+}
+.event-and-quantity{
+    display: flex;
+    justify-content: space-between;
+    margin: 10px;
+}
+.quantity-event{
+    width: 40%;
+    max-width: 110px;
+    align-self: center;
+}
+
+/* BOTON SOLAPA AMARILLA */ 
+
 .button-open-form{
+    cursor: pointer;
+    width: 150px;
+    height: 30px;
+    color: white;
+    font-weight: bold;
+    border-radius: 5px;
+    border: #BE1615;
+    background-color: #BE1615;
+    align-self: center;
     cursor: pointer;
 }
 .button-close-form{
@@ -202,4 +247,28 @@ fieldset.form-register-input > legend > small{
 }
 .yellow-form-small{
     height: 70px;
+}
+
+/* BOTONES formulario */ 
+
+button {
+    width: 150px;
+    height: 30px;
+    color: white;
+    font-weight: bold;
+    border-radius: 5px;
+    border: #BE1615;
+    background-color: #BE1615;
+    align-self: center;
+    cursor: pointer;
+}
+
+.button-cancel{
+    cursor: pointer;
+    color: black;
+    text-decoration: underline;
+    font-weight: bold;
+    font-size: 14px;
+    background-color: transparent;
+    border: thin;
 }
