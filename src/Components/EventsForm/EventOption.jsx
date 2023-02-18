@@ -22,7 +22,7 @@ const EventOption = ({OptionName}) => {
                             </div>
                             {
                             option.food ? 
-                            <ul>
+                            <ul className='menu-food-list'>
                                 {
                                     option.food?.map((foodOpt) => {
                                         return (
@@ -39,7 +39,7 @@ const EventOption = ({OptionName}) => {
                             option.entradas ? 
                             <>
                             <p>Entradas:</p>
-                            <ul>
+                            <ul className='menu-food-list'>
                                 {
                                     option.entradas?.map((foodOpt) => {
                                         return (
@@ -57,7 +57,7 @@ const EventOption = ({OptionName}) => {
                             option.principal ? 
                             <>
                             <p>Principal:</p>
-                            <ul>
+                            <ul className='menu-food-list'>
                                 {
                                     option.principal?.map((foodOpt) => {
                                         return (

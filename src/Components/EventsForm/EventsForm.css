@@ -29,7 +29,6 @@ textarea:focus {
 
 .form-register{
     width: 95%;
-    min-width: 350px;
     max-width: 600px;
     margin: 0 auto;
     display: flex;
@@ -44,15 +43,17 @@ textarea:focus {
     align-items: flex-start;
     width: 90%;
     margin: 0;
+    align-self: center;
 }
 
 .form-register-input > input{
-    height: 35px;
-    width: 100%;
+    height: 45px;
     padding-left: 5px;
+    width: 100%;
     margin: 5px;
     border-radius: 5px;
     border: 1px solid #f5b721;
+    opacity: 0.7;
 }
 
 .button-card{
@@ -60,8 +61,8 @@ textarea:focus {
     font-size: 16px;
     font-weight: 550;
 }
-
 fieldset.form-register-input{
+    width: 100%;
     border-color: #f5b721;
     display: flex;
     flex-direction: column;
@@ -69,12 +70,29 @@ fieldset.form-register-input{
     padding: 20px 5px;
 }
 fieldset.form-register-input > legend{
+    font-size: 24px;
     padding: 5px;
+    line-height: 16px
 }
 fieldset.form-register-input > legend > small{
     font-size: 11px;
 }
-
+.form-imges-container{
+    width: 100%;
+    display: flex;
+    justify-content: space-around;
+}
+.form-img-div{
+    width: 30%;
+    border: 1px solid #f5b721;
+    border-radius: 10px;
+}
+.form-img-div > img{
+    width: 100%;
+    height: 100%;
+    object-fit: cover;
+    border-radius: 10px;
+}
 /* MENUS PIZZA ASADO ETC */
 
 .combo-section{
@@ -111,7 +129,7 @@ fieldset.form-register-input > legend > small{
 
 /* ITEMS */ 
 
-ul{
+.menu-food-list{
     text-align: left;
     margin-left: 45px;
     font-size: 14px;
@@ -168,31 +186,36 @@ ul{
     color: black;
     background-color: #f5b721;
     border-radius: 20px 20px 0px 0px;
-    transition: all 1s;
+    transition: all 0.5s;
 }
 .yellow-form.open{
     height: 90vh;
-    transition: all 1s;
-}
-
-.yellow-form > h2{
-    width: 75%;
-    font-size: 32px;
-    text-align: left;
-    margin: 0 20px 20px 20px;
-}
-
-.yellow-form > p{
-    font-size: 14px;
-    text-align: justify;
-    margin: 0 20px 20px 20px;
-}
-
-.form-register-input.datetime{
-    margin-right: 20px;
-    max-width: 110px;
+    transition: all 0.5s;
     display: flex;
     flex-direction: column;
+    align-items: center;
+}
+
+.yellow-form-big{
+   width: 90%;
+   display: flex;
+   flex-direction: column;
+   justify-content: center;
+}
+
+.title-yellow-form{
+    width: 100%;
+    font-size: 28px;
+    text-align: left;
+    align-self: center;
+    margin: 0 20px 20px 20px;
+}
+
+.yellow-form-big > p{
+    font-size: 12px;
+    font-weight: 600;
+    text-align: left;
+    margin: 0 20px 20px 20px;
 }
 .form-register-input.quantity{
     margin-bottom: 20px;
@@ -201,40 +224,50 @@ ul{
     width: 100%;
     text-align: center;
 }
-
-.date-event{
-    width: 100%;
-    max-width: 110px;
-    height: 40px;
+.times-event{
     display: flex;
-    align-items: center;
-    align-self: center;
-    margin: 10px;
+    justify-content: space-around;
 }
-.event-and-quantity{
-    display: flex;
-    justify-content: space-between;
-    margin: 10px;
-}
-.quantity-event{
+.times-event > .form-register-input{
     width: 40%;
-    max-width: 110px;
-    align-self: center;
 }
-
+.time-label{
+    margin-top: 10px;
+    font-weight: 700;
+    padding-left: 5px;
+}
+.react-datepicker-wrapper{
+    width: 100%;
+}
+.react-datepicker__input-container > input{
+    width: 100%;
+    height: 45px;
+    padding-left: 5px;
+    border-radius: 5px;
+    border: none;
+    opacity: 0.7;
+    margin: 5px;
+}
+.react-datepicker__input-container > span{
+    display: none;
+}
+.react-datepicker__close-icon::after{
+    background-color: #BE1615;
+}
 /* BOTON SOLAPA AMARILLA */ 
 
 .button-open-form{
     cursor: pointer;
     width: 150px;
-    height: 30px;
+    height: 40px;
     color: white;
     font-weight: bold;
     border-radius: 5px;
     border: #BE1615;
     background-color: #BE1615;
-    align-self: center;
     cursor: pointer;
+    display: grid;
+    place-items: center;
 }
 .button-close-form{
     position: absolute;
@@ -246,29 +279,35 @@ ul{
     font-weight: 800;
 }
 .yellow-form-small{
-    height: 70px;
+    display: grid;
+    place-items: center;
+    padding: 20px 0px;
 }
 
 /* BOTONES formulario */ 
 
-button {
+.event-form-button{
+    cursor: pointer;
     width: 150px;
-    height: 30px;
+    height: 40px;
     color: white;
     font-weight: bold;
     border-radius: 5px;
     border: #BE1615;
     background-color: #BE1615;
-    align-self: center;
     cursor: pointer;
+    display: grid;
+    place-items: center;
+    align-self: center;
+    margin: 20px;
 }
 
 .button-cancel{
     cursor: pointer;
     color: black;
     text-decoration: underline;
-    font-weight: bold;
-    font-size: 14px;
+    font-weight: 700;
+    font-size: 16px;
     background-color: transparent;
     border: thin;
 }
