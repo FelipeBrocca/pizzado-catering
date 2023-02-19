@@ -1,10 +1,13 @@
 import React from 'react'
 import EventsForm from '../Components/EventsForm/EventsForm'
+import { EventProvider } from '../Context/EventContext'
 
 const Events = () => {
   return (
     <main>
-      <EventsForm />
+      <EventProvider>
+        <EventsForm />
+      </EventProvider>
     </main>
   )
 

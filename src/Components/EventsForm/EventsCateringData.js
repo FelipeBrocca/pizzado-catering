@@ -1,13 +1,13 @@
 export const PizzaClassic = [
     {
-        title: "Menú clásico",
+        title: "Menú clásico pizza",
         food: ['Napolitana', 'Cebolla caramelizada', 'Cherry y albahaca', 'Jamón crudo y rúcula', '4 quesos', 'Roquefort', 'Provolone', 'Rúcula y Brie'],
         price: 1350
     }
 ]
 export const PizzaPremium = [
     {
-        title: "Menú premium",
+        title: "Menú premium pizza",
         food: ['Salmón y palta', 'Pollo y barbacoa', 'Langostinos y Salsa golf', 'Crudo, rúcula y brie', 'Jamón, huevo y morrón', 'Champignon y crudo', 'Provolone y verdeo', 'Roquefort y nuez', 'Caramelizada y brie', 'Rúcula, parmesano y almendras', 'Bacon, huevo y parmesano', 'Pepperoni'],
         price: 1550
     }
@@ -15,7 +15,7 @@ export const PizzaPremium = [
 
 export const AsadoClassic = [
     {
-        title: "Menú clásico",
+        title: "Menú clásico asado",
         entradas: ['Brochettes de chorizo con brie', 'Brusquetas de morcilla con roquefort', 'Salchicha parrillera con salsa criolla', 'Provoletas'],
         principal: ['Sándwiches de colita y vacío'],
         price: 2200
@@ -24,7 +24,7 @@ export const AsadoClassic = [
 
 export const AsadoPremium = [
     {
-        title: "Menú premium",
+        title: "Menú premium asado",
         entradas: ['Mini hamburguesas con cheddar', 'Matambre a la pizza', 'Mollejas con salsa de verdeo', 'Sándwiches de entraña con salsa criolla'],
         principal: ['Sándwiches de lomo y bondiola'],
         price: 2700
@@ -33,7 +33,7 @@ export const AsadoPremium = [
 
 export const Hamburguesas = [
     {
-        title: "Menú clásico",
+        title: "Menú clásico hamburguesas",
         entradas: ['Mini hamburguesas de entraña con cheddar'],
         principal: ['Hamburguesas rellenas de roquefort', 'Hamburguesas con cheddar y bacon', 'Hamburguesas con cebolla caramelizada', 'Hamburguesas con rúcula y brie'],
         price: 1600
@@ -42,7 +42,7 @@ export const Hamburguesas = [
 
 export const EmpanadasClassic = [
     {
-        title: "Menú clásico",
+        title: "Menú clásico empanadas",
         food: ['Carne', 'Capresse', 'Humita', 'Pollo', 'Jamón y queso'],
         price: 1350
     }
@@ -50,7 +50,7 @@ export const EmpanadasClassic = [
 
 export const Entradas = [
     {
-        title: 'Brochettes -capresse + crudo y rúcula',
+        title: 'Brochettes: capresse, crudo y rúcula',
         price: 400
     },
     {
@@ -58,7 +58,7 @@ export const Entradas = [
         price: 550
     },
     {
-        title: 'Brusquetas-Finlandia y salmón + brochettes crudo y brie',
+        title: 'Brusquetas: Finlandia y salmón + Brochettes: crudo y brie',
         price: 600
     },
     {

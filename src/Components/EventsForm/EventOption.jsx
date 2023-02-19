@@ -1,17 +1,21 @@
 import React from 'react'
 
-const EventOption = ({OptionName}) => {
+const EventOption = ({OptionName, handleChange}) => {
+
+
+
     return (
         <>
             {
                 OptionName.map((option) => {
                     return (
                         <>
-                            <div key={option.title}>
+                            <div key={`title - ${option.title}`}>
                                 <label className='checkbox-style'>
                                     <input type="checkbox"
                                         id="scales"
                                         name='option'
+                                        onChange={(e) => handleChange(option, e)}
                                     />
                                     <span></span>
                                 </label>
@@ -26,7 +30,7 @@ const EventOption = ({OptionName}) => {
                                 {
                                     option.food?.map((foodOpt) => {
                                         return (
-                                            <li key={foodOpt}>
+                                            <li key={`food - ${foodOpt}`}>
                                                 {foodOpt}
                                             </li>
                                         )
@@ -43,7 +47,7 @@ const EventOption = ({OptionName}) => {
                                 {
                                     option.entradas?.map((foodOpt) => {
                                         return (
-                                            <li key={foodOpt}>
+                                            <li key={`entrada - ${foodOpt}`}>
                                                 {foodOpt}
                                             </li>
                                         )
@@ -61,7 +65,24 @@ const EventOption = ({OptionName}) => {
                                 {
                                     option.principal?.map((foodOpt) => {
                                         return (
-                                            <li key={foodOpt}>
+                                            <li key={`principal - ${foodOpt}`}>
+                                                {foodOpt}
+                                            </li>
+                                        )
+                                    })
+                                }
+                            </ul>
+                            </>
+                            : ''
+                            }
+                            {
+                            option.options ? 
+                            <>
+                            <ul className='menu-food-list'>
+                                {
+                                    option.options?.map((foodOpt) => {
+                                        return (
+                                            <li key={`postre - ${foodOpt}`}>
                                                 {foodOpt}
                                             </li>
                                         )
