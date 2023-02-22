@@ -1,21 +1,9 @@
-import { createContext, useState } from "react";
+import { createContext, useEffect, useState } from "react";
 
 export const EventContext = createContext();
 
 export const EventProvider = ({ children }) => {
-    const [message, setMessage] = useState({
-        name: '',
-        email: '',
-        address: '',
-        date: '',
-        timeStart: '',
-        timeEnd: '',
-        quant: '',
-        entrada: [],
-        menu: [],
-        postre: [],
-        bebida: []
-    })
+
     const [entrada, setEntrada] = useState([])
     const [menu, setMenu] = useState([])
     const [postre, setPostre] = useState([])
@@ -34,65 +22,60 @@ export const EventProvider = ({ children }) => {
         bebida: []
     })
 
+    useEffect(() => {
+        setInfoToSend({...infoToSend, entrada: entrada, menu: menu, postre: postre, bebida: bebida})
+        // eslint-disable-next-line react-hooks/exhaustive-deps
+    }, [entrada, menu, postre, bebida])
+
 
     const handleChangeEntrada = async (food) => {
-        const found = await entrada.find(element => element.title === food)
+        const found = await entrada.find(element => element === food.title)
         if (found) {
             let newEntrada = entrada.filter(element => element !== found)
-            setEntrada(newEntrada.title)
+            setEntrada(newEntrada)
         } else {
-            entrada.push(food.title)
-            setEntrada(entrada)
+            setEntrada(prevState => [...prevState, food.title])
         }
-        setInfoToSend({ ...infoToSend, entrada: entrada })
-        setMessage(infoToSend)
     }
     const handleChangeMenu = async (food) => {
         const found = await menu.find(element => element === food.title)
         if (found) {
-            let newMenu = menu.filter(element => element !== food.title)
+            let newMenu = menu.filter(element => element !== found)
             setMenu(newMenu)
         } else {
-            menu.push(food.title)
-            setMenu(menu)
+            setMenu(prevState => [...prevState, food.title])
         }
-        setInfoToSend({ ...infoToSend, menu: menu })
-        setMessage(infoToSend)
     }
     const handleChangePostre = async (food) => {
-        const found = await postre.find(element => element.title === food.title)
+        const found = await postre.find(element => element === food.title)
         if (found) {
             let newPostre = postre.filter(element => element !== found)
-            setPostre(newPostre.title)
+            setPostre(newPostre)
         } else {
-            postre.push(food.title)
-            setPostre(postre)
+            setPostre(prevState => [...prevState, food.title])
         }
-        setInfoToSend({ ...infoToSend, postre: postre })
-        setMessage(infoToSend)
     }
     const handleChangeBebida = async (food) => {
-        const found = await bebida.find(element => element.title === food.title)
+        const found = await bebida.find(element => element === food.title)
         if (found) {
             let newBebida = bebida.filter(element => element !== found)
-            setBebida(newBebida.title)
+            setBebida(newBebida)
         } else {
-            bebida.push(food.title)
-            setBebida(bebida)
+            setBebida(prevState => [...prevState, food.title])
         }
-        setInfoToSend({ ...infoToSend, bebida: bebida })
-        setMessage(infoToSend)
     }
 
-    const messageForm = `Hola, mi nombre es ${message.name} quiero averiguar para cotizar un evento. \n\n *Fecha:* ${message.date} ${message.timeStart}hs. \n *Dirección:* ${message.address} \n *Cantidad de invitados:* ${message.quant}\n *Entrada:*\n   ${message.entrada[0] ? message.entrada.map((entrada) => `   -${entrada} \n`) : 'Sin especificar'} \n *Menu principal:*\n   ${message.menu[0] ? message.menu.map((menu) => `   -${menu} \n`) : 'Sin especificar'} \n *Postre:*\n   ${message.postre[0] ? message.postre.map((postre) => `   -${postre} \n`) : 'Sin especificar'} \n *Bebidas:*\n   ${message.bebida[0] ? message.bebida.map((bebida) => `   -${bebida} \n`) : 'Sin especificar'}`
+    const messageForm = `Hola, mi nombre es ${infoToSend.name ? infoToSend.name : '*Sin especificar*'} quiero averiguar para cotizar un evento. \n\n *Fecha:* ${infoToSend.date ? infoToSend.date : '*Sin especificar*'}, desde ${infoToSend.timeStart ? infoToSend.timeStart : '*Sin especificar*'}hs. hasta ${infoToSend.timeEnd ? infoToSend.timeEnd : '*Sin especificar*'}hs.\n *Dirección:* ${infoToSend.address ? infoToSend.address : '*Sin especificar*'} \n *Cantidad de invitados:* ${infoToSend.quant ? infoToSend.quant : '*Sin especificar*'}\n *Entrada:*\n${infoToSend.entrada[0] ? infoToSend.entrada.map((entrada) => `-${entrada} \n`).join('') : 'Sin especificar'} \n *Menu principal:*\n${infoToSend.menu[0] ? infoToSend.menu.map((menu) => `-${menu} \n`).join('') : 'Sin especificar'} \n *Postre:*\n${infoToSend.postre[0] ? infoToSend.postre.map((postre) => `-${postre} \n`).join('') : 'Sin especificar'} \n *Bebidas:*\n${infoToSend.bebida[0] ? infoToSend.bebida.map((bebida) => `-${bebida} \n`).join('') : 'Sin especificar'}`
 
     return (
         <EventContext.Provider
             value={{
                 messageForm,
-                message,
-                setMessage,
                 entrada,
+                setMenu,
+                setBebida,
+                setEntrada,
+                setPostre,
                 menu,
                 postre,
                 bebida,

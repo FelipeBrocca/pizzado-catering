@@ -1,48 +1,46 @@
-import React, { useContext, useState, useRef } from 'react'
+import React, { useContext, useState, useEffect } from 'react'
 import ReactWhatsapp from 'react-whatsapp';
 import SmallConfirmEvent from './SmallConfirmEvent';
 import { EventContext } from '../../Context/EventContext';
+import FormInputs from './FormInputs';
 
 
 
 const ConfirmEvent = () => {
 
     const [formOpen, setFormOpen] = useState(false)
-    const { messageForm, message, infoToSend, setInfoToSend, setMessage, menu, entrada, bebida, postre } = useContext(EventContext)
+    const { messageForm, setInfoToSend, menu, entrada, bebida, postre } = useContext(EventContext)
 
-
-    const nameRef = useRef()
-    const emailRef = useRef()
-    const addressRef = useRef()
-    const dateRef = useRef()
-    const timeStartRef = useRef()
-    const timeEndRef = useRef()
-    const quantRef = useRef()
+    const body = document.getElementById('body')
+    useEffect(() => {
+        if (formOpen) {
+            body.classList.add('body-fixed')
+        } else {
+            body.classList.remove('body-fixed')
+        }
+    }, [formOpen, body.classList])
 
 
     const toggleYellowForm = () => {
         setFormOpen(!formOpen)
     }
 
-    const setInfo = () => {
+
+    const resetForm = () => {
         setInfoToSend({
-            name: nameRef.current.value,
-            email: emailRef.current.value,
-            address: addressRef.current.value,
-            date: dateRef.current.value,
-            timeStart: timeStartRef.current.value,
-            timeEnd: timeEndRef.current.value,
-            quant: quantRef.current.value,
-            menu: menu ? menu?.map((menu) => menu) : 'Sin especificar',
-            entrada: entrada ? entrada?.map((entrada) => entrada) : 'Sin especificar',
-            postre: postre ? postre?.map((postre) => postre) : 'Sin especificar',
-            bebida: bebida ? bebida?.map((bebida) => bebida) : 'Sin especificar'
+            name: '',
+            email: '',
+            address: '',
+            date: '',
+            timeStart: '',
+            timeEnd: '',
+            quant: '',
+            entrada: [],
+            menu: [],
+            postre: [],
+            bebida: []
         })
-        setMessage(infoToSend)
-        console.log(message);
     }
-
-
 
     return (
         <div className={formOpen ? 'yellow-form open' : 'yellow-form'}>
@@ -55,80 +53,40 @@ const ConfirmEvent = () => {
             <div className='yellow-form-big'>
                 <h2 className='title-yellow-form'>Solicitar servicio de catering:</h2>
                 <p>* Al enviar este formulario, está solicitando el servicio, no es una compra definitiva. Nos estaremos contactando para confirmar definitivamente el evento</p>
-                <div className="form-register-input">
-                    <input
-                        type="text"
-                        ref={nameRef}
-                        onChange={setInfo}
-                        name="name"
-                        id="name"
-                        placeholder="Nombre"
-                        autoComplete='off'
-                    />
+                <div className='form-includes'>
+                    <h4>Incluye: </h4>
+                    <ul className='form-includes-list'>
+                        {
+                            menu?.map((menu) => {
+                                return (
+                                    <li className='includes-opt' key={menu}><p>{menu}</p><small>Quitar</small></li>
+                                )
+                            })
+                        }
+                        {
+                            entrada?.map((entrada) => {
+                                return (
+                                    <li className='includes-opt' key={entrada}><p>{entrada}</p><small>Quitar</small></li>
+                                )
+                            })
+                        }
+                        {
+                            bebida?.map((bebida) => {
+                                return (
+                                    <li className='includes-opt' key={bebida}><p>{bebida}</p><small>Quitar</small></li>
+                                )
+                            })
+                        }
+                        {
+                            postre?.map((postre) => {
+                                return (
+                                    <li className='includes-opt' key={postre}><p>{postre}</p><small>Quitar</small></li>
+                                )
+                            })
+                        }
+                    </ul>
                 </div>
-                <div className="form-register-input">
-                    <input
-                        type="email"
-                        ref={emailRef}
-                        onChange={setInfo}
-                        name="email"
-                        id="email"
-                        placeholder="Email"
-                        autoComplete='off'
-                    />
-                </div>
-                <div className="form-register-input">
-                    <input
-                        type="street-address"
-                        ref={addressRef}
-                        onChange={setInfo}
-                        placeholder="Direccion"
-                        autoComplete='off'
-                    />
-                </div>
-                <div className="form-register-input">
-                    <input
-                        type='date'
-                        ref={dateRef}
-                        onChange={setInfo}
-                        dateformat='dd/MM/yyyy'
-                        min='2023-01-01'
-                    />
-                </div>
-                <div className='times-event'>
-                    <div className="form-register-input">
-                        <label className='time-label' htmlFor='trip-start'>Desde:</label>
-                        <input
-                            type="time"
-                            ref={timeStartRef}
-                            onChange={setInfo}
-                            id="start"
-                            name="trip-start"
-                            className='date-event'
-                        />
-                    </div>
-                    <div className="form-register-input">
-                        <label className='time-label' htmlFor='trip-end'>Hasta:</label>
-                        <input
-                            type="time"
-                            ref={timeEndRef}
-                            onChange={setInfo}
-                            id="end"
-                            name="trip-end"
-                            className='date-event'
-                        />
-                    </div>
-                </div>
-                <div className="form-register-input quantity">
-                    <input
-                        type="number"
-                        ref={quantRef}
-                        onChange={setInfo}
-                        min={0}
-                        className='quantity-event'
-                        placeholder='Cantidad de invitados'
-                    />
-                </div>
+                <FormInputs />
                 <ReactWhatsapp
                     number='+54 9 11 4078-1149'
                     message={messageForm}
@@ -137,20 +95,8 @@ const ConfirmEvent = () => {
                 </ReactWhatsapp>
                 <button
                     className="button-cancel"
+                    onClick={resetForm}
                     type='reset'
-                    onClick={() => setMessage({
-                        name: '',
-                        email: '',
-                        address: '',
-                        date: '',
-                        timeStart: '',
-                        timeEnd: '',
-                        quant: '',
-                        entrada: [],
-                        menu: [],
-                        postre: [],
-                        bebida: []
-                    })}
                 >Cancelar</button>
             </div>
         </div>
