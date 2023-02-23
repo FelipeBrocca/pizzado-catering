@@ -194,6 +194,8 @@ fieldset.form-register-input > legend > small{
     display: flex;
     flex-direction: column;
     align-items: center;
+    overflow-y: auto;
+    padding: 5px 5px 50px 5px;
 }
 
 .yellow-form-big{

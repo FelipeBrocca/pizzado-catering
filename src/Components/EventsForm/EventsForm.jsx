@@ -7,10 +7,20 @@ import './EventsForm.css'
 
 const EventsForm = () => {
 
-    const { handleChangeBebida, handleChangeEntrada, handleChangeMenu, handleChangePostre, bebida, postre, menu, entrada } = useContext(EventContext)
+    const {
+        handleChangeBebida,
+        handleChangeEntrada,
+        handleChangeMenu,
+        handleChangePostre,
+        bebida,
+        postre,
+        menu,
+        entrada
+    } = useContext(EventContext)
+
 
     return (
-        <form className="form-register">
+        <form className="form-register" id='form-event'>
             <fieldset className='form-register-input'>
                 <legend>Elegí tus combos.<br></br><small>(Todos los precios son por persona)</small></legend>
                 <div className='combo-section'>

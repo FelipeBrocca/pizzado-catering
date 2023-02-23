@@ -1,6 +1,9 @@
-import React from 'react'
+import React, { useContext } from 'react'
+import { EventContext } from '../../Context/EventContext'
 
-const SmallConfirmEvent = ({formOpen, toggleYellowForm}) => {
+const SmallConfirmEvent = () => {
+
+    const {formOpen, toggleYellowForm} = useContext(EventContext)
     return (
         <>
             <div

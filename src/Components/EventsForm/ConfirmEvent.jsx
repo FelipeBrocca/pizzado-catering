@@ -1,4 +1,4 @@
-import React, { useContext, useState, useEffect } from 'react'
+import React, { useContext } from 'react'
 import ReactWhatsapp from 'react-whatsapp';
 import SmallConfirmEvent from './SmallConfirmEvent';
 import { EventContext } from '../../Context/EventContext';
@@ -8,47 +8,20 @@ import FormInputs from './FormInputs';
 
 const ConfirmEvent = () => {
 
-    const [formOpen, setFormOpen] = useState(false)
-    const { messageForm, setInfoToSend, menu, entrada, bebida, postre } = useContext(EventContext)
-
-    const body = document.getElementById('body')
-    useEffect(() => {
-        if (formOpen) {
-            body.classList.add('body-fixed')
-        } else {
-            body.classList.remove('body-fixed')
-        }
-    }, [formOpen, body.classList])
-
-
-    const toggleYellowForm = () => {
-        setFormOpen(!formOpen)
-    }
-
-
-    const resetForm = () => {
-        setInfoToSend({
-            name: '',
-            email: '',
-            address: '',
-            date: '',
-            timeStart: '',
-            timeEnd: '',
-            quant: '',
-            entrada: [],
-            menu: [],
-            postre: [],
-            bebida: []
-        })
-    }
+    const {
+        messageForm,
+        menu,
+        entrada,
+        bebida,
+        postre,
+        formOpen,
+        resetForm
+    } = useContext(EventContext)
 
     return (
         <div className={formOpen ? 'yellow-form open' : 'yellow-form'}>
             <div className='yellow-form-small'>
-                <SmallConfirmEvent
-                    formOpen={formOpen}
-                    toggleYellowForm={toggleYellowForm}
-                />
+                <SmallConfirmEvent />
             </div>
             <div className='yellow-form-big'>
                 <h2 className='title-yellow-form'>Solicitar servicio de catering:</h2>
@@ -95,8 +68,7 @@ const ConfirmEvent = () => {
                 </ReactWhatsapp>
                 <button
                     className="button-cancel"
-                    onClick={resetForm}
-                    type='reset'
+                    onClick={(e) => resetForm(e)}
                 >Cancelar</button>
             </div>
         </div>
