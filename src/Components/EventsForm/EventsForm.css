@@ -27,33 +27,6 @@ textarea:focus {
     gap: 20px;
 }
 
-.form-register{
-    width: 95%;
-    min-width: 350px;
-    max-width: 600px;
-    margin: 0 auto;
-    display: flex;
-    flex-direction: column;
-    justify-content: center;
-    align-items: center;
-}
-
-.form-register-input{
-    display: flex;
-    flex-direction: column;
-    align-items: flex-start;
-    width: 90%;
-    margin: 0;
-}
-
-.form-register-input > input{
-    height: 35px;
-    width: 100%;
-    padding-left: 5px;
-    margin: 5px;
-    border-radius: 5px;
-    border: 1px solid #f5b721;
-}
 
 .button-card{
     width: 100px;
@@ -184,12 +157,39 @@ ul{
 
 .yellow-form > p{
     font-size: 14px;
-    text-align: justify;
+    text-align: left;
     margin: 0 20px 20px 20px;
 }
 
+.form-register{
+    width: 95%;
+    min-width: 350px;
+    max-width: 600px;
+    margin: 0 auto;
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+    align-items: center;
+}
+
+.form-register-input{
+    display: flex;
+    flex-direction: column;
+    align-items: flex-start;
+    width: 100%;
+    margin: 0;
+}
+
+.form-register-input > input{
+    height: 35px;
+    width: 90%;
+    padding-left: 5px;
+    margin: 5px 20px;
+    border-radius: 5px;
+    border: 1px solid #f5b721;
+}
 .form-register-input.datetime{
-    margin-right: 20px;
+    margin: 5px;
     max-width: 110px;
     display: flex;
     flex-direction: column;
@@ -225,7 +225,6 @@ ul{
 /* BOTON SOLAPA AMARILLA */ 
 
 .button-open-form{
-    cursor: pointer;
     width: 150px;
     height: 30px;
     color: white;
@@ -251,7 +250,8 @@ ul{
 
 /* BOTONES formulario */ 
 
-button {
+/* A ESTE HDP NO LE PUEDO SACAR ESE BORDE GRIS */ 
+.button-accept {
     width: 150px;
     height: 30px;
     color: white;
@@ -259,16 +259,21 @@ button {
     border-radius: 5px;
     border: #BE1615;
     background-color: #BE1615;
-    align-self: center;
     cursor: pointer;
 }
 
 .button-cancel{
     cursor: pointer;
     color: black;
+    margin: 5px;
     text-decoration: underline;
     font-weight: bold;
     font-size: 14px;
     background-color: transparent;
     border: thin;
 }
+
+/* ME DIJO MARU QUE EL BOTON DE CANCEL NO TIENE QUE 
+RESETEAR TODO, SINO QUE TIENE QUE CERRAR LA SOLAPA
+Y QUE TODO LO DEL CHECKBOX QUEDE SELECCIONADO, COMO
+PARA SEGUIR ELIGIENDO */
