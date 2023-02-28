@@ -83,6 +83,8 @@ fieldset.form-register-input > legend > small{
     justify-content: space-around;
 }
 .form-img-div{
+    min-width: 88px;
+    min-height: 77px;
     width: 30%;
     border: 1px solid #f5b721;
     border-radius: 10px;

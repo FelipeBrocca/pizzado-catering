@@ -37,7 +37,7 @@ export default function ContainerLazy (){
 
     return <section className="container-menu" id='menu-section' ref={fromRef}>
           <h2 className="titulo-pizzas"> Pizzas congeladas </h2>
-               <Suspense fallback={<div></div>}>
+               <Suspense fallback={<div>Cargando...</div>}>
                   {
                       isNearScreen 
                       ? <Container /> 

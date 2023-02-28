@@ -10,10 +10,7 @@ const ConfirmEvent = () => {
 
     const {
         messageForm,
-        menu,
-        entrada,
-        bebida,
-        postre,
+        infoToSend,
         formOpen,
         resetForm
     } = useContext(EventContext)
@@ -30,28 +27,28 @@ const ConfirmEvent = () => {
                     <h4>Incluye: </h4>
                     <ul className='form-includes-list'>
                         {
-                            menu?.map((menu) => {
+                            infoToSend.menu?.map((menu) => {
                                 return (
                                     <li className='includes-opt' key={menu}><p>{menu}</p><small>Quitar</small></li>
                                 )
                             })
                         }
                         {
-                            entrada?.map((entrada) => {
+                            infoToSend.entrada?.map((entrada) => {
                                 return (
                                     <li className='includes-opt' key={entrada}><p>{entrada}</p><small>Quitar</small></li>
                                 )
                             })
                         }
                         {
-                            bebida?.map((bebida) => {
+                            infoToSend.bebida?.map((bebida) => {
                                 return (
                                     <li className='includes-opt' key={bebida}><p>{bebida}</p><small>Quitar</small></li>
                                 )
                             })
                         }
                         {
-                            postre?.map((postre) => {
+                            infoToSend.postre?.map((postre) => {
                                 return (
                                     <li className='includes-opt' key={postre}><p>{postre}</p><small>Quitar</small></li>
                                 )
@@ -69,6 +66,7 @@ const ConfirmEvent = () => {
                 <button
                     className="button-cancel"
                     onClick={(e) => resetForm(e)}
+                    type='reset'
                 >Cancelar</button>
             </div>
         </div>
