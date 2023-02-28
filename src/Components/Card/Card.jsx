@@ -1,6 +1,8 @@
-import React, { useState } from 'react'
+import React, { lazy, Suspense, useState } from 'react'
+import Skeleton from 'react-loading-skeleton'
 import './Card.css'
 import CartService from './CartService'
+const ImageLazy = lazy(() => import('../ImageLazy/ImageLazy'))
 
 
 const Card = ({ id, image, name, ingredients, price }) => {
@@ -11,7 +13,11 @@ const Card = ({ id, image, name, ingredients, price }) => {
     <>
       <div className="container-products">
         <div className="product card">
-            <img src={image} alt='card-img' className='product-img' />
+          <Suspense fallback={
+            <Skeleton style={{ width: '100%', height: '150px', borderRadius: '10px' }} />
+          }>
+            <ImageLazy src={image} alt='card-img' className='product-img' />
+          </Suspense>
           <div className="product-description">
             <h3 className="product-title">{name}</h3>
             <p className="product-ingredients">({ingredients})</p>

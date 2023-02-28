@@ -1,9 +1,12 @@
-import React from 'react'
+import React, { lazy, Suspense } from 'react'
 import { Link } from 'react-router-dom'
 
 import './FoodOpt.css'
 import pizzasOpt from '../../public/images/pizzas.webp'
 import eventsOpt from '../../public/images/eventos.webp'
+import Skeleton from 'react-loading-skeleton'
+const ImageLazy = lazy(() => import('../ImageLazy/ImageLazy'))
+
 
 const FoodOpt = () => {
 
@@ -18,27 +21,35 @@ const FoodOpt = () => {
     return (
         <section className='container-options'>
             <div className="options-item">
+                <Suspense fallback={
+                    <Skeleton style={{ width: '100%', height: '100%', borderRadius: '50%' }} />
+                }>
                     <Link
                         onClick={handleClickScrollMenu}>
-                        <img
+                        <ImageLazy
                             src={pizzasOpt}
                             alt='pizzas-opt'
                             className='options-img'
                         />
-                        <p className="options-circle">Pizzas Congeladas</p>                       
+                        <p className="options-circle">Pizzas Congeladas</p>
                     </Link>
+                </Suspense>
             </div>
             <div className="options-item">
+                <Suspense fallback={
+                    <Skeleton style={{ width: '100%', height: '100%', borderRadius: '50%' }} />
+                }>
                     <Link
                         to={'/eventos'}
                         onClick={scrollToTop}>
-                        <img
+                        <ImageLazy
                             src={eventsOpt}
                             alt='eventos-opt'
                             className='options-img'
                         />
                         <p className="options-circle">Eventos</p>
                     </Link>
+                </Suspense>
             </div>
         </section>
     )

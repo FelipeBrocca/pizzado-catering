@@ -1,11 +1,14 @@
-import React from 'react'
+import React, { lazy, Suspense } from 'react'
 import { Link } from 'react-router-dom'
+import Skeleton from 'react-loading-skeleton'
+import 'react-loading-skeleton/dist/skeleton.css'
 import './Slider.css'
 import slide from '../../public/images/slider.webp'
 import slide2 from '../../public/images/slider2.webp'
 import slide3 from '../../public/images/slider3.webp'
 import "react-responsive-carousel/lib/styles/carousel.min.css";
 import { Carousel } from 'react-responsive-carousel'
+const ImageLazy = lazy(() => import('../ImageLazy/ImageLazy'))
 
 
 
@@ -24,22 +27,25 @@ const Slider = () => {
     return (
         <>
             <div className='carousel-container'>
-                    <Carousel
-                        autoPlay={true}
-                        interval={10000}
-                        infiniteLoop={true}
-                        showThumbs={false}
-                        stopOnHover={true}
-                        showArrows={false}
-                        dynamicHeight={true}
-                        showStatus={false}
-                    >
+                <Carousel
+                    autoPlay={true}
+                    interval={10000}
+                    infiniteLoop={true}
+                    showThumbs={false}
+                    stopOnHover={true}
+                    showArrows={false}
+                    dynamicHeight={true}
+                    showStatus={false}
+                >
+                    <Suspense fallback={
+                        <Skeleton style={{ width: '900px', height: '300px' }}
+                        />}>
                         <div className="slide-foodopt-container">
-                                <img
-                                    src={slide}
-                                    alt='imgSlide'
-                                    className='image-slider'
-                                />
+                            <ImageLazy
+                                src={slide}
+                                alt='imgSlide'
+                                className='image-slider'
+                            />
                             <div className="slider-content">
                                 <h2 className="slider-title">
                                     Las mejores pizzas en un solo lugar
@@ -54,45 +60,53 @@ const Slider = () => {
                                     >Ver Menú</Link>
                                 </div>
                             </div>
-                    </div>
-                    <div className="slide-foodopt-container">
-                        <img src={slide2} alt="imgSlide" className='image-slider' />
-                        <div className="slider-content">
-                            <h2 className="slider-title">
-                                Catering de pizza y asado
-                            </h2>
-                            <p className="slider-text">
-                                ¡Consultá por tu Evento!
-                            </p>
-                            <div className="btn draw-border">
-                                <Link
-                                    className='link-slider'
-                                    to={'/eventos'}
-                                    onClick={scrollToTop}
-                                >Click Acá</Link>
+                        </div>
+                        <div className="slide-foodopt-container">
+                            <ImageLazy
+                                src={slide2}
+                                alt="imgSlide"
+                                className='image-slider'
+                            />
+                            <div className="slider-content">
+                                <h2 className="slider-title">
+                                    Catering de pizza y asado
+                                </h2>
+                                <p className="slider-text">
+                                    ¡Consultá por tu Evento!
+                                </p>
+                                <div className="btn draw-border">
+                                    <Link
+                                        className='link-slider'
+                                        to={'/eventos'}
+                                        onClick={scrollToTop}
+                                    >Click Acá</Link>
+                                </div>
                             </div>
                         </div>
-                    </div>
-                    <div className="slide-foodopt-container">
-                        <img src={slide3} alt="imgSlide" className='image-slider' />
-                        <div className="slider-content">
-                            <h2 className="slider-title">
-                                Hacemos catering
-                            </h2>
-                            <p className="slider-text">
-                                Fiestas, Cumpleaños, Bautismos, Juntadas
-                            </p>
-                            <div className="btn draw-border">
-                                <Link
-                                    className='link-slider'
-                                    to={'/eventos'}
-                                    onClick={scrollToTop}
-                                >Armá tu Presupuesto</Link>
+                        <div className="slide-foodopt-container">
+                            <ImageLazy
+                                src={slide3}
+                                alt="imgSlide"
+                                className='image-slider' />
+                            <div className="slider-content">
+                                <h2 className="slider-title">
+                                    Hacemos catering
+                                </h2>
+                                <p className="slider-text">
+                                    Fiestas, Cumpleaños, Bautismos, Juntadas
+                                </p>
+                                <div className="btn draw-border">
+                                    <Link
+                                        className='link-slider'
+                                        to={'/eventos'}
+                                        onClick={scrollToTop}
+                                    >Armá tu Presupuesto</Link>
+                                </div>
                             </div>
                         </div>
-                    </div>
+                    </Suspense>
                 </Carousel>
-        </div>
+            </div>
         </>
     )
 }
