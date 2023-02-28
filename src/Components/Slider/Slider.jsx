@@ -1,13 +1,11 @@
-import React, { lazy, Suspense } from 'react'
+import React from 'react'
 import { Link } from 'react-router-dom'
 import './Slider.css'
 import slide from '../../public/images/slider.webp'
 import slide2 from '../../public/images/slider2.webp'
 import slide3 from '../../public/images/slider3.webp'
 import "react-responsive-carousel/lib/styles/carousel.min.css";
-import Fallback from '../LazyImage/Fallback'
-const Carousel = lazy(() => import('react-responsive-carousel').then(module => ({ default: module.Carousel })));
-const LazyImage = lazy(() => import('../LazyImage/LazyImage'))
+import { Carousel } from 'react-responsive-carousel'
 
 
 
@@ -26,7 +24,6 @@ const Slider = () => {
     return (
         <>
             <div className='carousel-container'>
-                <Suspense fallback={<Fallback />}>
                     <Carousel
                         autoPlay={true}
                         interval={10000}
@@ -38,13 +35,11 @@ const Slider = () => {
                         showStatus={false}
                     >
                         <div className="slide-foodopt-container">
-                            <Suspense fallback={<Fallback/>}>
-                                <LazyImage
+                                <img
                                     src={slide}
                                     alt='imgSlide'
-                                    class='image-slider'
+                                    className='image-slider'
                                 />
-                            </Suspense>
                             <div className="slider-content">
                                 <h2 className="slider-title">
                                     Las mejores pizzas en un solo lugar
@@ -97,7 +92,6 @@ const Slider = () => {
                         </div>
                     </div>
                 </Carousel>
-            </Suspense>
         </div>
         </>
     )

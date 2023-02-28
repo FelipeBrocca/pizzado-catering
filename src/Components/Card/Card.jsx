@@ -1,8 +1,6 @@
-import React, { lazy, Suspense, useState } from 'react'
-import Fallback from '../LazyImage/Fallback'
+import React, { useState } from 'react'
 import './Card.css'
 import CartService from './CartService'
-const LazyImage = lazy(() => import('../LazyImage/LazyImage'))
 
 
 const Card = ({ id, image, name, ingredients, price }) => {
@@ -13,9 +11,7 @@ const Card = ({ id, image, name, ingredients, price }) => {
     <>
       <div className="container-products">
         <div className="product card">
-          <Suspense fallback={<Fallback />}>
-            <LazyImage src={image} alt='card-img' className='product-img' />
-          </Suspense>
+            <img src={image} alt='card-img' className='product-img' />
           <div className="product-description">
             <h3 className="product-title">{name}</h3>
             <p className="product-ingredients">({ingredients})</p>
