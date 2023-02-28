@@ -27,19 +27,19 @@ const Slider = () => {
     return (
         <>
             <div className='carousel-container'>
-                <Carousel
-                    autoPlay={true}
-                    interval={10000}
-                    infiniteLoop={true}
-                    showThumbs={false}
-                    stopOnHover={true}
-                    showArrows={false}
-                    dynamicHeight={true}
-                    showStatus={false}
-                >
-                    <Suspense fallback={
-                        <Skeleton style={{ width: '900px', height: '300px' }}
-                        />}>
+                <Suspense fallback={
+                    <Skeleton style={{ width: '900px', height: '300px' }}
+                    />}>
+                    <Carousel
+                        autoPlay={true}
+                        interval={10000}
+                        infiniteLoop={true}
+                        showThumbs={false}
+                        stopOnHover={true}
+                        showArrows={false}
+                        dynamicHeight={true}
+                        showStatus={false}
+                    >
                         <div className="slide-foodopt-container">
                             <ImageLazy
                                 src={slide}
@@ -104,8 +104,8 @@ const Slider = () => {
                                 </div>
                             </div>
                         </div>
-                    </Suspense>
-                </Carousel>
+                    </Carousel>
+                </Suspense>
             </div>
         </>
     )
