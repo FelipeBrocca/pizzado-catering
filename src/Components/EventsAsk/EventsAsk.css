@@ -44,7 +44,7 @@
 }
 
 .button-events:hover span {
-    transform: translateX(8em);
+    transform: translateX(10em);
 }
 
 .button-events:active {
