@@ -7,7 +7,7 @@ import igLogo from '../../public/images/instagramblco_hfgf8n.png'
 
 const Footer = () => {
     return (
-    <footer className="main-footer">
+    <footer>
         <div className="footer-section">
             <h2 className="footer-title">Sobre Nosotros</h2>
             <p className="footer-txt">Nacidos en agosto de 2017, Pizzado reúne lo mejor de la pizza argentina con la mejor 

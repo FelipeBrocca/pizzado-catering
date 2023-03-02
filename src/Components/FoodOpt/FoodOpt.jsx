@@ -20,7 +20,7 @@ const FoodOpt = () => {
 
     return (
         <section className='container-options'>
-            <div className="options-item">
+            <div className="options-item left">
                 <Suspense fallback={
                     <Skeleton style={{ width: '100%', height: '100%', borderRadius: '50%' }} />
                 }>
@@ -35,7 +35,7 @@ const FoodOpt = () => {
                     </Link>
                 </Suspense>
             </div>
-            <div className="options-item">
+            <div className="options-item right">
                 <Suspense fallback={
                     <Skeleton style={{ width: '100%', height: '100%', borderRadius: '50%' }} />
                 }>

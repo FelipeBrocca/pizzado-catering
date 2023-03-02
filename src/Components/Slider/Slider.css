@@ -4,70 +4,60 @@
     display: flex;
     justify-content: center;
 }
+.react-loading-skeleton.slider-suspense{
+    width: 900px;
+    height: 300px;
+}
 .slider-wrapper{
     width: 100%;
-    max-width: 900px;
+    max-width: 1000px;
+    min-height: 300px;
     height: 100%;
-    max-height: 400px;
+    max-height: 300px;
+}
+.slider-wrapper > ul{
+    height: 300px;
 }
 .carousel{
     width: 100%;
-    max-width: 900px;
+    max-width: 1000px;
     height: 100%;
-    max-height: 400px;
+    max-height: 300px;
 }
 .image-slider{
     object-fit: cover;
     filter: brightness(50%);
     width: 100%;
     height: 100%;
+    max-height: 300px;
 }
 .slide{
     width: 100%;
 }
 .slide-foodopt-container{
     position: relative;
-    display: flex;
     width: 100%;
     max-width: 900px;
-    min-height: 300px;
+    max-height: 300px;
     height: 100%;
-    max-height: 400px;
 }
 .slider-content{
     position: absolute;
+    top: 0;
+    width: 100%;
+    height: 100%;
     z-index: 2;
-    top: 30%;
-    left: 15%;
     color: white;
-    width: 70%;
-    max-width: 400px;
     display: flex;
     flex-direction: column;
+    justify-content: center;
     gap: 10px;
     opacity: 100;
     visibility: visible;
-    border-radius: 5px;
-    padding: 10px 5px 2px 5px;
 }
 .slider-title{
     font-size: 20px;
     margin: 0;
-}
-.slider-btn{
-    position: absolute;
-    width: 40px;
-    height: 40px;
-    background: rgba(255, 255, 255, 1);
-    top: 50%;
-    transform: translateY(-50%);
-    font-size: 30px;
-    font-weight: bold;
-    font-family: monospace;
-    text-align: center;
-    border-radius: 50%;
-    cursor: pointer;
-    z-index: 3;
 }
 .draw-border {
     box-shadow: inset 0 0 0 4px #be1615;
@@ -124,8 +114,9 @@
     font: 700 17px "Roboto Slab", sans-serif;
     letter-spacing: 0.05rem;
     width: 100%;
+    max-width: 300px;
+    align-self: center;
 }
-
 .link-slider{
     display: block;
     text-decoration: none;
@@ -134,15 +125,50 @@
     width: 100%;
     padding: 1em 2em;
 }
-.carousel.control-arrow{
-    position: absolute;
-    width: 50px;
-    height: 50px;
-    border-radius: 50%;
-    top: 45%;
-    opacity: 100;
+
+
+
+@media (min-width: 1024px) {
+    .carousel-container{
+        height: 400px;
+        box-shadow: 0px 0px 10px 0px rgba(0, 0, 0, 0.737);
+    }
+    .carousel-container > .carousel-root > .carousel.carousel-slider{
+       height: 400px;
+       max-height: 400px;
+       max-width: none;
+       width: 100%;
+    }
+    .slider-wrapper{
+        max-height: 400px;
+       max-width: none;
+       width: 100%;
+    }
+    .slider-wrapper > ul{
+        height: 400px;
+       max-width: none;
+       width: 100%;
+    }
+    .slide-foodopt-container{
+        max-height: 400px;
+        max-width: none;
+        width: 100%;
+        display: flex;
+    }
+    .slider-content{
+        position: relative;
+        background-color: rgb(24, 23, 23);
+    }
+    .image-slider{
+        max-height: 400px;
+       max-width: none;
+       width: 100%;
+    }
+    .btn{
+        max-width: 500px;
+    }
+    .react-loading-skeleton.slider-suspense{
+        width: 100vw;
+        height: 400px;
+    }
 }
-
-
-  
-  

@@ -27,11 +27,9 @@ const Slider = () => {
     return (
         <>
             <div className='carousel-container'>
-                <Suspense fallback={
-                    <Skeleton style={{ width: '900px', height: '300px' }}
-                    />}>
+                <Suspense fallback={<Skeleton className='slider-suspense' />}>
                     <Carousel
-                        autoPlay={true}
+                        autoPlay={false}
                         interval={10000}
                         infiniteLoop={true}
                         showThumbs={false}
@@ -41,11 +39,6 @@ const Slider = () => {
                         showStatus={false}
                     >
                         <div className="slide-foodopt-container">
-                            <ImageLazy
-                                src={slide}
-                                alt='imgSlide'
-                                className='image-slider'
-                            />
                             <div className="slider-content">
                                 <h2 className="slider-title">
                                     Las mejores pizzas en un solo lugar
@@ -60,6 +53,11 @@ const Slider = () => {
                                     >Ver Menú</Link>
                                 </div>
                             </div>
+                            <ImageLazy
+                                src={slide}
+                                alt='imgSlide'
+                                className='image-slider'
+                            />
                         </div>
                         <div className="slide-foodopt-container">
                             <ImageLazy
