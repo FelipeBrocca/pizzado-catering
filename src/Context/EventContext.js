@@ -18,52 +18,54 @@ export const EventProvider = ({ children }) => {
     }
 
     const [formOpen, setFormOpen] = useState(false)
-    const [entrada, setEntrada] = useState([])
-    const [menu, setMenu] = useState([])
-    const [postre, setPostre] = useState([])
-    const [bebida, setBebida] = useState([])
     const [infoToSend, setInfoToSend] = useState(initialInfoToSend)
 
-    useEffect(() => {
-        setInfoToSend({...infoToSend, entrada: entrada, menu: menu, postre: postre, bebida: bebida})
-        // eslint-disable-next-line react-hooks/exhaustive-deps
-    }, [entrada, menu, postre, bebida])
-
-
     const handleChangeEntrada = async (food) => {
-        const found = await entrada.find(element => element === food.title)
+        const found = await infoToSend.entrada.find(element => element === food.title)
         if (found) {
-            let newEntrada = entrada.filter(element => element !== found)
-            setEntrada(newEntrada)
+            let newEntrada = infoToSend.entrada.filter(element => element !== found)
+            setInfoToSend({...infoToSend, entrada: newEntrada})
         } else {
-            setEntrada(prevState => [...prevState, food.title])
+            setInfoToSend(prevState => ({
+                ...prevState,
+                entrada: [...prevState.entrada, food.title]
+            }))
         }
     }
     const handleChangeMenu = async (food) => {
-        const found = await menu.find(element => element === food.title)
+        const found = await infoToSend.menu.find(element => element === food.title)
         if (found) {
-            let newMenu = menu.filter(element => element !== found)
-            setMenu(newMenu)
+            let newMenu = infoToSend.menu.filter(element => element !== found)
+            setInfoToSend({...infoToSend, menu: newMenu})
         } else {
-            setMenu(prevState => [...prevState, food.title])
+            setInfoToSend(prevState => ({
+                ...prevState,
+                menu: [...prevState.menu, food.title]
+            }))
         }
     }
     const handleChangePostre = async (food) => {
-        const found = await postre.find(element => element === food.title)
+        const found = await infoToSend.postre.find(element => element === food.title)
         if (found) {
-            let newPostre = postre.filter(element => element !== found)
-            setPostre(newPostre)
+            let newPostre = infoToSend.postre.filter(element => element !== found)
+            setInfoToSend({...infoToSend, postre: newPostre})
         } else {
-            setPostre(prevState => [...prevState, food.title])
+            setInfoToSend(prevState => ({
+                ...prevState,
+                postre: [...prevState.postre, food.title]
+            }))
         }
     }
     const handleChangeBebida = async (food) => {
-        const found = await bebida.find(element => element === food.title)
+        const found = await infoToSend.bebida.find(element => element === food.title)
         if (found) {
-            let newBebida = bebida.filter(element => element !== found)
-            setBebida(newBebida)
+            let newBebida = infoToSend.bebida.filter(element => element !== found)
+            setInfoToSend({...infoToSend, bebida: newBebida})
         } else {
-            setBebida(prevState => [...prevState, food.title])
+            setInfoToSend(prevState => ({
+                ...prevState,
+                bebida: [...prevState.bebida, food.title]
+            }))
         }
     }
 
@@ -86,10 +88,6 @@ export const EventProvider = ({ children }) => {
     const resetForm = async (e) => {
         e.preventDefault();
         try {
-            await setMenu([]);
-            await setEntrada([]);
-            await setBebida([]);
-            await setPostre([]);
             await setInfoToSend(initialInfoToSend);
             await formRef.current.reset();
             setFormOpen(prevFormOpen => !prevFormOpen)
@@ -97,11 +95,11 @@ export const EventProvider = ({ children }) => {
             console.error('Error resetting form:', error);
         }
     }
+
     
     const toggleYellowForm = () => {
         setFormOpen(prevFormOpen => !prevFormOpen);
-      }
-
+    }
 
     const messageForm = `Hola, mi nombre es ${infoToSend.name ? infoToSend.name : '*Sin especificar*'} quiero averiguar para cotizar un evento. \n\n *Fecha:* ${infoToSend.date ? infoToSend.date : '*Sin especificar*'}, desde ${infoToSend.timeStart ? infoToSend.timeStart : '*Sin especificar*'}hs. hasta ${infoToSend.timeEnd ? infoToSend.timeEnd : '*Sin especificar*'}hs.\n *Dirección:* ${infoToSend.address ? infoToSend.address : '*Sin especificar*'} \n *Cantidad de invitados:* ${infoToSend.quant ? infoToSend.quant : '*Sin especificar*'}\n *Entrada:*\n${infoToSend.entrada[0] ? infoToSend.entrada.map((entrada) => `-${entrada} \n`).join('') : 'Sin especificar'} \n *Menu principal:*\n${infoToSend.menu[0] ? infoToSend.menu.map((menu) => `-${menu} \n`).join('') : 'Sin especificar'} \n *Postre:*\n${infoToSend.postre[0] ? infoToSend.postre.map((postre) => `-${postre} \n`).join('') : 'Sin especificar'} \n *Bebidas:*\n${infoToSend.bebida[0] ? infoToSend.bebida.map((bebida) => `-${bebida} \n`).join('') : 'Sin especificar'}`
 
@@ -109,14 +107,6 @@ export const EventProvider = ({ children }) => {
         <EventContext.Provider
             value={{
                 messageForm,
-                entrada,
-                setMenu,
-                setBebida,
-                setEntrada,
-                setPostre,
-                menu,
-                postre,
-                bebida,
                 handleChangeBebida,
                 handleChangeEntrada,
                 handleChangeMenu,

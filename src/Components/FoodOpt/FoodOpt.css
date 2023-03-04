@@ -36,4 +36,28 @@
     opacity: 1;
 }
 
+@media (min-width: 1024px) {
+    .container-options{
+        height: 300px;
+        position: relative;
+    }
+    .options-item{
+        width: 40%;
+        height: 100%;
+        border-radius: 0%;
+        position: relative;
+        overflow: hidden;
+    }
+    .options-item.left{
+        position: absolute;
+        clip-path: polygon(100% 0, 0 0, 0 100%);
+        margin-right: 20px;
+        border-radius: 10px;
+    }
+    .options-item.right{
+        clip-path: polygon(100% 0, 100% 100%, 0 100%);
+        margin-left: 20px;
+        border-radius: 10px;
+    }
 
+}

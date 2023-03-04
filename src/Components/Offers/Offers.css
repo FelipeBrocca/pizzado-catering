@@ -63,6 +63,7 @@
     padding: 1.5px;
     margin: 0 auto;
     text-align: center;
+    max-width: 700px;
 }
 .text-offer-container{
     display: flex;
@@ -71,6 +72,7 @@
 }
 .carousel.carousel-slider{
     height: 300px;
+    max-width: 900px;
 }
 .carousel .control-dots{
     margin: 0px;
@@ -89,4 +91,8 @@
     color: black;
     transition: 0.3s;
     cursor: pointer;
+}
+.carousel-root{
+    display: flex;
+    justify-content: center;
 }
