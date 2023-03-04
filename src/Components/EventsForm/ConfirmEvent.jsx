@@ -1,61 +1,76 @@
-import React, { useState, useRef } from 'react'
-import { Link } from 'react-router-dom';
+import React, { useContext } from 'react'
 import ReactWhatsapp from 'react-whatsapp';
+import SmallConfirmEvent from './SmallConfirmEvent';
+import { EventContext } from '../../Context/EventContext';
+import FormInputs from './FormInputs';
 
 
-const ConfirmEvent = ({ getInfo, nameRef, emailRef, addressRef, dateRef, timeRef, quantRef, messageForm }) => {
 
-    const [formOpen, setFormOpen] = useState(false)
+const ConfirmEvent = () => {
 
-    const toggleYellowForm = () => {
-        setFormOpen(!formOpen)
-    }
+    const {
+        messageForm,
+        menu,
+        entrada,
+        bebida,
+        postre,
+        formOpen,
+        resetForm
+    } = useContext(EventContext)
 
     return (
         <div className={formOpen ? 'yellow-form open' : 'yellow-form'}>
             <div className='yellow-form-small'>
-                <div
-                    className={formOpen ? 'button-close-form' : 'button-open-form'}
-                    id='button-open-form'
-                    onClick={toggleYellowForm}
-                >{formOpen ? 'X' : 'Solicitar servicio'}
+                <SmallConfirmEvent />
+            </div>
+            <div className='yellow-form-big'>
+                <h2 className='title-yellow-form'>Solicitar servicio de catering:</h2>
+                <p>* Al enviar este formulario, está solicitando el servicio, no es una compra definitiva. Nos estaremos contactando para confirmar definitivamente el evento</p>
+                <div className='form-includes'>
+                    <h4>Incluye: </h4>
+                    <ul className='form-includes-list'>
+                        {
+                            menu?.map((menu) => {
+                                return (
+                                    <li className='includes-opt' key={menu}><p>{menu}</p><small>Quitar</small></li>
+                                )
+                            })
+                        }
+                        {
+                            entrada?.map((entrada) => {
+                                return (
+                                    <li className='includes-opt' key={entrada}><p>{entrada}</p><small>Quitar</small></li>
+                                )
+                            })
+                        }
+                        {
+                            bebida?.map((bebida) => {
+                                return (
+                                    <li className='includes-opt' key={bebida}><p>{bebida}</p><small>Quitar</small></li>
+                                )
+                            })
+                        }
+                        {
+                            postre?.map((postre) => {
+                                return (
+                                    <li className='includes-opt' key={postre}><p>{postre}</p><small>Quitar</small></li>
+                                )
+                            })
+                        }
+                    </ul>
                 </div>
+                <FormInputs />
+                <ReactWhatsapp
+                    number='+54 9 11 4078-1149'
+                    message={messageForm}
+                    className='event-form-button'
+                > Solicitar servicio
+                </ReactWhatsapp>
+                <button
+                    className="button-cancel"
+                    onClick={(e) => resetForm(e)}
+                >Cancelar</button>
             </div>
-            <h2>Solicitar servicio de catering:</h2>
-            <p>* Al enviar este formulario, está solicitando el servicio, no es una compra definitiva. Nos estaremos contactando para confirmar definitivamente el evento</p>
-            <div className="form-register-input">
-                <input type="text" ref={nameRef} onChange={getInfo} name="name" id="name" placeholder="Nombre" required />
-            </div>
-            <div className="form-register-input">
-                <input type="email" ref={emailRef} onChange={getInfo} name="email" id="email" placeholder="Email" required />
-            </div>
-            <div className="form-register-input">
-                <input type="street-address" ref={addressRef} onChange={getInfo} placeholder="Direccion" />
-            </div>
-            <div className='event-and-quantity'>
-                <div className="form-register-input datetime">
-                    <input type="date" ref={dateRef} onChange={getInfo} id="start" name="trip-start"
-                    className='date-event' min="2023-01-01" max="2200-12-31"/>
-                </div>
-                <div className="form-register-input datetime">
-                    <input type="time" ref={timeRef} onChange={getInfo} id="start" name="trip-start"
-                    className='date-event'/>
-                </div>
-                <div className="form-register-input datetime">
-                    <input type="time" ref={timeRef} onChange={getInfo} id="start" name="trip-start"
-                    className='date-event'/>
-                </div>
-            </div>
-            <div className="form-register-input quantity">
-                <input type="number" ref={quantRef} onChange={getInfo} min={0} className='quantity-event' placeholder='Invitados'/>
-            </div>
-            <button className= "button-cancel" type='reset'>Cancelar</button>
-            <ReactWhatsapp
-                number='+54 9 11 4078-1149'
-                message={messageForm}
-            >
-                <button className="button-accept">Solicitar Servicio</button>
-            </ReactWhatsapp>
         </div>
     )
 }
