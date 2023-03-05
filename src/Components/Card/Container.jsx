@@ -36,13 +36,13 @@ export default function ContainerLazy (){
     const {isNearScreen, fromRef} = useNearScreen()
 
     return <section className="container-menu" id='menu-section' ref={fromRef}>
-          <h2 className="titulo-pizzas"> Pizzas congeladas </h2>
-               <Suspense fallback={<div>Cargando...</div>}>
-                  {
-                      isNearScreen 
-                      ? <Container /> 
-                      : <div>Cargando...</div>
-                  }
-               </Suspense>
-           </section>
+        <h2 className="titulo-pizzas"> PIZZAS CONGELADAS </h2>
+            <Suspense fallback={<div>Cargando...</div>}>
+                {
+                    isNearScreen 
+                    ? <Container /> 
+                    : <div>Cargando...</div>
+                }
+            </Suspense>
+        </section>
 }

@@ -2,7 +2,7 @@
   margin: 0;
   padding: 0;
   box-sizing: border-box;
-  font-family: Arial, Helvetica, sans-serif; 
+  font-family:'Segoe UI', Tahoma, Geneva, Verdana, sans-serif; 
 }
 #root {
   width: calc(100vw - (100vw - 100%));
@@ -11,7 +11,8 @@
   flex-direction: column;
   justify-content: space-between;
   color: #fff;
-  background-color: #1E1E1D;
+  background-image: url("/src/public/images/fondonegro.jpg");
+  background-position: cover;
   gap: 50px;
 }
 body{
@@ -29,15 +30,15 @@ a{
   overflow-y: hidden;
 }
 .backdropPopUp{
-   position: fixed;
-   top: 0;
-   left: 0;
-   width: 100%;
-   height: 100vh;
-   display: flex;
-   justify-content: center;
-   align-items: center;
-   animation: fade-in 300ms forwards;
-   background-color: rgba(21, 21, 21, 0.491);
-   z-index: 90;
+    position: fixed;
+    top: 0;
+    left: 0;
+    width: 100%;
+    height: 100vh;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    animation: fade-in 300ms forwards;
+    background-color: rgba(21, 21, 21, 0.491);
+    z-index: 90;
 }

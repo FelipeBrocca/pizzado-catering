@@ -91,7 +91,7 @@ const Slider = () => {
                                     Hacemos catering
                                 </h2>
                                 <p className="slider-text">
-                                    Fiestas, Cumpleaños, Bautismos, Juntadas
+                                    Fiestas, Cumpleaños, Bautismos, Juntadas, y lo que se te ocurra
                                 </p>
                                 <div className="btn draw-border">
                                     <Link

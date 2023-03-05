@@ -96,3 +96,13 @@
     display: flex;
     justify-content: center;
 }
+
+@media (min-width: 769px) {
+    .offers-content h2{
+        font-size: 36px;
+    }
+
+    .offers-content h3 {
+        font-size: 20px;
+    }
+}

@@ -201,10 +201,10 @@ fieldset.form-register-input > legend > small{
 }
 
 .yellow-form-big{
-   width: 90%;
-   display: flex;
-   flex-direction: column;
-   justify-content: center;
+    width: 90%;
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
 }
 
 .title-yellow-form{
@@ -354,7 +354,8 @@ fieldset.form-register-input > legend > small{
     border: thin;
 }
 
-/* ME DIJO MARU QUE EL BOTON DE CANCEL NO TIENE QUE 
-RESETEAR TODO, SINO QUE TIENE QUE CERRAR LA SOLAPA
-Y QUE TODO LO DEL CHECKBOX QUEDE SELECCIONADO, COMO
-PARA SEGUIR ELIGIENDO */
+@media (min-width: 769px) {
+    .yellow-form{
+        width: 70%;
+    }
+}

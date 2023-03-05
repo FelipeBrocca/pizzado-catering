@@ -36,13 +36,13 @@
     opacity: 1;
 }
 
-@media (min-width: 1024px) {
+@media (min-width: 769px) {
     .container-options{
-        height: 300px;
+        height: 400px;
         position: relative;
     }
     .options-item{
-        width: 40%;
+        width: 75%;
         height: 100%;
         border-radius: 0%;
         position: relative;
