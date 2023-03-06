@@ -11,7 +11,7 @@
     padding-right: 15px;
 }
 .link-logo{
-    width: 90px;
+    width: 150px;
     margin: 5px;
 }
 .link-logo > img{
@@ -76,7 +76,7 @@
     display: flex;
     align-items: center;
 }
-.menu > li > a{
+.menu-link{
     color: black;
     font-size: 20px;
     width: 100%;
@@ -87,10 +87,9 @@
     padding-left: 35px;
     gap: 45%;
 }
-.menu > li > a:hover{
+.menu-link:hover{
     color: #F5B721;
 }
-
 .button-carrito {
     position: absolute;
     margin: 0 auto;
@@ -179,4 +178,36 @@
 .cart-icon{
     color: #F5B721;
     font-size: 2em;
+}
+.main-nav-big-screen{
+    display: none;
+}
+
+@media (min-width: 1024px) {
+    .icon-menu{
+        display: none;
+    }
+    .main-nav.small{
+        display: none;
+    }
+    .main-nav-big-screen{
+        display: flex;
+        position: relative;
+        height: 50px;
+        translate: 0 0;
+        opacity: 1;
+        background-color: transparent;
+        right: 150px;
+        width: 40%;
+        min-width: 500px;
+        align-self: center;
+    }
+    .main-nav-big-screen > ul{
+        flex-direction: row;
+    }
+    .menu-link.big{
+        font-size: 25px;
+        gap: 35px;
+        align-items: flex-end;
+    }
 }

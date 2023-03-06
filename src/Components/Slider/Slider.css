@@ -129,49 +129,54 @@
 
 @media (min-width: 769px) {
     .carousel-container{
-        height: 400px;
+        height: 500px;
         box-shadow: 0px 0px 10px 0px rgba(0, 0, 0, 0.737);
     }
     .carousel-container > .carousel-root > .carousel.carousel-slider{
-        height: 400px;
-        max-height: 400px;
+        height: 500px;
+        max-height: 500px;
         max-width: none;
         width: 100%;
     }
     .slider-wrapper{
-        max-height: 400px;
+        max-height: 500px;
         max-width: none;
         width: 100%;
     }
     .slider-wrapper > ul{
-        height: 400px;
+        height: 500px;
         max-width: none;
         width: 100%;
     }
     .slide-foodopt-container{
-        max-height: 400px;
+        max-height: 500px;
         max-width: none;
         width: 100%;
         display: flex;
     }
     .slider-content{
+        width: 40%;
         position: relative;
         background-color: rgb(24, 23, 23);
         font-size: 18px;
     }
     .image-slider{
-        max-height: 400px;
+        max-height: 500px;
         max-width: none;
-        width: 100%;
+        width: 40%;
     }
     .btn{
         max-width: 300px;
     }
     .react-loading-skeleton.slider-suspense{
         width: 100vw;
-        height: 400px;
+        height: 500px;
     }
     .slider-title{
         font-size: 32px;
+    }
+    .carousel
+    .slide img{
+        width: 60%;
     }
 }

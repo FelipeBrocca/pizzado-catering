@@ -1,6 +1,7 @@
 .section-events{
-    background-image: linear-gradient(rgba(0, 0, 0, 0.4), rgba(0, 0, 0, 0.4)), url("/src/public/images/banner-pizza.jpg");
+    background-image: linear-gradient(rgba(0, 0, 0, 0.4), rgba(0, 0, 0, 0.4)), url("/src/public/images/bannerpizza.webp");
     background-size: cover;
+    background-position: center;
     margin-top: 50px 0px;
     text-align: center;
     width: 100%;

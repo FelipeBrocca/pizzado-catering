@@ -25,11 +25,14 @@ textarea:focus {
     display: flex;
     flex-direction: column;
     gap: 20px;
+    max-width: 900px;
 }
-
+.top-form > p{
+    max-width: 700px;
+}
 .form-register{
     width: 95%;
-    max-width: 600px;
+    max-width: 700px;
     margin: 0 auto;
     display: flex;
     flex-direction: column;
@@ -94,6 +97,10 @@ fieldset.form-register-input > legend > small{
     height: 100%;
     object-fit: cover;
     border-radius: 10px;
+}
+.form-img-div > .react-loading-skeleton{
+    width: 100%;
+    height: 100%;
 }
 /* MENUS PIZZA ASADO ETC */
 
@@ -357,5 +364,12 @@ fieldset.form-register-input > legend > small{
 @media (min-width: 769px) {
     .yellow-form{
         width: 70%;
+    }
+    .form-img-div{
+        min-width: none;
+    }
+    .form-img-div > .react-loading-skeleton{
+        min-width: 208px;
+        min-height: 174px;
     }
 }

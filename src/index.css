@@ -11,12 +11,16 @@
   flex-direction: column;
   justify-content: space-between;
   color: #fff;
-  background-image: url("/src/public/images/fondonegro.jpg");
-  background-position: cover;
   gap: 50px;
 }
+
 body{
   overflow-x: hidden;
+  background-image: url('./public/images/fondonegro.webp');
+  background-position: center;
+  background-size: cover;
+  background-repeat: no-repeat;
+  background-attachment: fixed;
 }
 main{
   display: flex;
