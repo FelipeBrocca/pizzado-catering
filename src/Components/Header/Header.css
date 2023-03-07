@@ -91,29 +91,31 @@
     color: #F5B721;
 }
 .button-carrito {
-    position: absolute;
-    margin: 0 auto;
-    margin-top: 5px;
+    position: fixed;
+    z-index: 999;
+    bottom: 10px;
+    right: 10px;
     overflow: hidden;
     outline: none;
     cursor: pointer;
-    border-radius: 10px;
-    background-color: transparent;
+    border-radius: 50%;
+    background-color: #F5B721;
     border: none;
     font-family: inherit;
     display: flex;
-    gap: 3px;
+    flex-direction: column-reverse;
     align-items: center;
-    width: 70px;
-    height: 70px;
+    width: 80px;
+    height: 80px;
     justify-content: center;
-    right: 60px;
 }
 
 .button-carrito > span {
-    color: hsl(0, 0%, 100%);
+    color: black;
+    font-weight: bold;
+    font-size: 18px;
     position: relative;
-    bottom: 20px;
+    bottom: 5px;
 }
 
 .hover-btn span {
@@ -124,13 +126,10 @@
     background-color: #8e1212;
 }
 .cart-length{
-    border: 2px solid white;
-    border-radius: 50%;
     width: 20px;
     height: 20px;
-    display: flex;
-    justify-content: center;
-    align-items: center;
+    display: grid;
+    place-items: center;
 }
 .menu-item.contact{
     position: relative;
@@ -176,7 +175,7 @@
     cursor: pointer;
 }
 .cart-icon{
-    color: #F5B721;
+    color: black;
     font-size: 2em;
 }
 .main-nav-big-screen{
@@ -184,6 +183,9 @@
 }
 
 @media (min-width: 1024px) {
+    .main-header-container{
+        justify-content: space-between;
+    }
     .icon-menu{
         display: none;
     }
@@ -197,8 +199,7 @@
         translate: 0 0;
         opacity: 1;
         background-color: transparent;
-        right: 150px;
-        width: 40%;
+        width: 10%;
         min-width: 500px;
         align-self: center;
     }

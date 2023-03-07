@@ -42,6 +42,7 @@ const Offers = () => {
                 interval={5000}
                 infiniteLoop={true}
                 showThumbs={false}
+                showArrows={false}
                 stopOnHover={true}
                 showStatus={false}
                 >

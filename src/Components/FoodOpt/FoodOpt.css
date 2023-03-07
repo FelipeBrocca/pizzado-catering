@@ -38,26 +38,6 @@
 
 @media (min-width: 769px) {
     .container-options{
-        height: 400px;
-        position: relative;
+        display: none;
     }
-    .options-item{
-        width: 75%;
-        height: 100%;
-        border-radius: 0%;
-        position: relative;
-        overflow: hidden;
-    }
-    .options-item.left{
-        position: absolute;
-        clip-path: polygon(100% 0, 0 0, 0 100%);
-        margin-right: 20px;
-        border-radius: 10px;
-    }
-    .options-item.right{
-        clip-path: polygon(100% 0, 100% 100%, 0 100%);
-        margin-left: 20px;
-        border-radius: 10px;
-    }
-
 }

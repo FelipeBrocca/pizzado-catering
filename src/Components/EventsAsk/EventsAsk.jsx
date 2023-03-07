@@ -7,7 +7,7 @@ const EventsAsk = () => {
     const scrollToTop = () => window.scrollTo({ top: 0, behavior: 'smooth' })
 
     return (
-        <section className='container-options'>
+        <section className='banner-events'>
             <div className="section-events" id="events">
                 <div className="section-container">
                     <h2 className="section-title">

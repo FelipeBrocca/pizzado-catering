@@ -12,8 +12,8 @@ const Home = () => {
       <Slider />
       <FoodOpt />
       <Offers />
-      <ContainerLazy />
       <EventsAsk />
+      <ContainerLazy />
     </main>
   )
 

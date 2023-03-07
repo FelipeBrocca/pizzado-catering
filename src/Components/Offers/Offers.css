@@ -98,6 +98,9 @@
 }
 
 @media (min-width: 769px) {
+    .text-offer-container{
+        background-color: #181717;
+    }
     .offers-content h2{
         font-size: 36px;
     }

@@ -24,7 +24,7 @@ const Cart = ({ cartPopUpState, handleCartPopUp, cartItems }) => {
   const messageToWA = itemsForMessage.map(item => 
     item.id >= 1000 ? 
       `x${item.quantity} - PROMO ${item.title} - $${item.price} c/u.`
-     : `x${item.quantity} - ${item.title} - $${item.price} c/u.`
+      : `x${item.quantity} - ${item.title} - $${item.price} c/u.`
     )
   const messageFriendlyString = messageToWA.join('\n')
 
@@ -51,7 +51,7 @@ const Cart = ({ cartPopUpState, handleCartPopUp, cartItems }) => {
                       item.offer ? <p>PROMO {item.title}
                         <br></br>
                         <small>
-                         ({item.offer})
+                          ({item.offer})
                         </small>
                       </p>
                         : <p>{item.title}</p>
