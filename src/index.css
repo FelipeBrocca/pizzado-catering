@@ -12,16 +12,15 @@
   justify-content: space-between;
   color: #fff;
   gap: 50px;
-}
-
-body{
-  overflow-x: hidden;
-  min-height: calc(100vh + (100vh - 100%));
   background-image: url('./public/images/fondonegro.webp');
   background-position: center;
   background-size: cover;
   background-repeat: no-repeat;
   background-attachment: fixed;
+}
+
+body{
+  overflow-x: hidden;
 }
 main{
   display: flex;
