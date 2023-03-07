@@ -112,6 +112,10 @@ fieldset.form-register-input > legend > small{
     padding: 5px;
     gap: 15px;
 }
+.combo-section > h3{
+    color: #f5b721;
+    font-size: 24px;
+}
 .combo-section > div{
     display: flex;
     justify-content: flex-start;
@@ -134,6 +138,7 @@ fieldset.form-register-input > legend > small{
 }
 .option-container > p{
     width: 17%;
+    text-align: center;
 }
 
 /* ITEMS */ 
@@ -196,6 +201,7 @@ fieldset.form-register-input > legend > small{
     background-color: #f5b721;
     border-radius: 20px 20px 0px 0px;
     transition: all 0.5s;
+    z-index: 100;
 }
 .yellow-form.open{
     height: 95vh;
@@ -269,14 +275,14 @@ fieldset.form-register-input > legend > small{
 }
 .form-includes{
     width: 90%;
-    max-width: 350px;
+    max-width: 300px;
     align-self: center;
     display: flex;
     flex-direction: column;
 }
 .form-includes > h4{
     align-self: flex-start;
-    text-align: left
+    align-self: left;
 }
 .form-includes-list{
     width: 80%;
@@ -291,10 +297,10 @@ fieldset.form-register-input > legend > small{
     width: 100%;
     padding: 2px;
     display: flex;
+    justify-content: left;
 }
 .includes-opt > p{
-    width: 80%;
-    font-size: 13px;
+    font-size: 15px;
     text-align: left;
     display: list-item;
 }
@@ -364,6 +370,7 @@ fieldset.form-register-input > legend > small{
 @media (min-width: 769px) {
     .yellow-form{
         width: 70%;
+        max-width: 800px;
     }
     .form-img-div{
         min-width: none;
@@ -371,5 +378,14 @@ fieldset.form-register-input > legend > small{
     .form-img-div > .react-loading-skeleton{
         min-width: 208px;
         min-height: 174px;
+    }
+    .combo-section > div{
+        align-items: center;
+    }
+    .combo-section > ul{
+        font-size: 16px;
+    }
+    .option-container{
+        font-size: 20px;
     }
 }

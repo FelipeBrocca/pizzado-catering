@@ -30,3 +30,13 @@
         transform: rotate(360deg);
     }
 }
+
+@media (min-width: 1024px) {
+    .body-loading{
+        background-image: url('../../public/images/fondonegro.webp');
+        background-position: center;
+        background-size: cover;
+        background-repeat: no-repeat;
+        background-attachment: fixed;
+    }
+}

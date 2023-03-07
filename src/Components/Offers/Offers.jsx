@@ -38,8 +38,8 @@ const Offers = () => {
                 <h3 className='offer-choose'>ELEGÍ LA QUE MAS TE GUSTE!</h3>
                 <h3 className='offer-discount'>10% OFF EN EFECTIVO Y TAKEAWAY</h3>
                 <Carousel
-                autoPlay={true}
-                interval={5000}
+                autoPlay={false}
+                interval={8000}
                 infiniteLoop={true}
                 showThumbs={false}
                 showArrows={false}

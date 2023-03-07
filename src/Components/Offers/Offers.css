@@ -28,23 +28,24 @@
 .offer{
     display: flex;
     flex-direction: column;
-    gap: 35px;
+    gap: 20px;
     border: 2px solid #F5B721;
     border-radius: 10px;
     padding: 10px;
     width: 100%;
     margin: 0 auto;
-    justify-content: center;
-    height: 250px;
+    justify-content: space-between;
+    height: 270px;
 }
-.offer > button{
-    width: 150px;
-    height: 30px;
+.add-offer-button{
+    width: 200px;
+    height: 35px;
     border-radius: 10px;
     border: 1px solid #F5B721;
     background-color: transparent;
     color: #F5B721;
     align-self: center;
+    font-size: 16px;
 }
 .offer-price{
     letter-spacing: 1px;
@@ -98,14 +99,37 @@
 }
 
 @media (min-width: 769px) {
+    .offers-content > .carousel-root{
+        height: 500px;
+    }
+    .offers-content > .carousel-root > .carousel.carousel-slider{
+        height: 100%;
+        min-height: 400px;
+    }
+    .offers-content > .carousel-root > .carousel.carousel-slider > .slider-wrapper{
+        height: 350px;
+    }
     .text-offer-container{
         background-color: #181717;
+        max-width: 800px;
+        height: 350px;
+        margin: 0 auto;
+    }
+    .offer{
+        height: 350px;
+        align-items: center;
+    }
+    .offer-title{
+        font-size: 36px;
+    }
+    .offer-text{
+        font-size: 24px;
+    }
+    .offer-price{
+        font-size: 24px;
     }
     .offers-content h2{
         font-size: 36px;
     }
 
-    .offers-content h3 {
-        font-size: 20px;
-    }
 }

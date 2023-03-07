@@ -15,8 +15,11 @@ footer{
     gap: 20px;
 }
 .footer-section > p{
+    align-self: center;
     text-align: center;
     padding: 5px 15px;
+    width: 80%;
+    font-size: 18px;
 }
 .footer-title{
     color: #E6AF20;

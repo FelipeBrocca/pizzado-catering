@@ -29,7 +29,7 @@ const ConfirmEvent = () => {
                         {
                             infoToSend.menu?.map((menu) => {
                                 return (
-                                    <li className='includes-opt' key={menu}><p>{menu}</p><small>Quitar</small></li>
+                                    <li className='includes-opt' key={menu}><p>{menu}</p></li>
                                 )
                             })
                         }
