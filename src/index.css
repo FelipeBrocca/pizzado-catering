@@ -16,12 +16,7 @@
 
 body{
   overflow-x: hidden;
-  padding-top: env(safe-area-inset-top);
-  background-image: url('./public/images/fondonegro.webp');
-  background-position: center;
-  background-size: cover;
-  background-repeat: no-repeat;
-  background-attachment: fixed;
+  background: linear-gradient(90deg, rgb(21, 21, 21) 0%, #302f2f 50%, rgb(21, 21, 21) 100%);
 }
 main{
   display: flex;
@@ -46,4 +41,14 @@ a{
     animation: fade-in 300ms forwards;
     background-color: rgba(21, 21, 21, 0.491);
     z-index: 90;
+}
+
+@media (min-width: 769px) {
+  body{
+    background-image: url('./public/images/fondonegro.webp');
+    background-position: center;
+    background-size: cover;
+    background-repeat: no-repeat;
+    background-attachment: fixed;
+  }
 }
