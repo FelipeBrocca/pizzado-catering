@@ -16,10 +16,9 @@
 
 body{
   overflow-x: hidden;
-  min-height: calc(100vh + (100vh - 100%));
   background-image: url('./public/images/fondonegro.webp');
   background-position: center;
-  background-size: cover;
+  background-size: calc(100vh + (100vh - 100%));
   background-repeat: no-repeat;
   background-attachment: fixed;
 }
