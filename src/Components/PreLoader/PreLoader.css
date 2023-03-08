@@ -5,7 +5,7 @@
     justify-content: center;
     align-items: center;
     position: fixed;
-    background-color: #1E1E1D;
+    background: linear-gradient(90deg, rgb(21, 21, 21) 0%, #302f2f 50%, rgb(21, 21, 21) 100%);
     z-index: 100000;
 }
 .loader-img{

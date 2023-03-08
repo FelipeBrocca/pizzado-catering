@@ -5,6 +5,7 @@ import cuatroQuesos from '../../public/images/4quesos.webp'
 import morron from '../../public/images/morroncaram.webp'
 import chickenBBQ from '../../public/images/polloybarb.webp'
 import roque from '../../public/images/roque.webp'
+import jamon from '../../public/images/jamon.webp'
 
 export const ProducData = [
     {
@@ -58,7 +59,7 @@ export const ProducData = [
     },
     {
         id: 8,
-        image: roque,
+        image: jamon,
         name: 'Jamon y Muzzarella',
         ingredients: 'Jamón sobre una base de Muzzarella y salsa de tomate ',
         price: 1190

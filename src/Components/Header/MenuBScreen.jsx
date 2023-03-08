@@ -1,4 +1,4 @@
-import React from 'react'
+import React, {useState} from 'react'
 import { Link } from 'react-router-dom';
 import { FontAwesomeIcon } from '@fortawesome/react-fontawesome'
 import { faChevronDown } from '@fortawesome/free-solid-svg-icons'
@@ -7,11 +7,12 @@ import wappLogo from '../../public/images/wappblco_bc9zdu.png'
 
 const MenuBScreen = () => {
 
+    const [openContact, setOpenContact] = useState(false)
+
     const scrollToTop = () => window.scrollTo({ top: 0, behavior: 'smooth' })
     
-    const contact = document.getElementById('contact-header big')
     const handleContact = () => {
-        contact.classList.toggle('open')
+        setOpenContact(!openContact)
     }
 
 return (
@@ -29,10 +30,22 @@ return (
                     >Cotizar evento</Link>
                 </li>
                 <li className="menu-item big contact">
-                    <Link className="menu-link big"
-                        onClick={handleContact}
-                    ><p>Contacto</p><FontAwesomeIcon icon={faChevronDown} /></Link>
-                    <ul id='contact-header big'>
+                <Link className="menu-link big"
+                            onClick={handleContact}
+                        >
+                            <p>Contacto</p>
+                            <FontAwesomeIcon icon={faChevronDown} className={
+                                openContact
+                                ? 'chevron-active'
+                                : 'chevron-unactive'
+                            } />
+                            </Link>
+                        <ul className={
+                            openContact 
+                            ? 'open'
+                            : '' 
+                            }
+                        >
                         <li><a
                             href="https://wa.me/5491140781149"
                             target="_blank"
@@ -51,4 +64,4 @@ return (
     )
 }
 
-export default MenuBScreen
+export default React.memo(MenuBScreen)

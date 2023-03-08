@@ -94,4 +94,4 @@ const Cart = ({ cartPopUpState, handleCartPopUp, cartItems }) => {
   )
 }
 
-export default Cart
+export default React.memo(Cart)

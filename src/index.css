@@ -43,6 +43,28 @@ a{
     z-index: 90;
 }
 
+.not-found-main{
+  width: 100%;
+  display: grid;
+  place-items: center;
+}
+.not-found-main > img{
+  width: 90%;
+  max-width: 400px;
+}
+.not-found-main > h2{
+  font-size: 46px;
+}
+.not-found-main > p{
+  font-size: 20px;
+  max-width: 500px;
+}
+.not-found-main > p > a{
+  color: #E6AF20;
+  text-decoration: underline;
+  text-underline-offset: 3px;
+}
+
 @media (min-width: 1024px) {
   body{
     background-image: url('./public/images/fondonegro.webp');

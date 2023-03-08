@@ -1,4 +1,4 @@
-import React, { useEffect } from 'react'
+import React, { useEffect, useState } from 'react'
 import { Link } from 'react-router-dom'
 import { FontAwesomeIcon } from '@fortawesome/react-fontawesome'
 import { faChevronDown } from '@fortawesome/free-solid-svg-icons'
@@ -12,6 +12,7 @@ const MenuSScreen = () => {
     const { popUpState, backdropPopUp, handlePopUp, isClosed } = usePopUp()
     const body = document.getElementById('body')
 
+    const [openContact, setOpenContact] = useState(false)
 
     useEffect(() => {
         popUpState ? body.classList.add('body-fixed') : body.classList.remove('body-fixed')
@@ -20,9 +21,8 @@ const MenuSScreen = () => {
     const scrollToTop = () => window.scrollTo({ top: 0, behavior: 'smooth' })
 
 
-    const contact = document.getElementById('contact-header')
     const handleContact = () => {
-        contact.classList.toggle('open')
+        setOpenContact(!openContact)
     }
 
     return (
@@ -54,8 +54,20 @@ const MenuSScreen = () => {
                     <li className="menu-item contact">
                         <Link className="menu-link"
                             onClick={handleContact}
-                        ><p>Contacto</p><FontAwesomeIcon icon={faChevronDown} /></Link>
-                        <ul id='contact-header'>
+                        >
+                            <p>Contacto</p>
+                            <FontAwesomeIcon icon={faChevronDown} className={
+                                openContact
+                                ? 'chevron-active'
+                                : 'chevron-unactive'
+                            } />
+                            </Link>
+                        <ul className={
+                            openContact 
+                            ? 'open'
+                            : '' 
+                            }
+                        >
                             <li><a
                                 href="https://wa.me/5491135781101"
                                 target="_blank"
@@ -74,4 +86,4 @@ const MenuSScreen = () => {
     )
 }
 
-export default MenuSScreen
+export default React.memo(MenuSScreen)

@@ -60,8 +60,7 @@
 }
 .container-products .card:hover {
         transform: translateY(-0.5rem);
-        border: #ec1b1b62 0.2em solid;
-        border-radius: 2.5rem 0 2.5rem 0; 
+        border: #f5b721 2px solid;
 }
 .container-products .product {
         text-align: center;

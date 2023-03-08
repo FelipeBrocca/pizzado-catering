@@ -18,21 +18,21 @@ const EventInfo = () => {
                 <div className='form-imges-container'>
                     <div className='form-img-div'>
                         <Suspense fallback={
-                            <Skeleton style={{ width: '100%', height: '98%', borderRadius: '10px' }} />
+                            <Skeleton className='form-img-skeleton' />
                         }>
                             <LazyInfoImages src={catering1} alt='catering1' />
                         </Suspense>
                     </div>
                     <div className='form-img-div'>
                         <Suspense fallback={
-                            <Skeleton style={{ width: '100%', height: '98%', borderRadius: '10px' }} />
+                            <Skeleton className='form-img-skeleton' />
                         }>
                             <LazyInfoImages src={catering2} alt='catering2' />
                         </Suspense>
                     </div>
                     <div className='form-img-div'>
                         <Suspense fallback={
-                            <Skeleton style={{ width: '100%', height: '98%', borderRadius: '10px' }} />
+                            <Skeleton className='form-img-skeleton' />
                         }>
                             <LazyInfoImages src={catering3} alt='catering3' />
                         </Suspense>

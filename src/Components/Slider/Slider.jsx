@@ -29,7 +29,7 @@ const Slider = () => {
             <div className='carousel-container'>
                 <Suspense fallback={<Skeleton className='slider-suspense' />}>
                     <Carousel
-                        autoPlay={false}
+                        autoPlay={true}
                         interval={10000}
                         infiniteLoop={true}
                         showThumbs={false}
@@ -86,20 +86,13 @@ const Slider = () => {
                                 src={slide3}
                                 alt="imgSlide"
                                 className='image-slider' />
-                            <div className="slider-content">
-                                <h2 className="slider-title">
-                                    Hacemos catering
+                            <div className="slider-content offer">
+                                <h2 className="slider-title offer">
+                                    Aprovechá nuestra promo!
                                 </h2>
-                                <p className="slider-text">
-                                    Fiestas, Cumpleaños, Bautismos, Juntadas, <br></br> y lo que se te ocurra
+                                <p className="slider-text offer">
+                                    10% OFF EN EFECTIVO Y TAKEAWAY
                                 </p>
-                                <div className="btn draw-border">
-                                    <Link
-                                        className='link-slider'
-                                        to={'/eventos'}
-                                        onClick={scrollToTop}
-                                    >Armá tu Presupuesto</Link>
-                                </div>
                             </div>
                         </div>
                     </Carousel>

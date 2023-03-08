@@ -33,7 +33,7 @@ const CartService = ({id, valor, name, price, image}) => {
           onClick={setProductToCart}
           >
               <Link to="#" className="add-carrito" data-id="1">
-                  <span className="button-card-txt">Agregar +</span>
+                  <span className="button-card-txt">Agregar</span>
                   <span>¡Dale!</span>
               </Link>
         </button>
