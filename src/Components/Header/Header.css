@@ -36,6 +36,7 @@
     top: 0;
     right: 0;
     width: 70%;
+    max-width: 400px;
     background-color: #f8f8f8;
     height: 100vh;
     translate: 0 0;
