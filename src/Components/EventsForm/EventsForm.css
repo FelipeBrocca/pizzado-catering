@@ -220,6 +220,8 @@ fieldset.form-register-input > legend > small{
 }
 .yellow-form.open::-webkit-scrollbar{
     width: 5px;
+    height: 95%;
+    margin: auto 0;
     border-radius: 20px;
 }
 .yellow-form.open::-webkit-scrollbar-track{
