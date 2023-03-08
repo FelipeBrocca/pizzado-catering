@@ -36,21 +36,21 @@ const ConfirmEvent = () => {
                         {
                             infoToSend.entrada?.map((entrada) => {
                                 return (
-                                    <li className='includes-opt' key={entrada}><p>{entrada}</p><small>Quitar</small></li>
+                                    <li className='includes-opt' key={entrada}><p>{entrada}</p></li>
                                 )
                             })
                         }
                         {
                             infoToSend.bebida?.map((bebida) => {
                                 return (
-                                    <li className='includes-opt' key={bebida}><p>{bebida}</p><small>Quitar</small></li>
+                                    <li className='includes-opt' key={bebida}><p>{bebida}</p></li>
                                 )
                             })
                         }
                         {
                             infoToSend.postre?.map((postre) => {
                                 return (
-                                    <li className='includes-opt' key={postre}><p>{postre}</p><small>Quitar</small></li>
+                                    <li className='includes-opt' key={postre}><p>{postre}</p></li>
                                 )
                             })
                         }

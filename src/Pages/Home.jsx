@@ -10,10 +10,10 @@ const Home = () => {
   return (
     <main>
       <Slider />
-      <FoodOpt />
       <Offers />
-      <EventsAsk />
       <ContainerLazy />
+      <FoodOpt />
+      <EventsAsk />
     </main>
   )
 
