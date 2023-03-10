@@ -273,8 +273,8 @@ fieldset.form-register-input > legend > small{
     width: 40%;
 }
 .date-event{
-    width: 100%;
     background-color: #fff;
+    box-sizing: border-box;
 }
 .time-label{
     margin-top: 10px;
