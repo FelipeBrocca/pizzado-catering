@@ -210,7 +210,7 @@ fieldset.form-register-input > legend > small{
     z-index: 100;
 }
 .yellow-form.open{
-    height: 95vh;
+    height: calc(95vh - (100vh - 100%));
     transition: all 0.5s;
     display: flex;
     flex-direction: column;
@@ -271,6 +271,10 @@ fieldset.form-register-input > legend > small{
 }
 .times-event > .form-register-input{
     width: 40%;
+}
+.date-event{
+    width: 100%;
+    background-color: #fff;
 }
 .time-label{
     margin-top: 10px;

@@ -68,6 +68,7 @@ const FormInputs = () => {
                     onChange={setInfo}
                     dateformat='dd/MM/yyyy'
                     min='2023-01-01'
+                    className='date-event'
                 />
             </div>
             <div className='times-event'>
