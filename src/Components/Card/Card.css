@@ -60,7 +60,7 @@
 }
 .container-products .card:hover {
         transform: translateY(-0.5rem);
-        border: #f5b721 2px solid;
+        border: #be1615 2px solid;
 }
 .container-products .product {
         text-align: center;

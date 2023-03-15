@@ -41,10 +41,10 @@ const Slider = () => {
                         <div className="slide-foodopt-container">
                             <div className="slider-content">
                                 <h2 className="slider-title">
-                                    Las mejores pizzas en un solo lugar
+                                    Las pizzas mas ricas están acá
                                 </h2>
                                 <p className="slider-text">
-                                    Metelas en el frizzer y tenelas siempre a mano
+                                    Metelas en el freezer y tenelas siempre a mano
                                 </p>
                                 <div className="btn draw-border">
                                     <Link
@@ -67,7 +67,7 @@ const Slider = () => {
                             />
                             <div className="slider-content">
                                 <h2 className="slider-title">
-                                    Catering de pizza y asado
+                                    Cátering de pizza y asado
                                 </h2>
                                 <p className="slider-text">
                                     ¡Consultá por tu Evento!
@@ -88,7 +88,7 @@ const Slider = () => {
                                 className='image-slider' />
                             <div className="slider-content">
                                 <h2 className="slider-title">
-                                    Hacemos catering
+                                    Hacemos cátering
                                 </h2>
                                 <p className="slider-text">
                                     Fiestas, Cumpleaños, Bautismos, Juntadas, <br></br> y lo que se te ocurra

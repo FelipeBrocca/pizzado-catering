@@ -11,7 +11,7 @@ const EventsAsk = () => {
             <div className="section-events" id="events">
                 <div className="section-container">
                     <h2 className="section-title">
-                        Cotizá tu Evento
+                        COTIZÁ TU EVENTO
                     </h2>
                     <p className="section-events-txt">
                         Querés conocer mas acerca de nuestros eventos? <br /> Completá tus datos y enterate

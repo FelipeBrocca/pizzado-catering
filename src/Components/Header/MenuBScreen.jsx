@@ -47,7 +47,7 @@ return (
                             }
                         >
                         <li><a
-                            href="https://wa.me/5491140781149"
+                            href="https://wa.me/+5491140781149"
                             target="_blank"
                             rel="noreferrer"
                         ><img src={wappLogo} alt="wapp" />Whatsapp</a></li>
