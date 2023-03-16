@@ -2,7 +2,9 @@
   margin: 0;
   padding: 0;
   box-sizing: border-box;
-  font-family:'Segoe UI', Tahoma, Geneva, Verdana, sans-serif; 
+  /* font-family: 'Gobold CUTS', sans-serif; */
+  font-family: 'Gobold Thin Light', sans-serif;
+  letter-spacing: 1.5px;
 }
 #root {
   width: calc(100vw - (100vw - 100%));
