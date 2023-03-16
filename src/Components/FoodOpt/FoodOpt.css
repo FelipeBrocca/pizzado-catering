@@ -1,3 +1,47 @@
+/* #animation{
+    height: 100vh;
+    margin: 0;
+    background-color: transparent;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    padding: 80px 0px;
+}
+
+.parallax-text{
+    position: absolute;
+    font-family: 'Montserrat', sans-serif;
+    font-size: 15vw;
+    font-style: italic;
+    top: 1000px;
+}
+
+.parallax-text::after{
+    content: attr(text);
+    position: absolute;
+    z-index: 100;
+    top: 0;
+    left: 0;
+    color: transparent;
+    -webkit-text-stroke: 0.15vw black;
+}
+
+.img-pizza{
+    width: 50vw;
+    animation: pizzaAnimation 2s cubic-bezier(0.25, 1, 0.5, 1) infinite alternate;
+}
+
+@keyframes pizzaAnimation{
+    0%, 10%{
+        transform: translate(100vw, 0) rotate(15deg);
+    }
+    90%, 100%{
+        transform: translate(-5vw, -5vw) rotate(-30deg);
+    }
+} */
+
+
+
 .container-options{
     margin-top: 50px;
     display: flex;
@@ -36,7 +80,7 @@
     opacity: 1;
 }
 
-@media (min-width: 1024px) {
+@media (min-width: 769px) {
     .container-options{
         display: none;
     }

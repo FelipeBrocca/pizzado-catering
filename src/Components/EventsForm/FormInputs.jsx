@@ -105,6 +105,13 @@ const FormInputs = () => {
                     placeholder='Cantidad de invitados'
                 />
             </div>
+            <div>
+                <p>El lugar cuenta con parrilla?</p>
+                <label className="button-toggle" for="toggle">
+                    <input id="toggle" type="checkbox"/>
+                    <span className="move"></span>
+                </label>
+            </div>
         </>
     )
 }

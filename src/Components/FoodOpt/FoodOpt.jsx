@@ -52,6 +52,13 @@ const FoodOpt = () => {
                 </Suspense>
             </div>
         </section>
+        // <div id='animation'>
+        // <span className='parallax-text' text='PIZZADO'>
+        //     PIZZADO
+        // </span>
+        // {/* AGREGAR IMG */}
+        // </div>
+        
     )
 }
 
