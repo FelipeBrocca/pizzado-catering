@@ -10,8 +10,8 @@ const Home = () => {
   return (
     <main>
       <Slider />
-      {/* <Offers /> */}
       <FoodOpt />
+      {/* <Offers />  */}
       <ContainerLazy />
       <EventsAsk />
     </main>

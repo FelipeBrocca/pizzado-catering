@@ -10,10 +10,20 @@ const PreLoader = () => {
     
 
     return (
-    <div id="body-loading" className={loading ? 'body-loading' : 'body-loaded'}>
-        <img src={Loader} className={loading ? 'loader-img' : 'img-loaded'} alt="loader" />
-    </div>
+    <div id="body-loading animation" 
+    className={loading ? 'body-loading' : 'body-loaded'}
+    >
+            <div id='animation'>
+                <span className='parallax-text' text='PIZZADO'>
+                    PIZZADO
+                </span>
+                <img src={Loader} 
+                className={loading ? 'loader-img' : 'img-loaded'}
+                alt="loader" />
+            </div>
+        </div>
 )
 }
+
 
 export default PreLoader

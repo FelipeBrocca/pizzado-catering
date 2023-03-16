@@ -4,8 +4,8 @@ import { EventContext } from '../../Context/EventContext';
 
 const FormInputs = () => {
 
-    const { setInfoToSend, infoToSend } = useContext(EventContext)
-
+    const { setInfoToSend, infoToSend, parriCheck, setParriCheck } = useContext(EventContext)
+    
     const nameRef = useRef()
     const emailRef = useRef()
     const addressRef = useRef()
@@ -13,8 +13,10 @@ const FormInputs = () => {
     const timeStartRef = useRef()
     const timeEndRef = useRef()
     const quantRef = useRef()
-
-
+    
+    const toggleParri = () => {
+        setParriCheck(!parriCheck)
+    }
     const setInfo = () => {
         setInfoToSend({
             ...infoToSend,
@@ -24,9 +26,10 @@ const FormInputs = () => {
             date: dateRef.current.value,
             timeStart: timeStartRef.current.value,
             timeEnd: timeEndRef.current.value,
-            quant: quantRef.current.value
+            quant: quantRef.current.value    
         })
     }
+
 
     return (
         <>
@@ -107,8 +110,8 @@ const FormInputs = () => {
             </div>
             <div>
                 <p>El lugar cuenta con parrilla?</p>
-                <label className="button-toggle" for="toggle">
-                    <input id="toggle" type="checkbox"/>
+                <label className="button-toggle" htmlFor="toggle">
+                    <input id="toggle" type="checkbox" onChange={toggleParri} checked={parriCheck} />
                     <span className="move"></span>
                 </label>
             </div>

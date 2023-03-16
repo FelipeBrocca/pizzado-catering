@@ -169,32 +169,29 @@
         max-height: 600px;
         max-width: none;
         width: 100%;
-        display: flex;
     }
-    .slider-content{
-        width: 40%;
-        position: relative;
-        background-color: rgb(24, 23, 23);
-        font-size: 18px;
-        min-height: 600px;
-        padding: 0px 5px 0px 5px;
+
+    .slider-text{
+        font-size: 22px;
     }
     .image-slider{
         max-height: 600px;
         min-height: 600px;
     }
     .btn{
-        max-width: 300px;
+        max-width: 400px;
+        font-size: 22px;
+        margin: 25px;
     }
     .react-loading-skeleton.slider-suspense{
         width: 100vw;
         height: 600px;
     }
     .slider-title{
-        font-size: 32px;
+        font-size: 46px;
     }
-    .carousel
+    /* .carousel
     .slide img{
         max-width: 60%;
-    }
+    } */
 }

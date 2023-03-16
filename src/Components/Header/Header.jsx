@@ -19,7 +19,7 @@ const Header = () => {
     const handleLoading = () => {
         setTimeout(() => {
             setLoading(false)
-        }, 1000)
+        }, 3500)
     }
 
 

@@ -65,11 +65,11 @@
 }
 .main-nav > div > p{ 
     cursor: pointer;
-    padding: 10px;
+    padding: 20px;
+    font-size: 20px;
 }
 .main-nav > div > p:hover{ 
     cursor: pointer;
-    padding: 10px;
     color: #F5B721;
 }
 .menu > li{

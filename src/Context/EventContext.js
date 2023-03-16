@@ -14,9 +14,11 @@ export const EventProvider = ({ children }) => {
         entrada: [],
         menu: [],
         postre: [],
-        bebida: []
+        bebida: [],
+        parri: 'No'
     }
 
+    const [parriCheck, setParriCheck] = useState(false)
     const [formOpen, setFormOpen] = useState(false)
     const [infoToSend, setInfoToSend] = useState(initialInfoToSend)
 
@@ -101,7 +103,7 @@ export const EventProvider = ({ children }) => {
         setFormOpen(prevFormOpen => !prevFormOpen);
     }
 
-    const messageForm = `Hola, mi nombre es ${infoToSend.name ? infoToSend.name : '*Sin especificar*'} quiero averiguar para cotizar un evento. \n\n *Fecha:* ${infoToSend.date ? infoToSend.date : '*Sin especificar*'}, desde ${infoToSend.timeStart ? infoToSend.timeStart : '*Sin especificar*'}hs. hasta ${infoToSend.timeEnd ? infoToSend.timeEnd : '*Sin especificar*'}hs.\n *Dirección:* ${infoToSend.address ? infoToSend.address : '*Sin especificar*'} \n *Cantidad de invitados:* ${infoToSend.quant ? infoToSend.quant : '*Sin especificar*'}\n *Entrada:*\n${infoToSend.entrada[0] ? infoToSend.entrada.map((entrada) => `-${entrada} \n`).join('') : 'Sin especificar'} \n *Menu principal:*\n${infoToSend.menu[0] ? infoToSend.menu.map((menu) => `-${menu} \n`).join('') : 'Sin especificar'} \n *Postre:*\n${infoToSend.postre[0] ? infoToSend.postre.map((postre) => `-${postre} \n`).join('') : 'Sin especificar'} \n *Bebidas:*\n${infoToSend.bebida[0] ? infoToSend.bebida.map((bebida) => `-${bebida} \n`).join('') : 'Sin especificar'}`
+    const messageForm = `Hola, mi nombre es ${infoToSend.name ? infoToSend.name : '*Sin especificar*'} quiero averiguar para cotizar un evento. \n\n *Fecha:* ${infoToSend.date ? infoToSend.date : '*Sin especificar*'}, desde ${infoToSend.timeStart ? infoToSend.timeStart : '*Sin especificar*'}hs. hasta ${infoToSend.timeEnd ? infoToSend.timeEnd : '*Sin especificar*'}hs.\n *Dirección:* ${infoToSend.address ? infoToSend.address : '*Sin especificar*'} \n *Cantidad de invitados:* ${infoToSend.quant ? infoToSend.quant : '*Sin especificar*'}\n *Entrada:*\n${infoToSend.entrada[0] ? infoToSend.entrada.map((entrada) => `-${entrada} \n`).join('') : 'Sin especificar'} \n *Menu principal:*\n${infoToSend.menu[0] ? infoToSend.menu.map((menu) => `-${menu} \n`).join('') : 'Sin especificar'} \n *Postre:*\n${infoToSend.postre[0] ? infoToSend.postre.map((postre) => `-${postre} \n`).join('') : 'Sin especificar'} \n *Bebidas:*\n${infoToSend.bebida[0] ? infoToSend.bebida.map((bebida) => `-${bebida} \n`).join('') : 'Sin especificar'} \n *Tiene parrilla:* ${parriCheck ? 'Sí' : 'No'}`
 
     return (
         <EventContext.Provider
@@ -116,7 +118,9 @@ export const EventProvider = ({ children }) => {
                 resetForm,
                 formOpen,
                 setFormOpen,
-                toggleYellowForm
+                toggleYellowForm,
+                parriCheck,
+                setParriCheck
             }}
         >
             {children}
