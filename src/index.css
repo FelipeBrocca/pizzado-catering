@@ -19,6 +19,12 @@ body{
   overflow-x: hidden;
   background: linear-gradient(90deg, rgb(21, 21, 21) 0%, #302f2f 50%, rgb(21, 21, 21) 100%);
 }
+input[type="date"], input[type="time"]{
+  width: 100%;
+  padding: 0;
+  -webkit-appearance: none;
+  appearance: none;
+}
 main{
   display: flex;
   flex-direction: column;
