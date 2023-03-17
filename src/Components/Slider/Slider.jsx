@@ -50,7 +50,7 @@ const Slider = () => {
                                     <Link
                                         className='link-slider'
                                         onClick={handleClickScrollMenu}
-                                    >Ver Menú</Link>
+                                    >Ver menú</Link>
                                 </div>
                             </div>
                             <ImageLazy
@@ -77,7 +77,7 @@ const Slider = () => {
                                         className='link-slider'
                                         to={'/eventos'}
                                         onClick={scrollToTop}
-                                    >Click Acá</Link>
+                                    >Click acá</Link>
                                 </div>
                             </div>
                         </div>
@@ -98,7 +98,7 @@ const Slider = () => {
                                         className='link-slider'
                                         to={'/eventos'}
                                         onClick={scrollToTop}
-                                    >Armá tu Presupuesto</Link>
+                                    >Armá tu presupuesto</Link>
                                 </div>
                             </div>
                         </div>
