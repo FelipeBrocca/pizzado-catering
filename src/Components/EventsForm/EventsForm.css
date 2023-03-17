@@ -339,10 +339,9 @@ fieldset.form-register-input > legend > small{
 /* BOTON SOLAPA AMARILLA */ 
 
 .button-open-form{
-    width: 150px;
+    width: 180px;
     height: 40px;
     color: white;
-    font-weight: bold;
     border-radius: 5px;
     border: #BE1615;
     background-color: #BE1615;
@@ -369,18 +368,16 @@ fieldset.form-register-input > legend > small{
 
 .event-form-button{
     cursor: pointer;
-    width: 150px;
+    width: 180px;
     height: 40px;
     color: white;
-    font-weight: bold;
     border-radius: 5px;
     border: #BE1615;
     background-color: #BE1615;
-    cursor: pointer;
     display: grid;
     place-items: center;
     align-self: center;
-    margin: 20px;
+    margin: 10px;
 }
 
 .button-cancel{
