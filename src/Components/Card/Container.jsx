@@ -37,7 +37,7 @@ export default function ContainerLazy (){
 
     return <section className="container-menu" id='menu-section' ref={fromRef}>
         <h2 className="titulo-pizzas"> PIZZAS CONGELADAS </h2>
-        <h3 className='slider-text offer'>10% OFF EN EFECTIVO Y TAKEAWAY</h3>
+        <h3 className='slider-text-offer'>10% OFF EN EFECTIVO Y TAKEAWAY</h3>
             <Suspense fallback={<div>Cargando...</div>}>
                 {
                     isNearScreen 

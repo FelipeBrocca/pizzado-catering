@@ -20,7 +20,7 @@ const OffersCartService = ({id, value, name, price, offer}) => {
       productToCart.title = name
       productToCart.price = price
       productToCart.quantity = value
-      productToCart.offer = offer
+      productToCart.offer = name
   
       addItemToCart(productToCart, productToCart.quantity)
     })

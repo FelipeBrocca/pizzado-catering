@@ -49,10 +49,6 @@ const Cart = ({ cartPopUpState, handleCartPopUp, cartItems }) => {
                   <div className='div2-cart'>
                     {
                       item.offer ? <p>PROMO {item.title}
-                        <br></br>
-                        <small>
-                          ({item.offer})
-                        </small>
                       </p>
                         : <p>{item.title}</p>
                     }
