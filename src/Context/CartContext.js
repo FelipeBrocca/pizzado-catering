@@ -6,7 +6,7 @@ export const CartContext = createContext()
 export const CartProvider = ({children}) => {
     const [cartItems, setCartItems] = useState(() => {
         try {
-            const productsInLocalStorage = localStorage.getItem('cart')
+            const productsInLocalStorage = localStorage.getItem('pzz_cat$%cart')
             return productsInLocalStorage ? JSON.parse(productsInLocalStorage) : []
         } catch (error) {
             return []
@@ -14,7 +14,7 @@ export const CartProvider = ({children}) => {
     })
 
     useEffect(() => {
-        localStorage.setItem('cart', JSON.stringify(cartItems))
+        localStorage.setItem('pzz_cat$%cart', JSON.stringify(cartItems))
     }, [cartItems])
 
     const addItemToCart = (product, aggregated) => {
