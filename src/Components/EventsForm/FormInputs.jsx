@@ -101,6 +101,8 @@ const FormInputs = () => {
             <div className="form-register-input quantity">
                 <input
                     type="number"
+                    inputMode='numeric'
+                    pattern="[0-9]*"
                     ref={quantRef}
                     onChange={setInfo}
                     min={0}
