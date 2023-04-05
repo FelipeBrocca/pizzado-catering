@@ -2,14 +2,14 @@ export const PizzaClassic = [
     {
         title: "Menú clásico pizza",
         food: ['Napolitana', 'Cebolla caramelizada', 'Cherry y albahaca', 'Jamón crudo y rúcula', '4 quesos', 'Roquefort', 'Provolone', 'Rúcula y Brie'],
-        price: 1850
+        price: 1900
     }
 ]
 export const PizzaPremium = [
     {
         title: "Menú premium pizza",
         food: ['Salmón y palta', 'Pollo y barbacoa', 'Langostinos y Salsa golf', 'Crudo, rúcula y brie', 'Jamón, huevo y morrón', 'Champignon y crudo', 'Provolone y verdeo', 'Roquefort y nuez', 'Caramelizada y brie', 'Rúcula, parmesano y almendras', 'Bacon, huevo y parmesano', 'Pepperoni'],
-        price: 2290
+        price: 2350
     }
 ]
 
@@ -18,7 +18,7 @@ export const AsadoClassic = [
         title: "Menú clásico asado",
         entradas: ['Brochettes de chorizo con brie', 'Brusquetas de morcilla con roquefort', 'Salchicha parrillera con salsa criolla', 'Provoletas'],
         principal: ['Sándwiches de colita y vacío'],
-        price: 3650
+        price: 4090
     }
 ]
 
@@ -27,7 +27,7 @@ export const AsadoPremium = [
         title: "Menú premium asado",
         entradas: ['Mini hamburguesas con cheddar', 'Matambre a la pizza', 'Mollejas con salsa de verdeo', 'Sándwiches de entraña con salsa criolla'],
         principal: ['Sándwiches de lomo y bondiola'],
-        price: 3990
+        price: 4600
     }
 ]
 
@@ -44,7 +44,7 @@ export const EmpanadasClassic = [
     {
         title: "Menú clásico empanadas",
         food: ['Carne', 'Capresse', 'Humita', 'Pollo', 'Jamón y queso'],
-        price: 1690
+        price: 1800
     }
 ]
 
@@ -67,7 +67,7 @@ export const Entradas = [
     },
     {
         title: 'Matambre a la pizza',
-        price: 1090
+        price: 1200
     },
     {
         title: 'Sándwiches de entraña con salsa criolla',
@@ -75,7 +75,7 @@ export const Entradas = [
     },
     {
         title: 'Tablas de Picada',
-        price: 1190
+        price: 1250
     },
 ]
 
@@ -86,26 +86,26 @@ export const Postres = [
     },
     {
         title: "Bombon suizo o escocés",
-        price: 830
+        price: 900
     },
     {
         title: "Finger Food",
         options: ['Marquisse', 'Havannette', 'Key Lime', 'Cheesecake', 'Lemon pie', 'Tarta de frutilla', 'Tarta de coco', 'Pacloca', 'Rogelitos', 'De nuez'],
-        price: 1090
+        price: 1150
     },
     {
         title: "Shots",
         options: ['Marquisse', 'Mousse de limón', 'Sablee con frutillas o frutos rojos', 'Povlova', 'De nuez', 'Oreo', 'Chocotorta'],
-        price: 1350
+        price: 1390
     },
     {
         title: "Tortas",
         options: ['Lemon pie', 'Havannette (blanco o negro)', 'Tarta de frutillas', 'Chocotorta', 'Torta oreo', 'Marquisse', 'Key Lime pie', 'Torta de nuez', 'Cheesecake', 'Pavlova', 'Rogel', 'Tarta de coco'],
-        price: 1390
+        price: 1450
     },
     {
         title: "Mesa dulce (Finger food, Shots y tortas)",
-        price: 2950
+        price: 2990
     }
 ]
 
