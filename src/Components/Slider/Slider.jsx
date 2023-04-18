@@ -37,6 +37,8 @@ const Slider = () => {
                         showArrows={false}
                         dynamicHeight={true}
                         showStatus={false}
+                        swipeScrollTolerance={50}
+                        preventMovementUntilSwipeScrollTolerance={true}
                     >
                         <div className="slide-foodopt-container">
                             <div className="slider-content">
