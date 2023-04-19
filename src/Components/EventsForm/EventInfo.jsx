@@ -11,10 +11,9 @@ const EventInfo = () => {
             <h2 className="titulo-register">COTIZÁ TU EVENTO</h2>
             <div className='top-form'>
                 <p>
-                    El servicio incluye a los cocineros y mozos. 
+                    Mas de 500 eventos realizados: Corporativos, fiestas, cumpleanos y casamientos.
+                    <br></br>El servicio incluye a los cocineros y mozos. 
                     <br></br>Trabajamos en la parrilla u horno que haya en el lugar, aunque también tenemos nuestras parrillas movibles en caso de ser necesarias.(*)
-                    <br></br>Se cobra un costo de envío desde San Isidro. Los menores de 10 años pagan la mitad. 
-                    <br></br>(*)Se debe abonar la logística del traslado.
                 </p>
                 <div className='form-imges-container'>
                     <div className='form-img-div'>

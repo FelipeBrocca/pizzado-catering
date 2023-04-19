@@ -146,7 +146,10 @@ const EventsForm = () => {
                     ? <ConfirmEvent />
                     : ''
             }
-
+            
+            <br></br>Se cobra un costo de envío desde San Isidro. Los menores de 10 años pagan la mitad. 
+            <br></br>(*)Se debe abonar la logística del traslado.
+            <br></br>Resolvé todas tus dudas por Whatsapp
         </form>
     )
 }
