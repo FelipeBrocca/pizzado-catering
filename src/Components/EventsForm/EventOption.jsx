@@ -15,7 +15,7 @@ const EventOption = ({ option, handleChange }) => {
                 </label>
                 <div className='option-container'>
                     <label>{option.title}</label>
-                    <p>${option.price}</p>
+                    {/* <p>${option.price}</p> */}
                 </div>
             </div>
             {
