@@ -54,3 +54,12 @@ footer{
     color: #E6AF20;
     font-style: italic;
 }
+
+#portfolio{
+    text-decoration: none;
+    color: white;
+}
+
+#portfolio:hover{
+    color: red;
+}

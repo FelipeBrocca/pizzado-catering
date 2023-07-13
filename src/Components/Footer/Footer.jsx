@@ -32,7 +32,10 @@ const Footer = () => {
         </div>
         <p className="copy-footer">- 2017 Pizzado Catering - Todos los derechos reservados</p>
         <span className="copy-footer">Pagina Web realizada por 
-            <span className='creators'><p>~ NicoAbdala</p><p>~ EffeBe</p></span>
+            <span className='creators'>
+                <p><a id='portfolio' href="https://nicoabdala.vercel.app/" target="_blank">~ NicoAbdala</a></p>
+                <p><a id='portfolio' href="https://felipe-brocca.vercel.app/" target="_blank">~ EffeBe</a></p>
+            </span>
         </span>
     </footer>
     )
