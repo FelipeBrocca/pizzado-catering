@@ -1,0 +1,41 @@
+
+.testimonial__container{
+    width: 90%;
+    height: 300px;
+    padding: 20px;
+    margin: 30px;
+}
+
+.testimonial__card{
+    background-color: #f5b721;
+    color: black;
+    border-radius: 30px;
+    padding: 20px;
+    text-align: left;
+    max-height: 250px;
+}
+
+.testimonial__img{
+    width: 80px;
+    border-radius: 3rem;
+    margin-bottom: 10px;
+}
+
+.testimonial__name{
+    margin-bottom: 10px;
+}
+
+.testimonial__description{
+    margin-bottom: 15px;
+    margin-top: 15px;
+}
+
+/*SWIPER CLASS*/
+
+.swiper-pagination-bullet{
+    background-color: white !important;
+}
+
+.swiper-pagination-bullet-active{
+    background-color: white !important;
+}

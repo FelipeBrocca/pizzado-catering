@@ -9,6 +9,7 @@ import NotFound from './Pages/NotFound';
 import { LoadingProvider } from './Context/LoadingContext';
 import PreLoader from './Components/PreLoader/PreLoader';
 import { SkeletonTheme } from 'react-loading-skeleton';
+
 const Header = React.lazy(() => import('./Components/Header/Header'))
 
 

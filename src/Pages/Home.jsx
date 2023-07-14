@@ -4,7 +4,7 @@ import FoodOpt from '../Components/FoodOpt/FoodOpt'
 import EventsAsk from '../Components/EventsAsk/EventsAsk'
 import Slider from '../Components/Slider/Slider'
 import ContainerLazy from '../Components/Card/Container'
-
+import Testimonials from '../Components/Testimonials/Testimonials'
 
 const Home = () => {
   return (
@@ -14,6 +14,7 @@ const Home = () => {
       {/* <Offers />  */}
       <ContainerLazy />
       <EventsAsk />
+      <Testimonials />
     </main>
   )
 
