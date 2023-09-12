@@ -13,56 +13,56 @@ export const ProducData = [
         image: cebollaCaram,
         name: 'Cebolla Caramelizada',
         ingredients: 'Muzzarella, finas rodajas de cebolla caramelizada y salsa de tomate',
-        price: 1450
+        price: 1600
     },
     {
         id: 2,
         image: muzza,
         name: 'Muzzarella',
         ingredients: 'Muzzarella, salpicón de orégano y salsa de tomate',
-        price: 1300
+        price: 1550
     },
     {
         id: 3,
         image: provo,
         name: 'Provolone',
         ingredients: 'Muzzarella, Provolone en trozos y salsa de tomate',
-        price: 1600
+        price: 1700
     },
     {
         id: 4,
         image: cuatroQuesos,
         name: '4 Quesos',
         ingredients: 'Muzzarella, cubitos de provolone, Roquefort, Parmesano rallado y salsa de tomate',
-        price: 1600
+        price: 1700
     },
     {
         id: 5,
         image: morron,
         name: 'Morron Caramelizado',
         ingredients: 'Muzzarella, cubos de morron caramelizado y salsa de tomate',
-        price: 1550
+        price: 1700
     },
     {
         id: 6,
         image: chickenBBQ,
         name: 'Chicken BBQ',
         ingredients: 'Muzzarella, Pollo desmenuzado y salsa barbacoa',
-        price: 1550
+        price: 1900
     }, 
     {
         id: 7,
         image: roque,
         name: 'Roquefort',
         ingredients: 'Muzzarella con un salpicon de roque, y salsa de tomate',
-        price: 1500
+        price: 1600
     },
     {
         id: 8,
         image: jamon,
         name: 'Jamon y Muzzarella',
         ingredients: 'Jamón sobre una base de Muzzarella y salsa de tomate ',
-        price: 1450
+        price: 1650
     }
 ]
 
