@@ -10,9 +10,9 @@ const Footer = () => {
     <footer>
         <div className="footer-section">
             <h2 className="footer-title">SOBRE NOSOTROS</h2>
-            <p className="footer-txt">Nacidos en Agosto de 2017, Pizzado reúne lo mejor de la pizza argentina, con la mejor 
-                atención al cliente. Una experiencia que no puede faltar en la mesa de tu casa para compartir con 
-                toda la familia. 
+            <p className="footer-txt">
+            Nacidos en agosto de 2017, somos un cátering que busca garantizar la mejor satisfacción al cliente. 
+            Una experiencia que no puede faltar en tu evento para compartir con tus invitados.
             </p>
         </div>
         <div className="footer-section" id="redes">

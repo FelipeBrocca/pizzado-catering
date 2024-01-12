@@ -3,13 +3,12 @@ import "./Testimonials.css"
 import { Data } from './Data';
 // Import Swiper React components
 import { Swiper, SwiperSlide } from 'swiper/react';
+// import required modules
+import { Autoplay, Pagination } from 'swiper/modules';
 
 // Import Swiper styles
 import 'swiper/css';
 import 'swiper/css/pagination';
-
-// import required modules
-import { Pagination } from 'swiper/modules';
 
 const Testimonials = () => {
     return (
@@ -18,6 +17,11 @@ const Testimonials = () => {
             <Swiper 
                 className="testimonial__container" 
                 loop={true}
+                autoplay={{
+                    delay: 4000,
+                    disableOnInteraction: false,
+                  }}
+                speed={2000}
                 grabCursor={true}
                 spaceBetween={10}
                 pagination={{
@@ -32,7 +36,7 @@ const Testimonials = () => {
                     spaceBetween: 48,
                 },
             }}
-            modules={[Pagination]}>
+            modules={[Pagination, Autoplay]}>
 
             {Data.map(({id, image, title, description}) => {
                 return (
