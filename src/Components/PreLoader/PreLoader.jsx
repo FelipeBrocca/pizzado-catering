@@ -1,7 +1,7 @@
 import React from "react";
 import { useContext } from "react";
 import { LoadingContext } from "../../Context/LoadingContext";
-import Loader from '../../public/images/preloader.svg';
+import Loader from '../../public/images/logo.svg';
 import './PreLoader.css'
 
 const PreLoader = () => {
@@ -14,9 +14,9 @@ const PreLoader = () => {
     className={loading ? 'body-loading' : 'body-loaded'}
     >
             <div id='animation'>
-                <span className='parallax-text' text='PIZZADO'>
+                {/* <span className='parallax-text' text='PIZZADO'>
                     PIZZADO
-                </span>
+                </span> */}
                 <img src={Loader} 
                 className={loading ? 'loader-img' : 'img-loaded'}
                 alt="loader" />
