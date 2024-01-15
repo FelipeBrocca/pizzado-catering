@@ -2,7 +2,7 @@ import React, { useContext } from 'react'
 import ConfirmEvent from './ConfirmEvent';
 import EventOption from './EventOption';
 import { EventContext } from '../../Context/EventContext'
-import { Bebidas, Entradas, PizzaClassic, PizzaPremium, AsadoClassic, AsadoPremium, Hamburguesas, EmpanadasClassic, Postres } from './EventsCateringData';
+import { Bebidas, Entradas, PizzaClassic, PizzaPremium, AsadoClassic, AsadoPremium, AsadoGourmet, Woks, Perniles, Hamburguesas, EmpanadasClassic, CeliacosYVeggies, Postres } from './EventsCateringData';
 import './EventsForm.css'
 
 const EventsForm = () => {
@@ -21,24 +21,27 @@ const EventsForm = () => {
             <fieldset className='form-register-input'>
                 <legend>Elegí tus combos.<br></br><small>(Todos los precios son por persona)</small></legend>
                 <div className='combo-section'>
-                    <h3>Pizzas</h3>
+                    <h3>Entradas</h3>
                     {
-                        PizzaClassic.map((option) => {
+                        Entradas.map((option) => {
                             return (
                                 <EventOption
                                     option={option}
-                                    handleChange={handleChangeMenu}
+                                    handleChange={handleChangeEntrada}
                                     key={option.title}
                                 />
                             )
                         })
                     }
+                </div>
+                <div className='combo-section'>
+                    <h3>Bebidas</h3>
                     {
-                        PizzaPremium.map((option) => {
+                        Bebidas.map((option) => {
                             return (
                                 <EventOption
                                     option={option}
-                                    handleChange={handleChangeMenu}
+                                    handleChange={handleChangeBebida}
                                     key={option.title}
                                 />
                             )
@@ -60,6 +63,70 @@ const EventsForm = () => {
                     }
                     {
                         AsadoPremium.map((option) => {
+                            return (
+                                <EventOption
+                                    option={option}
+                                    handleChange={handleChangeMenu}
+                                    key={option.title}
+                                />
+                            )
+                        })
+                    }
+                    {
+                        AsadoGourmet.map((option) => {
+                            return (
+                                <EventOption
+                                    option={option}
+                                    handleChange={handleChangeMenu}
+                                    key={option.title}
+                                />
+                            )
+                        })
+                    }
+                </div>
+                <div className='combo-section'>
+                    <h3>Woks</h3>
+                    {
+                        Woks.map((option) => {
+                            return (
+                                <EventOption
+                                    option={option}
+                                    handleChange={handleChangeMenu}
+                                    key={option.title}
+                                />
+                            )
+                        })
+                    }
+                </div>
+                <div className='combo-section'>
+                    <h3>Perniles</h3>
+                    {
+                        Perniles.map((option) => {
+                            return (
+                                <EventOption
+                                    option={option}
+                                    handleChange={handleChangeMenu}
+                                    key={option.title}
+                                />
+                            )
+                        })
+                    }
+                </div>
+                <div className='combo-section'>
+                    <h3>Pizzas</h3>
+                    {
+                        PizzaClassic.map((option) => {
+                            return (
+                                <EventOption
+                                    option={option}
+                                    handleChange={handleChangeMenu}
+                                    key={option.title}
+                                />
+                            )
+                        })
+                    }
+                    {
+                        PizzaPremium.map((option) => {
                             return (
                                 <EventOption
                                     option={option}
@@ -99,13 +166,13 @@ const EventsForm = () => {
                     }
                 </div>
                 <div className='combo-section'>
-                    <h3>Entradas</h3>
+                    <h3>Celíacos y veggies</h3>
                     {
-                        Entradas.map((option) => {
+                        CeliacosYVeggies.map((option) => {
                             return (
                                 <EventOption
                                     option={option}
-                                    handleChange={handleChangeEntrada}
+                                    handleChange={handleChangeMenu}
                                     key={option.title}
                                 />
                             )
@@ -120,20 +187,6 @@ const EventsForm = () => {
                                 <EventOption
                                     option={option}
                                     handleChange={handleChangePostre}
-                                    key={option.title}
-                                />
-                            )
-                        })
-                    }
-                </div>
-                <div className='combo-section'>
-                    <h3>Bebidas</h3>
-                    {
-                        Bebidas.map((option) => {
-                            return (
-                                <EventOption
-                                    option={option}
-                                    handleChange={handleChangeBebida}
                                     key={option.title}
                                 />
                             )
