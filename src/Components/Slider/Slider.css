@@ -137,10 +137,6 @@
     width: 100%;
     padding: 1em 2em;
 }
-/* the following is to hide dots of the slider while we have only one tab */
-.dot {
-    opacity: 0 !important;
-}
 
 
 

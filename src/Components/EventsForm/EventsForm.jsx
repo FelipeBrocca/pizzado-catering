@@ -2,7 +2,7 @@ import React, { useContext } from 'react'
 import ConfirmEvent from './ConfirmEvent';
 import EventOption from './EventOption';
 import { EventContext } from '../../Context/EventContext'
-import { Bebidas, Entradas, PizzaClassic, PizzaPremium, AsadoClassic, AsadoPremium, AsadoGourmet, Woks, Perniles, Hamburguesas, EmpanadasClassic, CeliacosYVeggies, Postres } from './EventsCateringData';
+import { Bebidas, Entradas, PizzaClassic, PizzaPremium, AsadoClassic, AsadoPremium, AsadoGourmet, AsadoEspecial, Woks, Perniles, Hamburguesas, EmpanadasClassic, CeliacosYVeggies, Postres, MenuAPedido } from './EventsCateringData';
 import './EventsForm.css'
 
 const EventsForm = () => {
@@ -74,6 +74,17 @@ const EventsForm = () => {
                     }
                     {
                         AsadoGourmet.map((option) => {
+                            return (
+                                <EventOption
+                                    option={option}
+                                    handleChange={handleChangeMenu}
+                                    key={option.title}
+                                />
+                            )
+                        })
+                    }
+                    {
+                        AsadoEspecial.map((option) => {
                             return (
                                 <EventOption
                                     option={option}
@@ -187,6 +198,20 @@ const EventsForm = () => {
                                 <EventOption
                                     option={option}
                                     handleChange={handleChangePostre}
+                                    key={option.title}
+                                />
+                            )
+                        })
+                    }
+                </div>
+                <div className='combo-section'>
+                    <h3>A Pedido</h3>
+                    {
+                        MenuAPedido.map((option) => {
+                            return (
+                                <EventOption
+                                    option={option}
+                                    handleChange={handleChangeEntrada}
                                     key={option.title}
                                 />
                             )

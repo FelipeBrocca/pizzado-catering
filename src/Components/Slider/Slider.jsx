@@ -4,6 +4,7 @@ import Skeleton from 'react-loading-skeleton'
 import 'react-loading-skeleton/dist/skeleton.css'
 import './Slider.css'
 import slide2 from '../../public/images/slider2.webp'
+import eventos from '../../public/images/eventos.webp'
 import "react-responsive-carousel/lib/styles/carousel.min.css";
 import { Carousel } from 'react-responsive-carousel'
 const ImageLazy = lazy(() => import('../ImageLazy/ImageLazy'))
@@ -21,7 +22,7 @@ const Slider = () => {
                 <Suspense fallback={<Skeleton className='slider-suspense' />}>
                     <Carousel
                         autoPlay={true}
-                        interval={10000}
+                        interval={5000}
                         infiniteLoop={true}
                         showThumbs={false}
                         stopOnHover={true}
@@ -50,6 +51,29 @@ const Slider = () => {
                                 </div>
                             </div>
                         </div>
+
+                        <div className="slide-foodopt-container">
+                            <ImageLazy
+                                src={eventos}
+                                alt="eventosSlide"
+                                className='image-slider'
+                            />
+                            <div className="slider-content">
+                                <h2 className="slider-title">
+                                    DESAYUNOS Y ALMUERZOS CORPORATIVOS
+                                </h2>
+                                <div className="btn draw-border">
+                                    <a 
+                                    href="https://wa.me/+5491140781149" 
+                                    target="_blank" 
+                                    rel="noreferrer"
+                                    className="link-slider">
+                                            Consultanos por Whatsapp
+                                    </a>
+                                </div>
+                            </div>
+                        </div>
+
                     </Carousel>
                 </Suspense>
             </div>

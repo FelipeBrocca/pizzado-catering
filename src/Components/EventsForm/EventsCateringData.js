@@ -1,13 +1,13 @@
 export const PizzaClassic = [
     {
-        title: "Menú clásico pizza",
+        title: "Menú clásico",
         food: ['Napolitana', 'Cebolla caramelizada', 'Cherry y albahaca', 'Jamón crudo y rúcula', '4 quesos', 'Jamón, huevo y morrón', 'Pepperoni', 'Rúcula y Brie'],
         // price: 1900
     }
 ]
 export const PizzaPremium = [
     {
-        title: "Menú premium pizza (incluye todos los gustos clásicos)",
+        title: "Menú premium (incluye todos los gustos clásicos)",
         food: ['Salmón y palta', 'Pollo y barbacoa', 'Langostinos y Salsa golf', 'Crudo, rúcula y brie', 'Champignon y crudo', 'Provolone y verdeo', 'Roquefort y nuez', 'Caramelizada y brie', 'Rúcula, parmesano y almendras', 'Bacon, huevo y parmesano', 'Pepperoni'],
         // price: 2350
     }
@@ -15,7 +15,7 @@ export const PizzaPremium = [
 
 export const AsadoClassic = [
     {
-        title: "Menú clásico asado",
+        title: "Menú clásico",
         entradas: ['Tablas de picada', 'Empanadas de carne', 'Salchicha parrillera con salsa criolla', 'Provoletas'],
         principal: ['Sándwiches de colita y vacío'],
         // price: 4090
@@ -24,7 +24,7 @@ export const AsadoClassic = [
 
 export const AsadoPremium = [
     {
-        title: "Menú premium asado",
+        title: "Menú premium",
         entradas: ['Mini hamburguesas con cheddar', 'Matambre a la pizza', 'Mollejas con salsa de verdeo', 'Sándwiches de entraña con salsa criolla'],
         principal: ['Sándwiches de lomo y bondiola'],
         // price: 4600
@@ -33,9 +33,18 @@ export const AsadoPremium = [
 
 export const AsadoGourmet = [
     {
-        title: "Menú gourmet asado",
+        title: "Menú gourmet",
         entradas: ['Vacío a la cruz con salsa criolla', 'Entraña fundida en queso', 'Mollejas al verdeo', 'Sándwich de tomahawk'],
         principal: ['Ojo de bife cocinado al quebracho'],
+        // price: 4600
+    }
+]
+
+export const AsadoEspecial = [
+    {
+        title: "Menú especial",
+        entradas: ['Entrañas al malbec', 'Croquetas de morcilla', 'Langostinos empanados'],
+        principal: ['Sándwich de lomo de ojo de bife'],
         // price: 4600
     }
 ]
@@ -59,7 +68,7 @@ export const Perniles = [
 
 export const Hamburguesas = [
     {
-        title: "Menú clásico hamburguesas",
+        title: "Menú hamburguesas",
         entradas: ['Mini hamburguesas de entraña con cheddar'],
         principal: ['Hamburguesas rellenas de roquefort', 'Hamburguesas con cheddar y bacon', 'Hamburguesas con cebolla caramelizada', 'Hamburguesas con rúcula y brie'],
         // price: 2250
@@ -172,5 +181,11 @@ export const Bebidas = [
     {
         title: "Gaseosa + Cerveza + Vino",
         // price: 3450
+    }
+]
+
+export const MenuAPedido = [
+    {
+        title: "¿No encontraste lo que buscabas? No importa, ¡armamos tu menú como desees!",
     }
 ]
