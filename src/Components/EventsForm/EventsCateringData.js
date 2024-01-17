@@ -44,7 +44,7 @@ export const AsadoEspecial = [
     {
         title: "Menú especial asado",
         entradas: ['Entrañas al malbec', 'Croquetas de morcilla', 'Langostinos empanados'],
-        principal: ['Sándwich de lomo de ojo de bife'],
+        principal: ['Sándwich de lomo y de ojo de bife'],
         // price: 4600
     }
 ]
