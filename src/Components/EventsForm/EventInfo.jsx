@@ -11,7 +11,7 @@ const EventInfo = () => {
             <h2 className="titulo-register">COTIZÁ TU EVENTO</h2>
             <div className='top-form'>
                 <p>
-                    Mas de 500 eventos realizados: Corporativos, fiestas, cumpleanos y casamientos.
+                    Más de 500 eventos realizados: Corporativos, fiestas, cumpleanos y casamientos.
                     <br></br>El servicio incluye a los cocineros y mozos. 
                     <br></br>Trabajamos en la parrilla u horno que haya en el lugar, aunque también tenemos nuestras parrillas movibles en caso de ser necesarias.(*)
                 </p>
