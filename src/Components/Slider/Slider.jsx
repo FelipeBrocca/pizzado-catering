@@ -4,7 +4,7 @@ import Skeleton from 'react-loading-skeleton'
 import 'react-loading-skeleton/dist/skeleton.css'
 import './Slider.css'
 import slide2 from '../../public/images/slider2.webp'
-import eventos from '../../public/images/eventos.webp'
+import eventos from '../../public/images/events2.webp'
 import "react-responsive-carousel/lib/styles/carousel.min.css";
 import { Carousel } from 'react-responsive-carousel'
 const ImageLazy = lazy(() => import('../ImageLazy/ImageLazy'))
@@ -22,7 +22,7 @@ const Slider = () => {
                 <Suspense fallback={<Skeleton className='slider-suspense' />}>
                     <Carousel
                         autoPlay={true}
-                        interval={5000}
+                        interval={4000}
                         infiniteLoop={true}
                         showThumbs={false}
                         stopOnHover={true}

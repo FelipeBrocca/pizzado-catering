@@ -211,7 +211,7 @@ const EventsForm = () => {
                             return (
                                 <EventOption
                                     option={option}
-                                    handleChange={handleChangeEntrada}
+                                    handleChange={handleChangeMenu}
                                     key={option.title}
                                 />
                             )

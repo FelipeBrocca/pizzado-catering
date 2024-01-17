@@ -9,6 +9,7 @@ const Home = () => {
     <main>
       <Slider />
       <FoodOpt />
+      <ContainerLazy />
       <Testimonials />
     </main>
   )

@@ -15,12 +15,7 @@ const Container = () => {
                     ProducData.map((product) => {
                         return (
                             <Card
-                            id={product.id}
                             image={product.image}
-                            name={product.name}
-                            ingredients={product.ingredients}
-                            price={product.price}
-                            key={product.name}
                             />
                             )
                         })
@@ -36,8 +31,7 @@ export default function ContainerLazy (){
     const {isNearScreen, fromRef} = useNearScreen()
 
     return <section className="container-menu" id='menu-section' ref={fromRef}>
-        <h2 className="titulo-pizzas"> PIZZAS CONGELADAS </h2>
-        <h3 className='slider-text-offer'>10% OFF EN EFECTIVO Y TAKEAWAY</h3>
+        <h2 className="titulo-pizzas"> NUESTROS EVENTOS </h2>
             <Suspense fallback={<div>Cargando...</div>}>
                 {
                     isNearScreen 

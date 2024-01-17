@@ -1,13 +1,13 @@
 export const PizzaClassic = [
     {
-        title: "Menú clásico",
+        title: "Menú clásico pizza",
         food: ['Napolitana', 'Cebolla caramelizada', 'Cherry y albahaca', 'Jamón crudo y rúcula', '4 quesos', 'Jamón, huevo y morrón', 'Pepperoni', 'Rúcula y Brie'],
         // price: 1900
     }
 ]
 export const PizzaPremium = [
     {
-        title: "Menú premium (incluye todos los gustos clásicos)",
+        title: "Menú premium pizza (incluye todos los gustos clásicos)",
         food: ['Salmón y palta', 'Pollo y barbacoa', 'Langostinos y Salsa golf', 'Crudo, rúcula y brie', 'Champignon y crudo', 'Provolone y verdeo', 'Roquefort y nuez', 'Caramelizada y brie', 'Rúcula, parmesano y almendras', 'Bacon, huevo y parmesano', 'Pepperoni'],
         // price: 2350
     }
@@ -15,7 +15,7 @@ export const PizzaPremium = [
 
 export const AsadoClassic = [
     {
-        title: "Menú clásico",
+        title: "Menú clásico asado",
         entradas: ['Tablas de picada', 'Empanadas de carne', 'Salchicha parrillera con salsa criolla', 'Provoletas'],
         principal: ['Sándwiches de colita y vacío'],
         // price: 4090
@@ -24,7 +24,7 @@ export const AsadoClassic = [
 
 export const AsadoPremium = [
     {
-        title: "Menú premium",
+        title: "Menú premium asado",
         entradas: ['Mini hamburguesas con cheddar', 'Matambre a la pizza', 'Mollejas con salsa de verdeo', 'Sándwiches de entraña con salsa criolla'],
         principal: ['Sándwiches de lomo y bondiola'],
         // price: 4600
@@ -33,7 +33,7 @@ export const AsadoPremium = [
 
 export const AsadoGourmet = [
     {
-        title: "Menú gourmet",
+        title: "Menú gourmet asado",
         entradas: ['Vacío a la cruz con salsa criolla', 'Entraña fundida en queso', 'Mollejas al verdeo', 'Sándwich de tomahawk'],
         principal: ['Ojo de bife cocinado al quebracho'],
         // price: 4600
@@ -42,7 +42,7 @@ export const AsadoGourmet = [
 
 export const AsadoEspecial = [
     {
-        title: "Menú especial",
+        title: "Menú especial asado",
         entradas: ['Entrañas al malbec', 'Croquetas de morcilla', 'Langostinos empanados'],
         principal: ['Sándwich de lomo de ojo de bife'],
         // price: 4600
@@ -186,6 +186,6 @@ export const Bebidas = [
 
 export const MenuAPedido = [
     {
-        title: "¿No encontraste lo que buscabas? No importa, ¡armamos tu menú como desees!",
+        title: "¿No encontraste lo que buscabas? No importa, ¡armamos tu menú como quieras!",
     }
 ]

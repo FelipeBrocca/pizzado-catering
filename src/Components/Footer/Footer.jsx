@@ -11,7 +11,7 @@ const Footer = () => {
         <div className="footer-section">
             <h2 className="footer-title">SOBRE NOSOTROS</h2>
             <p className="footer-txt">
-            Nacidos en agosto de 2017, somos un cátering que busca garantizar la mejor satisfacción al cliente. 
+            Nacidos en agosto de 2017 y con más de 500 eventos realizados, somos un cátering que busca garantizar la mejor satisfacción del cliente. 
             Una experiencia que no puede faltar en tu evento para compartir con tus invitados.
             </p>
         </div>

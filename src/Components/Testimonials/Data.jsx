@@ -12,12 +12,6 @@ export const Data = [
         description: 'Hola chicos! Increible todo! Me halagaron un montón el catering!! De diez, super recomendable'
     },
     {
-        id: 2,
-        image: Image2,
-        title: 'Andrea',
-        description: 'Salió todo impecable! Me asusté un poquito que llegaron tarde pero salio perfectooo!!'
-    },
-    {
         id: 3,
         image: Image3,
         title: 'Horacio',
@@ -34,5 +28,11 @@ export const Data = [
         image: Image5,
         title: 'Ramiro',
         description: 'Gonzalo, salió impecable todo, muchisimas gracias!! Las pizzas son espectaculares'
-    }
+    },
+    {
+        id: 2,
+        image: Image2,
+        title: 'Andrea',
+        description: 'Salió todo impecable! Me asusté un poquito que llegaron tarde pero salio perfectooo!!'
+    },
 ]
