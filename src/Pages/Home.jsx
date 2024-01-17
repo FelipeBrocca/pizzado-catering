@@ -8,7 +8,6 @@ const Home = () => {
   return (
     <main>
       <Slider />
-      <FoodOpt />
       <ContainerLazy />
       <Testimonials />
     </main>
