@@ -5,7 +5,6 @@ import { Data } from './Data';
 import { Swiper, SwiperSlide } from 'swiper/react';
 // import required modules
 import { Autoplay, Pagination } from 'swiper/modules';
-
 // Import Swiper styles
 import 'swiper/css';
 import 'swiper/css/pagination';
@@ -20,7 +19,7 @@ const Testimonials = () => {
                 autoplay={{
                     delay: 4000,
                     disableOnInteraction: false,
-                  }}
+                }}
                 speed={2000}
                 grabCursor={true}
                 spaceBetween={10}

@@ -22,7 +22,7 @@ const Slider = () => {
                 <Suspense fallback={<Skeleton className='slider-suspense' />}>
                     <Carousel
                         autoPlay={true}
-                        interval={4000}
+                        interval={2000}
                         infiniteLoop={true}
                         showThumbs={false}
                         stopOnHover={true}

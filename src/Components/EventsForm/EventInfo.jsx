@@ -1,8 +1,13 @@
 import React, { lazy, Suspense } from 'react'
-import Skeleton from 'react-loading-skeleton'
-import catering1 from '../../public/images/catering1.webp'
-import catering2 from '../../public/images/catering2.webp'
-import catering3 from '../../public/images/catering3.webp'
+// Import Swiper React components
+import { Swiper, SwiperSlide } from 'swiper/react';
+// import required modules
+import { Autoplay, Pagination } from 'swiper/modules';
+// Import Swiper styles
+import 'swiper/css';
+import 'swiper/css/pagination';
+import { DataEvents } from './DataEvents';
+
 const LazyInfoImages = lazy(() => import('./LazyInfoImages'))
 
 const EventInfo = () => {
@@ -15,7 +20,7 @@ const EventInfo = () => {
                     <br></br>El servicio incluye a los cocineros y mozos. 
                     <br></br>Trabajamos en la parrilla u horno que haya en el lugar, aunque también tenemos nuestras parrillas movibles en caso de ser necesarias.(*)
                 </p>
-                <div className='form-imges-container'>
+                {/* <div className='form-imges-container'>
                     <div className='form-img-div'>
                         <Suspense fallback={
                             <Skeleton className='form-img-skeleton' />
@@ -37,7 +42,41 @@ const EventInfo = () => {
                             <LazyInfoImages src={catering3} alt='catering3' />
                         </Suspense>
                     </div>
-                </div>
+                </div> */}
+                <section className="">
+                    <Swiper 
+                        className="img-container-events" 
+                        loop={true}
+                        autoplay={{
+                            delay: 2000,
+                            disableOnInteraction: false,
+                        }}
+                        speed={2000}
+                        grabCursor={true}
+                        spaceBetween={10}
+                        pagination={{
+                        clickable: true,
+                        }}
+                        breakpoints={{
+                            448: {
+                                slidesPerView: 2,
+                            },
+                            768: {
+                                slidesPerView: 3,
+                                spaceBetween: 12,
+                            },
+                        }}
+                        modules={[Autoplay]}>
+
+                        {DataEvents.map(({id, image}) => {
+                            return (
+                                <SwiperSlide className='form-imges-container' key={id}>
+                                    <img src={image} alt="" className='form-img-div'/>
+                                </SwiperSlide>
+                            );
+                        })}
+                    </Swiper>
+                </section>
             </div>
         </>
     )
