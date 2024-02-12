@@ -96,12 +96,7 @@ fieldset.form-register-input > legend > small {
   border-radius: 10px;
   position: relative;
   object-fit: cover;
-}
-.form-img-div > img {
-  width: 100%;
-  height: 100%;
-  object-fit: cover;
-  border-radius: 10px;
+  padding: 1px;
 }
 
 /* MENUS PIZZA ASADO ETC */

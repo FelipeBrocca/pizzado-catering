@@ -30,7 +30,7 @@ const EventInfo = () => (
           delay: 2000,
           disableOnInteraction: false,
         }}
-        speed={2000}
+        speed={2500}
         grabCursor={true}
         spaceBetween={10}
         pagination={{

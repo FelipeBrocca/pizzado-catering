@@ -1,11 +1,11 @@
-import ImgPizzaBandejeo from '../../public/images/IMG-20210221-WA0000.webp';
-import ImgMesaDulce from '../../public/images/PXL_20220814_041320096.webp';
-import ImgCocinero from '../../public/images/PXL_20230430_001538726.PORTRAIT.webp';
-import ImgVacio from '../../public/images/IMG_4693.webp';
-import ImgSandwichCarne from '../../public/images/IMG_4736.webp';
-import ImgHamburguesita from '../../public/images/hamburguesita.webp';
-import ImgEntradaSalmonJamon from '../../public/images/entradasSalmonJamon.webp';
-import ImgParrilla from '../../public/images/parrilla.webp';
+import ImgPizzaBandejeo from '../../public/images/optimized/IMG-20210221-WA0000.jpg';
+import ImgMesaDulce from '../../public/images/optimized/PXL_20220814_041320096.jpg';
+import ImgCocinero from '../../public/images/optimized/PXL_20230430_001538726.PORTRAIT.jpg';
+import ImgVacio from '../../public/images/optimized/IMG_4693.jpg';
+import ImgSandwichCarne from '../../public/images/optimized/IMG_4736.jpg';
+import ImgHamburguesita from '../../public/images/optimized/hamburguesita.jpg';
+import ImgEntradaSalmonJamon from '../../public/images/optimized/entradasSalmonJamon.jpg';
+import ImgParrilla from '../../public/images/optimized/parrilla.jpg';
 
 export const DataEvents = [
   {
