@@ -100,7 +100,6 @@ fieldset.form-register-input > legend > small {
 }
 
 /* MENUS PIZZA ASADO ETC */
-
 .combo-section {
   width: 100%;
   display: flex;
@@ -113,13 +112,11 @@ fieldset.form-register-input > legend > small {
   height: auto;
   max-height: 50px;
 }
-
 /* Class to apply when a section is visible */
 .combo-section-visible {
-  max-height: 1100px; /* Example fixed value */
+  max-height: 1100px;
   transition: max-height 2s ease-in-out;
 }
-
 .combo-header {
   color: #f5b721;
   font-size: 24px;
@@ -127,10 +124,8 @@ fieldset.form-register-input > legend > small {
   justify-content: space-between !important;
   align-items: center !important;
   cursor: pointer;
-  width: 100%; /* Ensure the header takes full width to spread title and icon */
+  width: 100%;
 }
-
-/* Adjustments to ensure flex items align properly */
 .combo-section > div {
   display: flex;
   justify-content: flex-start;
