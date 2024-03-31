@@ -108,14 +108,14 @@ fieldset.form-register-input > legend > small {
   padding: 5px;
   gap: 15px;
   overflow: hidden;
-  transition: max-height 2s ease-out;
+  transition: max-height 0.5s ease-out;
   height: auto;
   max-height: 50px;
 }
 /* Class to apply when a section is visible */
 .combo-section-visible {
   max-height: 1100px;
-  transition: max-height 2s ease-in-out;
+  transition: max-height 0.5s ease-in-out;
 }
 .combo-header {
   color: #f5b721;
