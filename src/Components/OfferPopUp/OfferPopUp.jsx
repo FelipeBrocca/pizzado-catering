@@ -20,10 +20,9 @@ const OfferPopUp = () => {
         // Set timeout to show the popup after 40 seconds
         setTimeout(() => {
           setShowPopup(true);
+          // Update the last visit time in localStorage
+          localStorage.setItem('lastVisit', currentTime);
         }, 40000); // 40000 milliseconds = 40 seconds
-
-        // Update the last visit time in localStorage
-        localStorage.setItem('lastVisit', currentTime);
       }
     };
 
