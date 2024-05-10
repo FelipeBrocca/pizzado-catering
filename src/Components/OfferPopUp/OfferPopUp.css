@@ -1,0 +1,202 @@
+.offer-pop-up {
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+  z-index: 1000;
+  position: fixed;
+  top: 50%;
+  left: 50%;
+  transform: translate(-50%, -50%);
+  background-color: black;
+  width: 90vw;
+  height: 30vh;
+  /* border-radius: 0.7rem; */
+  box-shadow: 8px 4px 8px 4px rgba(0, 0, 0, 0.5); /* Adds a shadow with a subtle blur and semi-transparency */
+}
+
+.offer-pop-up strong {
+  font-weight: 600;
+}
+
+.offer-left {
+  width: 50%;
+  text-align: center;
+}
+
+.offer-left h4 {
+  font-size: 0.8rem;
+  margin-bottom: 1rem;
+}
+
+.offer-details {
+  font-size: 0.55rem;
+  margin: auto;
+  width: 80%;
+}
+
+.offer-details p {
+  padding-bottom: 0.4rem;
+}
+
+.wapp-button {
+  font-size: 0.7rem;
+  background-color: #e63720;
+  width: 120px;
+  margin: 0.6rem auto;
+  text-align: center;
+  display: flex;
+  justify-content: space-around;
+  align-items: center;
+  border-radius: 0.9rem;
+  padding: 0.4rem;
+}
+
+.wapp-button img {
+  width: 18px;
+  height: 18px;
+}
+
+.wapp-button a {
+  color: white;
+}
+
+.offer-right {
+  width: 50%;
+  text-align: center;
+  background-image: url('../../public/images/fondo-offer-pop-up.webp');
+  background-size: cover;
+  background-position: center;
+  height: 100%;
+  padding: 0 !important;
+}
+
+.offer-title-container {
+  width: 85%;
+  /* height: 40px; */
+  margin: auto;
+  font-size: 0.55rem;
+  text-align: center;
+  color: black;
+  background-color: rgba(255, 255, 255, 0.693);
+  border-radius: 1rem;
+  position: relative;
+  padding: 25px 15px 15px 15px;
+}
+
+.offer-title-container h4 {
+  font-size: 0.7rem;
+  margin-bottom: 5px;
+  font-weight: 600;
+}
+
+.offer-title-container img {
+  width: 40px;
+  height: 40px;
+  border-radius: 50%;
+  position: absolute;
+  top: -20px;
+  transform: translate(-50%);
+}
+
+.offer-close {
+  color: black;
+  font-size: 0.8rem;
+  position: fixed;
+  top: 0;
+  right: 0;
+  margin: 4px 6px 0 0;
+  font-weight: bolder;
+}
+
+@media screen and (min-width: 769px) {
+  .offer-pop-up {
+    width: 90vw;
+    height: 50vh;
+  }
+
+  .offer-left h4 {
+    font-size: 1.4rem;
+    margin-bottom: 1rem;
+  }
+
+  .offer-details {
+    font-size: 0.8rem;
+    width: 60%;
+  }
+
+  .wapp-button {
+    font-size: 1rem;
+    width: 160px;
+  }
+
+  .wapp-button img {
+    width: 25px;
+    height: 25px;
+  }
+
+  .offer-title-container {
+    width: 60%;
+    font-size: 0.8rem;
+    padding-top: 35px;
+  }
+
+  .offer-title-container h4 {
+    font-size: 1.3rem;
+  }
+
+  .offer-title-container img {
+    width: 60px;
+    height: 60px;
+    top: -30px;
+  }
+
+  .offer-close {
+    font-size: 1.4rem;
+  }
+}
+
+@media screen and (min-width: 1200px) {
+  .offer-pop-up {
+    width: 50vw;
+    height: 50vh;
+  }
+
+  .offer-left h4 {
+    font-size: 1.4rem;
+    margin-bottom: 1rem;
+  }
+
+  .offer-details {
+    font-size: 0.8rem;
+    width: 60%;
+  }
+
+  .wapp-button {
+    font-size: 1rem;
+  }
+
+  .wapp-button img {
+    width: 25px;
+    height: 25px;
+  }
+
+  .offer-title-container {
+    width: 60%;
+    font-size: 0.8rem;
+    padding-top: 35px;
+  }
+
+  .offer-title-container h4 {
+    font-size: 1.3rem;
+  }
+
+  .offer-title-container img {
+    width: 60px;
+    height: 60px;
+    top: -30px;
+  }
+
+  .offer-close {
+    font-size: 1.4rem;
+  }
+}

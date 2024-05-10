@@ -11,6 +11,7 @@ import PreLoader from './Components/PreLoader/PreLoader';
 import { SkeletonTheme } from 'react-loading-skeleton';
 import { FloatingWhatsApp } from 'react-floating-whatsapp';
 import logo from './public/images/logo-sin-descripcion.svg';
+import OfferPopUp from './Components/OfferPopUp/OfferPopUp';
 
 const Header = React.lazy(() => import('./Components/Header/Header'));
 
@@ -40,6 +41,7 @@ function App() {
               notification
               notificationSound
             />
+            <OfferPopUp />
           </CartProvider>
         </BrowserRouter>
       </LoadingProvider>
