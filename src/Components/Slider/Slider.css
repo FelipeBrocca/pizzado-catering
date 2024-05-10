@@ -1,196 +1,195 @@
-.carousel-container{
-    width: 100%;
-    height: 300px;
-    display: flex;
-    justify-content: center;
+.carousel-container {
+  width: 100%;
+  height: 300px;
+  display: flex;
+  justify-content: center;
 }
-.react-loading-skeleton.slider-suspense{
-    width: 900px;
-    height: 300px;
+.react-loading-skeleton.slider-suspense {
+  width: 900px;
+  height: 300px;
 }
-.slider-wrapper{
-    width: 100%;
-    max-width: 1000px;
-    min-height: 300px;
-    height: 100%;
-    max-height: 300px;
+.slider-wrapper {
+  width: 100%;
+  max-width: 1000px;
+  min-height: 300px;
+  height: 100%;
+  max-height: 300px;
 }
-.slider-wrapper > ul{
-    height: 300px;
+.slider-wrapper > ul {
+  height: 300px;
 }
-.carousel{
-    width: 100%;
-    max-width: 1000px;
-    height: 100%;
-    max-height: 300px;
+.carousel {
+  width: 100%;
+  max-width: 1000px;
+  height: 100%;
+  max-height: 300px;
 }
-.image-slider{
-    object-fit: cover;
-    filter: brightness(60%);
-    width: 100%;
-    height: 100%;
-    max-height: 300px;
+.image-slider {
+  object-fit: cover;
+  filter: brightness(60%);
+  width: 100%;
+  height: 100%;
+  max-height: 300px;
 }
-.slide{
-    width: 100%;
+.slide {
+  width: 100%;
 }
-.slide-foodopt-container{
-    position: relative;
-    width: 100%;
-    max-width: 900px;
-    max-height: 300px;
-    height: 100%;
+.slide-foodopt-container {
+  position: relative;
+  width: 100%;
+  max-width: 900px;
+  max-height: 300px;
+  height: 100%;
 }
-.slider-content{
-    position: absolute;
-    top: 0;
-    width: 100%;
-    height: 100%;
-    z-index: 2;
-    color: white;
-    display: flex;
-    flex-direction: column;
-    justify-content: center;
-    gap: 10px;
-    opacity: 100;
-    visibility: visible;
+.slider-content {
+  position: absolute;
+  top: 0;
+  width: 100%;
+  height: 100%;
+  z-index: 2;
+  color: white;
+  display: flex;
+  flex-direction: column;
+  justify-content: center;
+  gap: 10px;
+  opacity: 100;
+  visibility: visible;
 }
-.slider-title{
-    font-size: 20px;
-    margin: 0;
+.slider-title {
+  font-size: 20px;
+  margin: 0;
 }
-.slider-title.offer{
-    font-size: 26px;
+.slider-title.offer {
+  font-size: 26px;
 }
-.slider-text.offer{
-    background-color: #cd0f0f;
-    min-width: 250px;
-    max-width: 400px;
-    text-align: center;
-    width: 50%;
-    margin: 0 auto;
-    padding: 5px;
-    border-radius: 10px;
+.slider-text.offer {
+  background-color: #cd0f0f;
+  min-width: 250px;
+  max-width: 400px;
+  text-align: center;
+  width: 50%;
+  margin: 0 auto;
+  padding: 5px;
+  border-radius: 10px;
 }
 .draw-border {
-    box-shadow: inset 0 0 0 4px #be1615;
-    color: #be1615;
-    transition: color 0.25s 0.0833333333s;
-    position: relative;
+  box-shadow: inset 0 0 0 4px #be1615;
+  color: #be1615;
+  transition: color 0.25s 0.0833333333s;
+  position: relative;
 }
-.draw-border::before, .draw-border::after {
-    border: 0 solid transparent;
-    box-sizing: border-box;
-    content: "";
-    pointer-events: none;
-    position: absolute;
-    width: 0;
-    height: 0;
-    bottom: 0;
-    right: 0;
+.draw-border::before,
+.draw-border::after {
+  border: 0 solid transparent;
+  box-sizing: border-box;
+  content: '';
+  pointer-events: none;
+  position: absolute;
+  width: 0;
+  height: 0;
+  bottom: 0;
+  right: 0;
 }
 
 .draw-border::before {
-    border-bottom-width: 4px;
-    border-left-width: 4px;
+  border-bottom-width: 4px;
+  border-left-width: 4px;
 }
 
 .draw-border::after {
-    border-top-width: 4px;
-    border-right-width: 4px;
+  border-top-width: 4px;
+  border-right-width: 4px;
 }
 
 .draw-border:hover {
-    color: #ffe593;
+  color: #ffe593;
 }
 
-.draw-border:hover::before, .draw-border:hover::after {
-    border-color: #f5b721;
-    transition: border-color 0s, width 0.25s, height 0.25s;
-    width: 100%;
-    height: 100%;
+.draw-border:hover::before,
+.draw-border:hover::after {
+  border-color: #f5b721;
+  transition: border-color 0s, width 0.25s, height 0.25s;
+  width: 100%;
+  height: 100%;
 }
 
 .draw-border:hover::before {
-    transition-delay: 0s, 0s, 0.25s;
+  transition-delay: 0s, 0s, 0.25s;
 }
 
 .draw-border:hover::after {
-    transition-delay: 0s, 0.25s, 0s;
+  transition-delay: 0s, 0.25s, 0s;
 }
 
 .btn {
-    background: none;
-    border: none;
-    cursor: pointer;
-    line-height: 1.5;
-    font: 700 17px "Roboto Slab", sans-serif;
-    width: 100%;
-    max-width: 300px;
-    align-self: center;
+  background: none;
+  border: none;
+  cursor: pointer;
+  line-height: 1.5;
+  font-size: 0.7rem;
+  width: 90%;
+  max-width: 250px;
+  align-self: center;
 }
-.link-slider{
-    display: block;
-    text-decoration: none;
-    color: white;
-    height: 100%;
-    width: 100%;
-    padding: 1em 2em;
+.link-slider {
+  display: block;
+  text-decoration: none;
+  color: white;
+  height: 100%;
+  width: 100%;
+  padding: 1em 2em;
 }
-
-
 
 @media (min-width: 769px) {
-    
-    .carousel-container{
-        height: 600px;
-        box-shadow: 0px 0px 10px 0px rgba(0, 0, 0, 0.737);
-    }
-    .carousel-container > .carousel-root{
-        width: 100%;
-    }
-    .carousel-container > .carousel-root > .carousel.carousel-slider{
-        height: 600px;
-        max-height: 600px;
-        max-width: none;
-        width: 100%;
-    }
-    .slider-wrapper{
-        max-height: 600px;
-        max-width: none;
-        width: 100%;
-    }
-    .slider-wrapper > ul{
-        height: 600px;
-        max-width: none;
-        width: 100%;
-    }
-    .slide-foodopt-container{
-        max-height: 600px;
-        max-width: none;
-        width: 100%;
-    }
+  .carousel-container {
+    height: 600px;
+    box-shadow: 0px 0px 10px 0px rgba(0, 0, 0, 0.737);
+  }
+  .carousel-container > .carousel-root {
+    width: 100%;
+  }
+  .carousel-container > .carousel-root > .carousel.carousel-slider {
+    height: 600px;
+    max-height: 600px;
+    max-width: none;
+    width: 100%;
+  }
+  .slider-wrapper {
+    max-height: 600px;
+    max-width: none;
+    width: 100%;
+  }
+  .slider-wrapper > ul {
+    height: 600px;
+    max-width: none;
+    width: 100%;
+  }
+  .slide-foodopt-container {
+    max-height: 600px;
+    max-width: none;
+    width: 100%;
+  }
 
-    .slider-text{
-        font-size: 22px;
-    }
-    .image-slider{
-        max-height: 600px;
-        min-height: 600px;
-    }
-    .btn{
-        max-width: 400px;
-        font-size: 22px;
-        margin: 25px;
-    }
-    .react-loading-skeleton.slider-suspense{
-        width: 100vw;
-        height: 600px;
-    }
-    .slider-title{
-        font-size: 46px;
-    }
-    /* .carousel
+  .slider-text {
+    font-size: 22px;
+  }
+  .image-slider {
+    max-height: 600px;
+    min-height: 600px;
+  }
+  .btn {
+    max-width: 400px;
+    font-size: 1rem;
+    margin: 25px;
+  }
+  .react-loading-skeleton.slider-suspense {
+    width: 100vw;
+    height: 600px;
+  }
+  .slider-title {
+    font-size: 46px;
+  }
+  /* .carousel
     .slide img{
         max-width: 60%;
     } */

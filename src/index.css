@@ -1,8 +1,10 @@
-*{
+* {
   margin: 0;
   padding: 0;
   box-sizing: border-box;
-  font-family: 'Gobold Thin Light', sans-serif;
+  font-family: 'Poppins', sans-serif;
+  font-weight: 400;
+  font-style: normal;
   letter-spacing: 1.5px;
 }
 #root {
@@ -15,75 +17,81 @@
   gap: 50px;
 }
 
-body{
+body {
   overflow-x: hidden;
-  background: linear-gradient(90deg, rgb(21, 21, 21) 0%, #302f2f 50%, rgb(21, 21, 21) 100%);
+  background: linear-gradient(
+    90deg,
+    rgb(21, 21, 21) 0%,
+    #302f2f 50%,
+    rgb(21, 21, 21) 100%
+  );
 }
-input[type="date"], input[type="time"]{
+input[type='date'],
+input[type='time'] {
   width: 100%;
   padding: 0;
   -webkit-appearance: none;
   appearance: none;
 }
-main{
+main {
   display: flex;
   flex-direction: column;
   gap: 50px;
 }
-a{
+a {
   text-decoration: none;
 }
-.body-fixed{
+.body-fixed {
   overflow-y: hidden;
 }
-.backdropPopUp{
-    position: fixed;
-    top: 0;
-    left: 0;
-    width: 100%;
-    height: 100vh;
-    display: flex;
-    justify-content: center;
-    align-items: center;
-    animation: fade-in 300ms forwards;
-    background-color: rgba(21, 21, 21, 0.491);
-    z-index: 90;
+.backdropPopUp {
+  position: fixed;
+  top: 0;
+  left: 0;
+  width: 100%;
+  height: 100vh;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  animation: fade-in 300ms forwards;
+  background-color: rgba(21, 21, 21, 0.491);
+  z-index: 90;
 }
 
-.not-found-main{
+.not-found-main {
   width: 100%;
   display: grid;
   place-items: center;
 }
-.not-found-main > img{
+.not-found-main > img {
   width: 90%;
   max-width: 400px;
 }
-.not-found-main > h2{
+.not-found-main > h2 {
   font-size: 46px;
 }
-.not-found-main > p{
+.not-found-main > p {
   font-size: 20px;
   max-width: 500px;
 }
-.not-found-main > p > a{
-  color: #E6AF20;
+.not-found-main > p > a {
+  color: #e6af20;
   text-decoration: underline;
   text-underline-offset: 3px;
 }
 
 @media (min-width: 1024px) {
-  body{
+  body {
     background-image: url('./public/images/fondonegro.webp');
     background-position: center;
     background-size: cover;
     background-repeat: no-repeat;
     background-attachment: fixed;
   }
-  .body-fixed{
+  .body-fixed {
     overflow-y: visible;
   }
-  .backdropPopUp{
+  .backdropPopUp {
     display: none;
   }
 }
