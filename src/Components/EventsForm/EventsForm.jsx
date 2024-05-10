@@ -175,22 +175,6 @@ const EventsForm = () => {
               })}
             {visibleSections[key] && (
               <>
-                {key === 'entradas' &&
-                  Entradas.map((option) => (
-                    <EventOption
-                      option={option}
-                      handleChange={handleChangeEntrada}
-                      key={option.title}
-                    />
-                  ))}
-                {key === 'bebidas' &&
-                  Bebidas.map((option) => (
-                    <EventOption
-                      option={option}
-                      handleChange={handleChangeBebida}
-                      key={option.title}
-                    />
-                  ))}
                 {key === 'pizzas' && (
                   <>
                     {PizzaClassic.map((option) => {
