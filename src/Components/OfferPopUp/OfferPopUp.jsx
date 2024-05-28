@@ -22,7 +22,7 @@ const OfferPopUp = () => {
           setShowPopup(true);
           // Update the last visit time in localStorage
           localStorage.setItem('lastVisit', currentTime);
-        }, 25000); // 25000 milliseconds = 25 seconds
+        }, 10000); // 10000 milliseconds = 10 seconds
       }
     };
 
