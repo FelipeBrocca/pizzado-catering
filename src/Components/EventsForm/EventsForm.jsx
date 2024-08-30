@@ -58,15 +58,16 @@ const EventsForm = () => {
   // Utility to dynamically assign section names
   const sectionNames = {
     Entradas: 'entradas',
-    Bebidas: 'bebidas',
-    Asado: 'asado',
+    'Menú asado': 'asado',
+    'Menú pizzas': 'pizzas',
+    'Menú al plato': 'alPlato',
     Woks: 'woks',
     Perniles: 'perniles',
-    Pizzas: 'pizzas',
     Hamburguesas: 'hamburguesas',
     Empanadas: 'empanadas',
     'Celíacos y veggies': 'celiacosYVeggies',
     Postres: 'postres',
+    Bebidas: 'bebidas',
     'A Pedido': 'aPedido',
   };
 
@@ -78,7 +79,7 @@ const EventsForm = () => {
     <form className="form-register" id="form-event">
       <fieldset className="form-register-input">
         <legend>
-          Elegí tus combos.<br></br>
+          Diseñá tu menú.<br></br>
           <small>(Todos los precios son por persona)</small>
         </legend>
 
@@ -151,30 +152,6 @@ const EventsForm = () => {
                     })}
                   </>
                 )}
-              </>
-            )}
-            {key === 'woks' &&
-              Woks.map((option) => {
-                return (
-                  <EventOption
-                    option={option}
-                    handleChange={handleChangeMenu}
-                    key={option.title}
-                  />
-                );
-              })}
-            {key === 'perniles' &&
-              Perniles.map((option) => {
-                return (
-                  <EventOption
-                    option={option}
-                    handleChange={handleChangeMenu}
-                    key={option.title}
-                  />
-                );
-              })}
-            {visibleSections[key] && (
-              <>
                 {key === 'pizzas' && (
                   <>
                     {PizzaClassic.map((option) => {
@@ -197,6 +174,42 @@ const EventsForm = () => {
                     })}
                   </>
                 )}
+                {key === 'alPlato' && (
+                  <>
+                    {Woks.map((option) => {
+                      return (
+                        <EventOption
+                          option={option}
+                          handleChange={handleChangeMenu}
+                          key={option.title}
+                        />
+                      );
+                    })}
+                    {PizzaPremium.map((option) => {
+                      return (
+                        <EventOption
+                          option={option}
+                          handleChange={handleChangeMenu}
+                          key={option.title}
+                        />
+                      );
+                    })}
+                  </>
+                )}
+              </>
+            )}
+            {key === 'perniles' &&
+              Perniles.map((option) => {
+                return (
+                  <EventOption
+                    option={option}
+                    handleChange={handleChangeMenu}
+                    key={option.title}
+                  />
+                );
+              })}
+            {visibleSections[key] && (
+              <>
                 {key === 'hamburguesas' &&
                   Hamburguesas.map((option) => {
                     return (
