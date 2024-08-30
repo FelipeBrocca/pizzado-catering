@@ -86,12 +86,12 @@ export const AsadoEspecial = [
   },
 ];
 
-export const Woks = [
+export const Cazuelas = [
   {
-    title: 'Menú wok',
+    title: 'Menú cazuelas de carne o pollo',
     entradas: ['Mini empanadas de carne'],
     principal: [
-      'Cazuelas de pollo y arroz salteado con verduras y salsa agridulce, al disco con quebracho',
+      'Cazuelas de carne o pollo y arroz salteado con verduras y salsa agridulce, al disco con quebracho',
     ],
     // price: 4090
   },
@@ -129,24 +129,22 @@ export const EmpanadasClassic = [
   },
 ];
 
-export const CeliacosYVeggies = [
+export const Celiacos = [
   {
-    title: 'Ensalada de rúcula, queso brie, jamón crudo y cebolla caramelizada',
+    title: 'Menú celíacos',
+    principal: [
+      'Pizzas para celíacos (gustos a eleccción)',
+      'Podés consultar por otras opciones!',
+    ],
   },
+];
+
+export const Veggies = [
   {
-    title: 'Ensalada de rúcula, salmón, parmesano y almendras',
-  },
-  {
-    title: 'Lomo con ensalada a elección',
-  },
-  {
-    title: 'Pizzas para celíacos (gustos a elección)',
-  },
-  {
-    title: 'Brochettes de verduras asadas',
-  },
-  {
-    title: 'Wok de verduras',
+    title: 'Menú vegetariano',
+    entradas: ['Brochettes de capresse', 'Empanaditas de choclo'],
+    principal: ['Sándwich de medallones vegetarianos'],
+    // price: 4090
   },
 ];
 
