@@ -134,7 +134,7 @@ export const Celiacos = [
     title: 'Menú celíacos',
     principal: [
       'Pizzas para celíacos (gustos a eleccción)',
-      'Podés consultar por otras opciones!',
+      'Averiguar por otras opciones',
     ],
   },
 ];
