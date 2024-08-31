@@ -247,7 +247,7 @@ export const Bebidas = [
     // price: 1990
   },
   {
-    title: 'Cervez tirada',
+    title: 'Cerveza tirada',
     // price: 2990
   },
   {
