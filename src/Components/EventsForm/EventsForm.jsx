@@ -11,11 +11,12 @@ import {
   AsadoPremium,
   AsadoGourmet,
   AsadoEspecial,
-  Woks,
+  Cazuelas,
+  Veggies,
   Perniles,
   Hamburguesas,
   EmpanadasClassic,
-  CeliacosYVeggies,
+  Celiacos,
   Postres,
   MenuAPedido,
 } from './EventsCateringData';
@@ -34,15 +35,12 @@ const EventsForm = () => {
   } = useContext(EventContext);
 
   const [visibleSections, setVisibleSections] = useState({
-    entradas: false,
-    bebidas: false,
     asado: false,
-    woks: false,
-    perniles: false,
     pizzas: false,
-    hamburguesas: false,
-    empanadas: false,
-    celiacosYVeggies: false,
+    entradas: false,
+    alPlato: false,
+    enSandwich: false,
+    bebidas: false,
     postres: false,
     aPedido: true,
   });
@@ -57,16 +55,13 @@ const EventsForm = () => {
 
   // Utility to dynamically assign section names
   const sectionNames = {
+    'Menú asado': 'asado',
+    'Menú pizzas': 'pizzas',
     Entradas: 'entradas',
-    Bebidas: 'bebidas',
-    Asado: 'asado',
-    Woks: 'woks',
-    Perniles: 'perniles',
-    Pizzas: 'pizzas',
-    Hamburguesas: 'hamburguesas',
-    Empanadas: 'empanadas',
-    'Celíacos y veggies': 'celiacosYVeggies',
+    'Menú al plato': 'alPlato',
+    'Menú en sándwich': 'enSandwich',
     Postres: 'postres',
+    Bebidas: 'bebidas',
     'A Pedido': 'aPedido',
   };
 
@@ -78,7 +73,7 @@ const EventsForm = () => {
     <form className="form-register" id="form-event">
       <fieldset className="form-register-input">
         <legend>
-          Elegí tus combos.<br></br>
+          Diseñá tu menú.<br></br>
           <small>(Todos los precios son por persona)</small>
         </legend>
 
@@ -151,30 +146,6 @@ const EventsForm = () => {
                     })}
                   </>
                 )}
-              </>
-            )}
-            {key === 'woks' &&
-              Woks.map((option) => {
-                return (
-                  <EventOption
-                    option={option}
-                    handleChange={handleChangeMenu}
-                    key={option.title}
-                  />
-                );
-              })}
-            {key === 'perniles' &&
-              Perniles.map((option) => {
-                return (
-                  <EventOption
-                    option={option}
-                    handleChange={handleChangeMenu}
-                    key={option.title}
-                  />
-                );
-              })}
-            {visibleSections[key] && (
-              <>
                 {key === 'pizzas' && (
                   <>
                     {PizzaClassic.map((option) => {
@@ -197,36 +168,63 @@ const EventsForm = () => {
                     })}
                   </>
                 )}
-                {key === 'hamburguesas' &&
-                  Hamburguesas.map((option) => {
-                    return (
-                      <EventOption
-                        option={option}
-                        handleChange={handleChangeMenu}
-                        key={option.title}
-                      />
-                    );
-                  })}
-                {key === 'empanadas' &&
-                  EmpanadasClassic.map((option) => {
-                    return (
-                      <EventOption
-                        option={option}
-                        handleChange={handleChangeMenu}
-                        key={option.title}
-                      />
-                    );
-                  })}
-                {key === 'celiacosYVeggies' &&
-                  CeliacosYVeggies.map((option) => {
-                    return (
-                      <EventOption
-                        option={option}
-                        handleChange={handleChangeMenu}
-                        key={option.title}
-                      />
-                    );
-                  })}
+                {key === 'alPlato' && (
+                  <>
+                    {Cazuelas.map((option) => {
+                      return (
+                        <EventOption
+                          option={option}
+                          handleChange={handleChangeMenu}
+                          key={option.title}
+                        />
+                      );
+                    })}
+                    {Celiacos.map((option) => {
+                      return (
+                        <EventOption
+                          option={option}
+                          handleChange={handleChangeMenu}
+                          key={option.title}
+                        />
+                      );
+                    })}
+                    {Veggies.map((option) => {
+                      return (
+                        <EventOption
+                          option={option}
+                          handleChange={handleChangeMenu}
+                          key={option.title}
+                        />
+                      );
+                    })}
+                  </>
+                )}
+                {key === 'enSandwich' && (
+                  <>
+                    {Hamburguesas.map((option) => {
+                      return (
+                        <EventOption
+                          option={option}
+                          handleChange={handleChangeMenu}
+                          key={option.title}
+                        />
+                      );
+                    })}
+                    {Perniles.map((option) => {
+                      return (
+                        <EventOption
+                          option={option}
+                          handleChange={handleChangeMenu}
+                          key={option.title}
+                        />
+                      );
+                    })}
+                  </>
+                )}
+              </>
+            )}
+            {visibleSections[key] && (
+              <>
                 {key === 'postres' &&
                   Postres.map((option) => {
                     return (
