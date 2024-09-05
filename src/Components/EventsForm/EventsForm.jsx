@@ -36,7 +36,6 @@ const EventsForm = () => {
         const response = await axios.get(
           `${process.env.REACT_APP_MENU_DATA_API_URL}/menus/by_category`
         );
-        console.log(response.data);
         setMenuData(response.data);
       } catch (error) {
         console.error('Error fetching menu data', error);
