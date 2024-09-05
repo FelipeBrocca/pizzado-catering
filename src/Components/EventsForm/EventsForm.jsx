@@ -1,25 +1,8 @@
-import React, { useContext, useState } from 'react';
+import React, { useContext, useState, useEffect } from 'react';
+import axios from 'axios';
 import ConfirmEvent from './ConfirmEvent';
 import EventOption from './EventOption';
 import { EventContext } from '../../Context/EventContext';
-import {
-  Bebidas,
-  Entradas,
-  PizzaClassic,
-  PizzaPremium,
-  AsadoClassic,
-  AsadoPremium,
-  AsadoGourmet,
-  AsadoEspecial,
-  Cazuelas,
-  Veggies,
-  Perniles,
-  Hamburguesas,
-  EmpanadasClassic,
-  Celiacos,
-  Postres,
-  MenuAPedido,
-} from './EventsCateringData';
 import './EventsForm.css';
 
 import { FontAwesomeIcon } from '@fortawesome/react-fontawesome';
@@ -45,7 +28,22 @@ const EventsForm = () => {
     aPedido: true,
   });
 
-  // Step 2: Toggle visibility function
+  const [menuData, setMenuData] = useState({});
+
+  useEffect(() => {
+    const fetchMenuData = async () => {
+      try {
+        const response = await axios.get(
+          `${process.env.REACT_APP_MENU_DATA_API_URL}/menus/by_category`
+        );
+        setMenuData(response.data);
+      } catch (error) {
+        console.error('Error fetching menu data', error);
+      }
+    };
+    fetchMenuData();
+  }, []);
+
   const toggleVisibility = (section) => {
     setVisibleSections((prevState) => ({
       ...prevState,
@@ -53,7 +51,6 @@ const EventsForm = () => {
     }));
   };
 
-  // Utility to dynamically assign section names
   const sectionNames = {
     'Menú asado': 'asado',
     'Menú pizzas': 'pizzas',
@@ -65,9 +62,8 @@ const EventsForm = () => {
     'A Pedido': 'aPedido',
   };
 
-  // Placeholder icon components, replace these with actual imports
-  const ExpandIcon = () => <FontAwesomeIcon icon={faChevronDown} />; // Replace with  or similar
-  const CollapseIcon = () => <FontAwesomeIcon icon={faMinus} />; // Replace with or similar
+  const ExpandIcon = () => <FontAwesomeIcon icon={faChevronDown} />;
+  const CollapseIcon = () => <FontAwesomeIcon icon={faMinus} />;
 
   return (
     <form className="form-register" id="form-event">
@@ -88,163 +84,23 @@ const EventsForm = () => {
               <h3>{title}</h3>
               {visibleSections[key] ? <CollapseIcon /> : <ExpandIcon />}
             </div>
-            {visibleSections[key] && (
+            {visibleSections[key] && menuData[title] && (
               <>
-                {key === 'entradas' &&
-                  Entradas.map((option) => (
-                    <EventOption
-                      option={option}
-                      handleChange={handleChangeEntrada}
-                      key={option.title}
-                    />
-                  ))}
-                {key === 'bebidas' &&
-                  Bebidas.map((option) => (
-                    <EventOption
-                      option={option}
-                      handleChange={handleChangeBebida}
-                      key={option.title}
-                    />
-                  ))}
-                {key === 'asado' && (
-                  <>
-                    {AsadoClassic.map((option) => {
-                      return (
-                        <EventOption
-                          option={option}
-                          handleChange={handleChangeMenu}
-                          key={option.title}
-                        />
-                      );
-                    })}
-                    {AsadoPremium.map((option) => {
-                      return (
-                        <EventOption
-                          option={option}
-                          handleChange={handleChangeMenu}
-                          key={option.title}
-                        />
-                      );
-                    })}
-                    {AsadoGourmet.map((option) => {
-                      return (
-                        <EventOption
-                          option={option}
-                          handleChange={handleChangeMenu}
-                          key={option.title}
-                        />
-                      );
-                    })}
-                    {AsadoEspecial.map((option) => {
-                      return (
-                        <EventOption
-                          option={option}
-                          handleChange={handleChangeMenu}
-                          key={option.title}
-                        />
-                      );
-                    })}
-                  </>
-                )}
-                {key === 'pizzas' && (
-                  <>
-                    {PizzaClassic.map((option) => {
-                      return (
-                        <EventOption
-                          option={option}
-                          handleChange={handleChangeMenu}
-                          key={option.title}
-                        />
-                      );
-                    })}
-                    {PizzaPremium.map((option) => {
-                      return (
-                        <EventOption
-                          option={option}
-                          handleChange={handleChangeMenu}
-                          key={option.title}
-                        />
-                      );
-                    })}
-                  </>
-                )}
-                {key === 'alPlato' && (
-                  <>
-                    {Cazuelas.map((option) => {
-                      return (
-                        <EventOption
-                          option={option}
-                          handleChange={handleChangeMenu}
-                          key={option.title}
-                        />
-                      );
-                    })}
-                    {Celiacos.map((option) => {
-                      return (
-                        <EventOption
-                          option={option}
-                          handleChange={handleChangeMenu}
-                          key={option.title}
-                        />
-                      );
-                    })}
-                    {Veggies.map((option) => {
-                      return (
-                        <EventOption
-                          option={option}
-                          handleChange={handleChangeMenu}
-                          key={option.title}
-                        />
-                      );
-                    })}
-                  </>
-                )}
-                {key === 'enSandwich' && (
-                  <>
-                    {Hamburguesas.map((option) => {
-                      return (
-                        <EventOption
-                          option={option}
-                          handleChange={handleChangeMenu}
-                          key={option.title}
-                        />
-                      );
-                    })}
-                    {Perniles.map((option) => {
-                      return (
-                        <EventOption
-                          option={option}
-                          handleChange={handleChangeMenu}
-                          key={option.title}
-                        />
-                      );
-                    })}
-                  </>
-                )}
-              </>
-            )}
-            {visibleSections[key] && (
-              <>
-                {key === 'postres' &&
-                  Postres.map((option) => {
-                    return (
-                      <EventOption
-                        option={option}
-                        handleChange={handleChangePostre}
-                        key={option.title}
-                      />
-                    );
-                  })}
-                {key === 'aPedido' &&
-                  MenuAPedido.map((option) => {
-                    return (
-                      <EventOption
-                        option={option}
-                        handleChange={handleChangeMenu}
-                        key={option.title}
-                      />
-                    );
-                  })}
+                {menuData[title].map((option) => (
+                  <EventOption
+                    option={option}
+                    handleChange={
+                      key === 'bebidas'
+                        ? handleChangeBebida
+                        : key === 'postres'
+                        ? handleChangePostre
+                        : key === 'entradas'
+                        ? handleChangeEntrada
+                        : handleChangeMenu
+                    }
+                    key={option.title}
+                  />
+                ))}
               </>
             )}
           </div>
