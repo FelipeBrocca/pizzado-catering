@@ -34,7 +34,7 @@ const EventsForm = () => {
     const fetchMenuData = async () => {
       try {
         const response = await axios.get(
-          `https://pizzado-admin-panel.onrender.com/api/menus/by_category`
+          `${process.env.REACT_APP_MENU_DATA_API_URL}/menus/by_category`
         );
         setMenuData(response.data);
       } catch (error) {
