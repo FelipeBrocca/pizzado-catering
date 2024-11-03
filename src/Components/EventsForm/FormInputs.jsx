@@ -1,124 +1,45 @@
 import React, { useRef, useContext } from 'react';
 import { EventContext } from '../../Context/EventContext';
 
-
 const FormInputs = () => {
+  const { setInfoToSend, infoToSend } = useContext(EventContext);
 
-    const { setInfoToSend, infoToSend, parriCheck, setParriCheck } = useContext(EventContext)
-    
-    const nameRef = useRef()
-    const emailRef = useRef()
-    const addressRef = useRef()
-    const dateRef = useRef()
-    const timeStartRef = useRef()
-    const timeEndRef = useRef()
-    const quantRef = useRef()
-    
-    const toggleParri = () => {
-        setParriCheck(!parriCheck)
-    }
-    const setInfo = () => {
-        setInfoToSend({
-            ...infoToSend,
-            name: nameRef.current.value,
-            email: emailRef.current.value,
-            address: addressRef.current.value,
-            date: dateRef.current.value,
-            timeStart: timeStartRef.current.value,
-            timeEnd: timeEndRef.current.value,
-            quant: quantRef.current.value    
-        })
-    }
+  const nameRef = useRef();
+  const dateRef = useRef();
 
+  const setInfo = () => {
+    setInfoToSend({
+      ...infoToSend,
+      name: nameRef.current.value,
+      date: dateRef.current.value,
+    });
+  };
 
-    return (
-        <>
-            <div className="form-register-input">
-                <input
-                    type="text"
-                    ref={nameRef}
-                    onChange={setInfo}
-                    name="name"
-                    id="name"
-                    placeholder="Nombre"
-                    autoComplete='off'
-                />
-            </div>
-            <div className="form-register-input">
-                <input
-                    type="email"
-                    ref={emailRef}
-                    onChange={setInfo}
-                    name="email"
-                    id="email"
-                    placeholder="Email"
-                    autoComplete='off'
-                />
-            </div>
-            <div className="form-register-input">
-                <input
-                    type="street-address"
-                    ref={addressRef}
-                    onChange={setInfo}
-                    placeholder="Direccion"
-                    autoComplete='off'
-                />
-            </div>
-            <div className="form-register-input">
-                <input
-                    type='date'
-                    ref={dateRef}
-                    onChange={setInfo}
-                    dateformat='dd/MM/yyyy'
-                    min='2023-01-01'
-                    className='date-event'
-                />
-            </div>
-            <div className='times-event'>
-                <div className="form-register-input">
-                    <label className='time-label' htmlFor='trip-start'>Desde:</label>
-                    <input
-                        type="time"
-                        ref={timeStartRef}
-                        onChange={setInfo}
-                        id="start"
-                        name="trip-start"
-                        className='date-event'
-                    />
-                </div>
-                <div className="form-register-input">
-                    <label className='time-label' htmlFor='trip-end'>Hasta:</label>
-                    <input
-                        type="time"
-                        ref={timeEndRef}
-                        onChange={setInfo}
-                        id="end"
-                        name="trip-end"
-                        className='date-event'
-                    />
-                </div>
-            </div>
-            <div className="form-register-input quantity">
-                <input
-                    type="number"
-                    inputMode='numeric'
-                    pattern="[0-9]*"
-                    ref={quantRef}
-                    onChange={setInfo}
-                    min={0}
-                    className='quantity-event'
-                    placeholder='Cantidad de invitados'
-                />
-            </div>
-            <div>
-                <p>El lugar cuenta con parrilla?</p>
-                <label className="button-toggle" htmlFor="toggle">
-                    <input id="toggle" type="checkbox" onChange={toggleParri} checked={parriCheck} />
-                    <span className="move"></span>
-                </label>
-            </div>
-        </>
-    )
-}
+  return (
+    <>
+      <div className="form-register-input">
+        <input
+          type="text"
+          ref={nameRef}
+          onChange={setInfo}
+          name="name"
+          id="name"
+          placeholder="Nombre"
+          autoComplete="off"
+        />
+      </div>
+      <div className="form-register-input">
+        <input
+          type="date"
+          ref={dateRef}
+          onChange={setInfo}
+          dateformat="dd/MM/yyyy"
+          min="2023-01-01"
+          className="date-event"
+        />
+      </div>
+    </>
+  );
+};
 
-export default FormInputs
+export default FormInputs;
