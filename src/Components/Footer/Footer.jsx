@@ -3,6 +3,7 @@ import React from 'react';
 import './Footer.css';
 import wappLogo from '../../public/images/wappblco_bc9zdu.png';
 import igLogo from '../../public/images/instagramblco_hfgf8n.png';
+import gmailLogo from '../../public/images/gmaillogo.png';
 
 const Footer = () => {
   return (
@@ -34,6 +35,14 @@ const Footer = () => {
             className="footer-link"
           >
             <img src={igLogo} alt="ig" />
+          </a>
+          <a
+            href="mailto:eventos@pizzadocatering.com"
+            target="_blank"
+            rel="noreferrer"
+            className="footer-link"
+          >
+            <img src={gmailLogo} alt="gmail" />
           </a>
         </div>
       </div>
