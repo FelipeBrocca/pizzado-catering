@@ -41,7 +41,7 @@ function App() {
               notification
               notificationSound
             />
-            <OfferPopUp />
+            {/* <OfferPopUp /> */}
           </CartProvider>
         </BrowserRouter>
       </LoadingProvider>
