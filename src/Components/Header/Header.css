@@ -11,7 +11,7 @@
   padding-right: 15px;
 }
 .link-logo {
-  width: 150px;
+  width: 250px;
   margin: 5px;
 }
 .link-logo > img {
@@ -237,5 +237,8 @@
     right: 30px;
     width: 80px;
     height: 80px;
+  }
+  .link-logo {
+    width: 300px;
   }
 }

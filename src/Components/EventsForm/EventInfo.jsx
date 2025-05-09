@@ -12,10 +12,9 @@ const EventInfo = () => (
         Más de 500 eventos realizados: Corporativos, fiestas, cumpleaños y
         casamientos.
         <br />
+        <br />
         El servicio incluye a los cocineros y mozos.
         <br />
-        Trabajamos en la parrilla u horno que haya en el lugar, aunque también
-        tenemos nuestras parrillas movibles en caso de ser necesarias.(*)
       </p>
     </div>
     <div className="form-images-container">

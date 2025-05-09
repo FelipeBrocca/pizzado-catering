@@ -44,7 +44,7 @@
 }
 
 .loader-img{
-    width: 35vh;
+    width: 30vh;
     animation: pizzaAnimation 1.75s cubic-bezier(0.25, 1, 0.5, 1) infinite alternate;
     position: absolute;
     top: 35%;
@@ -65,7 +65,7 @@
         font-size: 15vw;
     }
     .loader-img{ 
-        width: 45vh;
+        width: 25vh;
     }
     @keyframes pizzaAnimation{
         0%, 10%{
