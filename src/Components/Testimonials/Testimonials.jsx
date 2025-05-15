@@ -42,7 +42,7 @@ const Testimonials = () => {
         modules={[Autoplay, Pagination]}
         loop={true}
         autoplay={{
-          delay: 1000,
+          delay: 6000,
           disableOnInteraction: false,
           pauseOnMouseEnter: true,
         }}
