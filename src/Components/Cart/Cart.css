@@ -9,7 +9,7 @@
     right: 0;
     width: 95%;
     margin: 0px 2.5%;
-    background-color: #F5B721;
+    background-color: #f2e2b2;
     min-height: 150px;
     translate: 0 0;
     transition: 500ms;
@@ -48,12 +48,12 @@
     justify-content: space-around;
     align-items: center;
     padding: 10px;
-    border-top: 1px dotted #F5B721;
+    border-top: 1px dotted #f2e2b2;
     border-radius: 0px 0px 10px 10px;
 }
 .cart-bottom > button{
     border: none;
-    background-color: #BE1615;
+    background-color: #301011;
     border-radius: 5px;
     color: white;
     padding: 10px;
@@ -144,12 +144,12 @@
     position: relative;
     width: 20px;
     height: 20px;
-    color: #BE1615;
+    color: #301011;
     font-weight: 900;
     cursor: pointer;
 }
 .trash-icon-cart{
-    color: #BE1615;
+    color: #301011;
     cursor: pointer;
 }
 .button-whatsapp{

@@ -66,7 +66,7 @@ textarea:focus {
 }
 fieldset.form-register-input {
   width: 100%;
-  border-color: #f5b721;
+  border-color: #f2e2b2;
   display: flex;
   flex-direction: column;
   gap: 60px;
@@ -76,6 +76,7 @@ fieldset.form-register-input > legend {
   font-size: 24px;
   padding: 5px;
   line-height: 16px;
+  color: #f2e2b2;
 }
 fieldset.form-register-input > legend > small {
   font-size: 11px;
@@ -92,7 +93,7 @@ fieldset.form-register-input > legend > small {
 .form-img-div {
   width: 60%;
   min-height: 100%;
-  border: 1px solid #f5b721;
+  border: 1px solid #f2e2b2;
   border-radius: 10px;
   position: relative;
   object-fit: cover;
@@ -131,7 +132,7 @@ fieldset.form-register-input > legend > small {
   transition: max-height 0.5s ease-in-out;
 }
 .combo-header {
-  color: #f5b721;
+  color: #f2e2b2;
   font-size: 24px;
   display: flex;
   justify-content: space-between !important;
@@ -185,14 +186,14 @@ fieldset.form-register-input > legend > small {
   background-color: transparent;
   border-radius: 20%;
   transition: all 0.5s;
-  border: 1px solid #f5b721;
+  border: 1px solid #f2e2b2;
 }
 .checkbox-style {
   font-size: 15px;
   cursor: pointer;
 }
 .checkbox-style input:checked ~ span {
-  box-shadow: 0px 0px 10px 0px #f5b721;
+  box-shadow: 0px 0px 10px 0px #f2e2b2;
 }
 .checkbox-style > span:after {
   content: '';
@@ -220,7 +221,7 @@ fieldset.form-register-input > legend > small {
   position: fixed;
   bottom: 0px;
   color: black;
-  background-color: #f5b721;
+  background-color: #f2e2b2;
   border-radius: 20px 20px 0px 0px;
   transition: all 0.5s;
   z-index: 100;
@@ -313,7 +314,7 @@ fieldset.form-register-input > legend > small {
   display: none;
 }
 .react-datepicker__close-icon::after {
-  background-color: #be1615;
+  background-color: #301011;
 }
 .form-includes {
   width: 90%;
@@ -359,8 +360,8 @@ fieldset.form-register-input > legend > small {
   height: 40px;
   color: white;
   border-radius: 5px;
-  border: #be1615;
-  background-color: #be1615;
+  border: #301011;
+  background-color: #301011;
   cursor: pointer;
   display: grid;
   place-items: center;
@@ -388,8 +389,8 @@ fieldset.form-register-input > legend > small {
   height: 40px;
   color: white;
   border-radius: 5px;
-  border: #be1615;
-  background-color: #be1615;
+  border: #301011;
+  background-color: #301011;
   display: grid;
   place-items: center;
   align-self: center;
@@ -431,7 +432,7 @@ fieldset.form-register-input > legend > small {
   content: 'NO';
   width: 25px;
   height: 25px;
-  background-color: #be1615;
+  background-color: #301011;
   border: 2px solid #fff;
   border-radius: 50%;
   box-shadow: 0 0 5px rgba(0, 0, 0, 0.25);
@@ -446,7 +447,7 @@ fieldset.form-register-input > legend > small {
 
 #toggle:checked + .move::after {
   content: 'SI';
-  background-color: #f5b721;
+  background-color: #f2e2b2;
   transform: translateX(25px) rotate(360deg);
 }
 

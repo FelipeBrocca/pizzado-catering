@@ -72,7 +72,7 @@
 }
 .main-nav > div > p:hover {
   cursor: pointer;
-  color: #f5b721;
+  color: #f2e2b2;
 }
 .menu > li {
   height: 50px;
@@ -91,7 +91,7 @@
   gap: 45%;
 }
 .menu-link:hover {
-  color: #f5b721;
+  color: #f2e2b2;
 }
 .menu-link svg {
   position: fixed;
@@ -106,7 +106,7 @@
   outline: none;
   cursor: pointer;
   border-radius: 50%;
-  background-color: #f5b721;
+  background-color: #f2e2b2;
   border: none;
   font-family: inherit;
   display: flex;
@@ -131,7 +131,7 @@
 }
 
 .button-carrito:hover .default-btn {
-  background-color: #be1615;
+  background-color: #301011;
 }
 .cart-length {
   width: 20px;
@@ -179,7 +179,7 @@
   width: 20px;
 }
 .contact > ul > li > a:hover {
-  color: #f5b721;
+  color: #f2e2b2;
   cursor: pointer;
 }
 .cart-icon {

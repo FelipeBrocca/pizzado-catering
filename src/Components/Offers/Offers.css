@@ -7,7 +7,7 @@
     background-color: #18181a;
     align-self: center;
     /* max-width: 1200px; */
-    box-shadow: 0px 0px 10px 0px #F5B721;
+    box-shadow: 0px 0px 10px 0px #f2e2b2;
 }
 .offers-content{
     width: 100%;
@@ -23,17 +23,17 @@
 }
 .offer-choose{
     font-size: 14px;
-    color:#F5B721
+    color:#f2e2b2
 }
 .offer-title{
     font-size: 26px;
-    color: #F5B721;
+    color: #f2e2b2;
 }
 .offer{
     display: flex;
     flex-direction: column;
     gap: 20px;
-    border: 2px solid #F5B721;
+    border: 2px solid #f2e2b2;
     border-radius: 10px;
     padding: 10px;
     width: 100%;
@@ -45,9 +45,9 @@
     width: 200px;
     height: 35px;
     border-radius: 10px;
-    border: 1px solid #F5B721;
+    border: 1px solid #f2e2b2;
     background-color: transparent;
-    color: #F5B721;
+    color: #f2e2b2;
     align-self: center;
     font-size: 16px;
 }
@@ -55,13 +55,13 @@
     letter-spacing: 1px;
     font-size: 20px;
     font-weight: 500;
-    color: #F5B721;
+    color: #f2e2b2;
 }
 .offer-text{
     font-size: 13px;
 }
 .offer-discount{
-    background-color: #BE1615;
+    background-color: #301011;
     font-size: 12px;
     border-radius: 5px;
     width: 90%;
@@ -92,7 +92,7 @@
     max-height: 250px;
 }
 .add-offer-button:hover{
-    background-color: #F5B721;
+    background-color: #f2e2b2;
     color: black;
     transition: 0.3s;
     cursor: pointer;

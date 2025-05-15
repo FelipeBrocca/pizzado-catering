@@ -58,7 +58,7 @@
 }
 .product-price{
     font-size: 18px;
-    color: #f5b721;
+    color: #f2e2b2;
 }
 .container-products .product {
         text-align: center;
@@ -75,7 +75,7 @@
     padding: 10px;
     margin: 10px;
     cursor: pointer;
-    background: #f5b721;
+    background: #f2e2b2;
     user-select: none;
     -webkit-user-select: none;
     touch-action: manipulation; 
@@ -107,7 +107,7 @@
     font-size: 18px;
 }
 .slider-text-offer{
-    background-color: #be1615;
+    background-color: #301011;
     width: 100%;
     text-align: center;
     max-width: 600px;
@@ -145,6 +145,6 @@
 
     .container-products .card:hover {
         transform: translateY(-0.5rem);
-        border: #be1615 2px solid;
+        border: #301011 2px solid;
     }
 }

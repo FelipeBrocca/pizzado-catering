@@ -67,8 +67,8 @@
   border-radius: 10px;
 }
 .draw-border {
-  box-shadow: inset 0 0 0 4px #be1615;
-  color: #be1615;
+  box-shadow: inset 0 0 0 4px #f2e2b2;
+  color: #f2e2b2;
   transition: color 0.25s 0.0833333333s;
   position: relative;
 }
@@ -101,7 +101,7 @@
 
 .draw-border:hover::before,
 .draw-border:hover::after {
-  border-color: #f5b721;
+  border-color: #fdc860;
   transition: border-color 0s, width 0.25s, height 0.25s;
   width: 100%;
   height: 100%;
