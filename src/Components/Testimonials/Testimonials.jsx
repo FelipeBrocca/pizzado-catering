@@ -18,8 +18,7 @@ const Testimonials = () => {
     const fetchMenuData = async () => {
       try {
         const response = await axios.get(
-          //   `${process.env.REACT_APP_MENU_DATA_API_URL}/googleres`
-          "http://localhost:5000/api/googleres"
+          `${process.env.REACT_APP_MENU_DATA_API_URL}/googleres`
         );
         setTestimonials(response.data);
       } catch (error) {
@@ -40,10 +39,10 @@ const Testimonials = () => {
       <Swiper
         className="testimonial__container"
         loop={true}
-        // autoplay={{
-        //   delay: 4000,
-        //   disableOnInteraction: false,
-        // }}
+        autoplay={{
+          delay: 8000,
+          disableOnInteraction: false,
+        }}
         speed={2000}
         grabCursor={true}
         spaceBetween={10}
