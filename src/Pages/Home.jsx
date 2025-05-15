@@ -9,7 +9,7 @@ const Home = () => {
     <main>
       <Slider />
       <ContainerLazy />
-       {/* <Testimonials /> */}
+       <Testimonials />
     </main>
   )
 

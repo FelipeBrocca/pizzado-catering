@@ -5,10 +5,13 @@
   margin: 10px;
 }
 
-.testimonial{
-gap: 10px;
+.testimonial {
+  gap: 10px;
 }
 
+.swiper {
+  max-width: 100vw !important;
+}
 .testimonial__card {
   background-color: #f5f3ef;
   color: black;
@@ -47,31 +50,31 @@ gap: 10px;
 }
 
 .testimonial__name h3 {
-    white-space: nowrap;
-    overflow: hidden;
-    text-overflow: ellipsis;
+  white-space: nowrap;
+  overflow: hidden;
+  text-overflow: ellipsis;
 }
 
 .testimonial__stars {
-    height: 15px;
-    display: flex;
+  height: 15px;
+  display: flex;
 }
 .testimonial__description {
-    font-size: 12px;
-    height: 75%;
-    overflow-y: auto;
-    scrollbar-width: thin; /* Firefox */
-    scrollbar-color: black transparent;
-    width: 100%;
-    padding-right: 10px;
-    text-align: center;
+  font-size: 12px;
+  height: 75%;
+  overflow-y: auto;
+  scrollbar-width: thin; /* Firefox */
+  scrollbar-color: black transparent;
+  width: 100%;
+  padding-right: 10px;
+  text-align: center;
 }
 
 .top-testimonial > div {
-    display: flex;
-    flex-direction: column;
-    gap: 3px;
-    width: calc(100% - 60px);
+  display: flex;
+  flex-direction: column;
+  gap: 3px;
+  width: calc(100% - 60px);
 }
 
 .top-test-date {
