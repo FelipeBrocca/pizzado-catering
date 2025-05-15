@@ -23,6 +23,10 @@
     font-size: 28px;
 }
 
+h2.titulo-pizzas{
+    color: #f2e2b2;
+}
+
 .container-products .card {
     height: 350px;
     width: 100%;

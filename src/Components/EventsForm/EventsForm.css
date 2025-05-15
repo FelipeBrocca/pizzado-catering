@@ -19,6 +19,7 @@ textarea:focus {
 
 .titulo-register {
   font-size: 32px;
+  color: #f2e2b2;
 }
 
 .top-form {
@@ -196,7 +197,7 @@ fieldset.form-register-input > legend > small {
   box-shadow: 0px 0px 10px 0px #f2e2b2;
 }
 .checkbox-style > span:after {
-  content: '';
+  content: "";
   position: absolute;
   border: solid white;
   border-width: 0 2px 2px 0px;
@@ -429,7 +430,7 @@ fieldset.form-register-input > legend > small {
 }
 
 .move::after {
-  content: 'NO';
+  content: "NO";
   width: 25px;
   height: 25px;
   background-color: #301011;
@@ -446,7 +447,7 @@ fieldset.form-register-input > legend > small {
 }
 
 #toggle:checked + .move::after {
-  content: 'SI';
+  content: "SI";
   background-color: #f2e2b2;
   transform: translateX(25px) rotate(360deg);
 }
