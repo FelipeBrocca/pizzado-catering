@@ -12,7 +12,7 @@ const Events = () => {
         <EventProvider>
           <EventsForm />
         </EventProvider>
-        <Testimonials />
+        {/* <Testimonials /> */}
       </section>
     </main>
   )
