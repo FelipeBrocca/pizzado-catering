@@ -1,8 +1,7 @@
-import React, { lazy, Suspense, useState } from 'react'
+import { lazy, Suspense } from 'react'
 import Skeleton from 'react-loading-skeleton'
 import 'react-loading-skeleton/dist/skeleton.css'
 import './Card.css'
-import CartService from './CartService'
 const ImageLazy = lazy(() => import('../ImageLazy/ImageLazy'))
 
 
