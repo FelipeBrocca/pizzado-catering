@@ -1,21 +1,36 @@
-import React from 'react';
-import { BrowserRouter, Routes, Route } from 'react-router-dom';
-import Home from './Pages/Home';
-import Events from './Pages/Events';
+import React, { useEffect } from "react";
+import { BrowserRouter, Routes, Route } from "react-router-dom";
+import Home from "./Pages/Home";
+import Events from "./Pages/Events";
 
-import { CartProvider } from './Context/CartContext';
-import FooterLazy from './Components/Footer/LazyFooter';
-import NotFound from './Pages/NotFound';
-import { LoadingProvider } from './Context/LoadingContext';
-import PreLoader from './Components/PreLoader/PreLoader';
-import { SkeletonTheme } from 'react-loading-skeleton';
-import { FloatingWhatsApp } from 'react-floating-whatsapp';
-import logo from './public/images/logo-sin-descripcion.svg';
+import { CartProvider } from "./Context/CartContext";
+import FooterLazy from "./Components/Footer/LazyFooter";
+import NotFound from "./Pages/NotFound";
+import { LoadingProvider } from "./Context/LoadingContext";
+import PreLoader from "./Components/PreLoader/PreLoader";
+import { SkeletonTheme } from "react-loading-skeleton";
+import { FloatingWhatsApp } from "react-floating-whatsapp";
+import logo from "./public/images/logo-sin-descripcion.svg";
 // import OfferPopUp from './Components/OfferPopUp/OfferPopUp';
 
-const Header = React.lazy(() => import('./Components/Header/Header'));
+const Header = React.lazy(() => import("./Components/Header/Header"));
 
 function App() {
+  useEffect(() => {
+    const ref = document.referrer;
+
+    if (ref.includes("instagram.com") || ref.includes("l.instagram.com")) {
+      console.log("El usuario vino desde Instagram");
+      localStorage.setItem("trafficSource", "instagram");
+    } else if (ref.includes("google.")) {
+      console.log("El usuario vino desde Google");
+      localStorage.setItem("trafficSource", "google");
+    } else {
+      console.log("Otro origen:", ref || "Acceso directo");
+      localStorage.setItem("trafficSource", "other");
+    }
+  }, []);
+
   return (
     <SkeletonTheme baseColor="#313131" highlightColor="#525252">
       <LoadingProvider>
