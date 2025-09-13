@@ -1,12 +1,12 @@
-import React, { useContext, useState, useEffect } from 'react';
-import axios from 'axios';
-import ConfirmEvent from './ConfirmEvent';
-import EventOption from './EventOption';
-import { EventContext } from '../../Context/EventContext';
-import './EventsForm.css';
+import React, { useContext, useState, useEffect } from "react";
+import axios from "axios";
+import ConfirmEvent from "./ConfirmEvent";
+import EventOption from "./EventOption";
+import { EventContext } from "../../Context/EventContext";
+import "./EventsForm.css";
 
-import { FontAwesomeIcon } from '@fortawesome/react-fontawesome';
-import { faMinus, faChevronDown } from '@fortawesome/free-solid-svg-icons';
+import { FontAwesomeIcon } from "@fortawesome/react-fontawesome";
+import { faMinus, faChevronDown } from "@fortawesome/free-solid-svg-icons";
 
 const EventsForm = () => {
   const {
@@ -17,17 +17,7 @@ const EventsForm = () => {
     infoToSend,
   } = useContext(EventContext);
 
-  const [visibleSections, setVisibleSections] = useState({
-    asado: false,
-    pizzas: false,
-    entradas: false,
-    alPlato: false,
-    enSandwich: false,
-    bebidas: false,
-    postres: false,
-    aPedido: true,
-  });
-
+  const [visibleSections, setVisibleSections] = useState({});
   const [menuData, setMenuData] = useState({});
 
   useEffect(() => {
@@ -36,9 +26,17 @@ const EventsForm = () => {
         const response = await axios.get(
           `${process.env.REACT_APP_MENU_DATA_API_URL}/menus/by_category`
         );
-        setMenuData(response.data);
+        const data = response.data;
+        setMenuData(data);
+
+        // Inicializar visibilidad dinámica
+        const initialVisibility = Object.keys(data).reduce((acc, key) => {
+          acc[key] = key === "A Pedido"; // solo "A Pedido" en true
+          return acc;
+        }, {});
+        setVisibleSections(initialVisibility);
       } catch (error) {
-        console.error('Error fetching menu data', error);
+        console.error("Error fetching menu data", error);
       }
     };
     fetchMenuData();
@@ -51,17 +49,6 @@ const EventsForm = () => {
     }));
   };
 
-  const sectionNames = {
-    'Menú asado': 'asado',
-    'Menú pizzas': 'pizzas',
-    Entradas: 'entradas',
-    'Menú al plato': 'alPlato',
-    'Menú en sándwich': 'enSandwich',
-    Postres: 'postres',
-    Bebidas: 'bebidas',
-    'A Pedido': 'aPedido',
-  };
-
   const ExpandIcon = () => <FontAwesomeIcon icon={faChevronDown} />;
   const CollapseIcon = () => <FontAwesomeIcon icon={faMinus} />;
 
@@ -69,32 +56,36 @@ const EventsForm = () => {
     <form className="form-register" id="form-event">
       <fieldset className="form-register-input">
         <legend>
-          Diseñá tu menú.<br></br>
+          Diseñá tu menú.
+          <br />
           <small>(Todos los precios son por persona)</small>
         </legend>
 
-        {Object.entries(sectionNames).map(([title, key]) => (
+        {Object.entries(menuData).map(([title, options]) => (
           <div
             className={`combo-section ${
-              visibleSections[key] ? 'combo-section-visible' : ''
+              visibleSections[title] ? "combo-section-visible" : ""
             }`}
-            key={key}
+            key={title}
           >
-            <div className="combo-header" onClick={() => toggleVisibility(key)}>
+            <div
+              className="combo-header"
+              onClick={() => toggleVisibility(title)}
+            >
               <h3>{title}</h3>
-              {visibleSections[key] ? <CollapseIcon /> : <ExpandIcon />}
+              {visibleSections[title] ? <CollapseIcon /> : <ExpandIcon />}
             </div>
-            {visibleSections[key] && menuData[title] && (
+            {visibleSections[title] && (
               <>
-                {menuData[title].map((option) => (
+                {options.map((option) => (
                   <EventOption
                     option={option}
                     handleChange={
-                      key === 'bebidas'
+                      title === "Bebidas"
                         ? handleChangeBebida
-                        : key === 'postres'
+                        : title === "Postres"
                         ? handleChangePostre
-                        : key === 'entradas'
+                        : title === "Entradas"
                         ? handleChangeEntrada
                         : handleChangeMenu
                     }
@@ -106,15 +97,18 @@ const EventsForm = () => {
           </div>
         ))}
       </fieldset>
+
       {infoToSend.entrada[0] ||
       infoToSend.menu[0] ||
       infoToSend.postre[0] ||
       infoToSend.bebida[0] ? (
         <ConfirmEvent />
       ) : (
-        ''
+        ""
       )}
-      <br></br>Resolvé todas tus dudas por Whatsapp
+
+      <br />
+      Resolvé todas tus dudas por Whatsapp
     </form>
   );
 };
